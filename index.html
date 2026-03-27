@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tredgold Digital Ltd</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #f5f5f0;
+      --mid: #888;
+      --border: #222;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      cursor: crosshair;
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 3rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10,10,10,0.88);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.12em;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.4rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--mid);
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--white); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 0 3rem 4rem;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid-lines {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 1.2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(5rem, 14vw, 14rem);
+      line-height: 0.88;
+      letter-spacing: -0.01em;
+      color: var(--white);
+      opacity: 0;
+      animation: fadeUp 0.9s 0.4s forwards;
+    }
+
+    .hero-sub {
+      margin-top: 2.4rem;
+      max-width: 38ch;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.65;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.65s forwards;
+    }
+
+    .hero-cta {
+      margin-top: 2.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.85s forwards;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2.2rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid var(--white);
+      color: var(--black);
+      background: var(--white);
+      transition: background 0.22s, color 0.22s;
+    }
+
+    .btn:hover { background: transparent; color: var(--white); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+    }
+
+    .btn-ghost:hover { background: var(--white); color: var(--black); }
+
+    /* ── TICKER ── */
+    .ticker-wrap {
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 0.95rem 0;
+      background: var(--black);
+    }
+
+    .ticker {
+      display: flex;
+      gap: 3rem;
+      animation: ticker 22s linear infinite;
+      white-space: nowrap;
+    }
+
+    .ticker span {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.18em;
+      color: var(--mid);
+    }
+
+    .ticker span.dot { color: var(--white); }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ── SERVICES ── */
+    .section { padding: 7rem 3rem; border-bottom: 1px solid var(--border); }
+
+    .section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 4rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .service-card {
+      padding: 2.8rem 2.2rem;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.22s;
+    }
+
+    .service-card:last-child { border-right: none; }
+
+    .service-card:hover { background: rgba(255,255,255,0.03); }
+
+    .service-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      color: var(--mid);
+      margin-bottom: 1.4rem;
+    }
+
+    .service-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.9rem;
+    }
+
+    .service-desc {
+      font-size: 0.9rem;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    /* ── ABOUT ── */
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .about-heading {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      line-height: 0.9;
+      letter-spacing: 0.01em;
+    }
+
+    .about-body {
+      font-size: 1rem;
+      color: var(--mid);
+      line-height: 1.8;
+    }
+
+    .about-body p + p { margin-top: 1.2rem; }
+
+    .stat-row {
+      display: flex;
+      gap: 4rem;
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-top: 0.3rem;
+    }
+
+    /* ── CONTACT ── */
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .contact-heading {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      line-height: 0.9;
+    }
+
+    .contact-detail {
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mid);
+      line-height: 2;
+    }
+
+    .contact-detail a { color: var(--white); text-decoration: none; }
+    .contact-detail a:hover { text-decoration: underline; }
+
+    /* ── FORM ── */
+    form { display: flex; flex-direction: column; gap: 0; }
+
+    .form-group {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--mid);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 300;
+      width: 100%;
+      resize: none;
+      appearance: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: #444; }
+
+    .form-group select option { background: var(--black); }
+
+    .form-submit {
+      margin-top: 2.4rem;
+    }
+
+    .form-submit button {
+      all: unset;
+      display: inline-block;
+      padding: 1rem 2.8rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: var(--white);
+      color: var(--black);
+      border: 1px solid var(--white);
+      cursor: pointer;
+      transition: background 0.22s, color 0.22s;
+    }
+
+    .form-submit button:hover { background: transparent; color: var(--white); }
+
+    /* ── SUCCESS MESSAGE ── */
+    .form-success {
+      display: none;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 0.06em;
+      color: var(--white);
+      margin-top: 2rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 2.2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mid);
+    }
+
+    .footer-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      color: var(--white);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 1.2rem 1.4rem; }
+      .nav-links { display: none; }
+      .hero { padding: 0 1.4rem 3rem; }
+      .section { padding: 5rem 1.4rem; }
+      .about-inner,
+      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRRVWXJF0T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RRRVWXJF0T');
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">TD</a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn" style="font-size:0.7rem;padding:0.6rem 1.4rem;">Get in touch</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid-lines"></div>
+    <p class="hero-eyebrow">Digital Marketing · Bramhope, UK</p>
+    <h1>Tredgold<br>Digital</h1>
+    <p class="hero-sub">Specialising in Digital Marketing for small business. Optimising your business' online presence.</p>
+    <div class="hero-cta">
+      <a href="#services" class="btn">Our Services</a>
+      <a href="#contact" class="btn btn-ghost">Start a Project</a>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <span>SEO</span><span class="dot">✦</span>
+      <span>Paid Media</span><span class="dot">✦</span>
+      <span>Content Strategy</span><span class="dot">✦</span>
+      <span>Social Media</span><span class="dot">✦</span>
+      <span>Analytics</span><span class="dot">✦</span>
+      <span>Email Marketing</span><span class="dot">✦</span>
+      <span>Brand Strategy</span><span class="dot">✦</span>
+      <span>Web Optimisation</span><span class="dot">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span>SEO</span><span class="dot">✦</span>
+      <span>Paid Media</span><span class="dot">✦</span>
+      <span>Content Strategy</span><span class="dot">✦</span>
+      <span>Social Media</span><span class="dot">✦</span>
+      <span>Analytics</span><span class="dot">✦</span>
+      <span>Email Marketing</span><span class="dot">✦</span>
+      <span>Brand Strategy</span><span class="dot">✦</span>
+      <span>Web Optimisation</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <p class="section-label">What We Do</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <p class="service-num">01</p>
+        <h3 class="service-title">SEO & Content</h3>
+        <p class="service-desc">Organic visibility that compounds over time. Keyword strategy, technical audits, and content that earns rankings.</p>
+      </div>
+      <div class="service-card">
+        <p class="service-num">02</p>
+        <h3 class="service-title">Paid Media</h3>
+        <p class="service-desc">Google, Meta, LinkedIn. Precise targeting, relentless optimisation, and budgets that work harder than you do.</p>
+      </div>
+      <div class="service-card">
+        <p class="service-num">03</p>
+        <h3 class="service-title">Social Media</h3>
+        <p class="service-desc">Strategy and content that builds real audiences. From creative direction to scheduling and community management.</p>
+      </div>
+      <div class="service-card">
+        <p class="service-num">04</p>
+        <h3 class="service-title">Analytics & CRO</h3>
+        <p class="service-desc">Data you can act on. We set up the right tracking, surface what matters, and convert more of your existing traffic.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <p class="section-label">About</p>
+    <div class="about-inner">
+      <div>
+        <h2 class="about-heading"><br>No nonsense.<br>Just results.</h2>
+        <div class="stat-row">
+          <div>
+            <p class="stat-num">8+</p>
+            <p class="stat-label">Years in market</p>
+          </div>
+          <div>
+            <p class="stat-num">60+</p>
+            <p class="stat-label">Clients served</p>
+          </div>
+          <div>
+            <p class="stat-num">90%</p>
+            <p class="stat-label">Repeat client rate</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-body">
+        <p>Tredgold Digital Ltd is an independent digital marketing consultancy. We work with growth-stage businesses and established brands that want more from their marketing investment.</p>
+        <p>We don't offer everything to everyone. We go deep on search, paid media, and analytics — doing fewer things exceptionally well rather than spreading thin across every channel.</p>
+        <p>Every engagement starts with understanding your business, not just your brief. Strategy first, execution second, results always.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <p class="section-label">Get in Touch</p>
+    <div class="contact-inner">
+      <div>
+        <h2 class="contact-heading">Let's Talk<br>Strategy.</h2>
+        <div class="contact-detail">
+          <p>Email</p>
+          <p><a href="mailto:hello@tredgolddigital.com">hello@tredgolddigital.com</a></p>
+          <br>
+          <p>Based in</p>
+          <p>Bramhope, United Kingdom</p>
+        </div>
+      </div>
+
+      <div>
+        <!-- Netlify form -->
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none;"><input name="bot-field" /></p>
+
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Acme Ltd" />
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service of Interest</label>
+            <select id="service" name="service">
+              <option value="">Select a service</option>
+              <option value="analytics">Analytics &amp; CRO</option>
+              <option value="paid">Paid Media</option>
+              <option value="seo">SEO &amp; Content</option>
+              <option value="social">Social Media</option>
+              <option value="analytics">Web Design</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project…" required></textarea>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit">Send Message →</button>
+          </div>
+        </form>
+        <p class="form-success" id="formSuccess">Message received — we'll be in touch shortly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">Tredgold Digital Ltd</span>
+    <span>© <span id="yr"></span> · All rights reserved</span>
+    <span>Bramhope, UK</span>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Show success message if Netlify redirects back with ?success
+    if (window.location.search.includes('success')) {
+      document.querySelector('form').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }
+
+    // Scroll-triggered fade-in for sections
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.service-card, .about-inner, .contact-inner').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
