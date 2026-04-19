@@ -1,9 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tredgold Digital — Automation for Small Service Businesses</title>
+
+  <!-- Primary SEO -->
+  <title>Automation for Small Businesses | Tredgold Digital — Leeds, UK</title>
+  <meta name="description" content="Tredgold Digital builds simple automation systems for small service businesses in the UK. Missed call recovery, online booking, deposit collection and more. Set up for you in under 7 days. Based in Leeds." />
+  <meta name="keywords" content="automation for small businesses, small business automation UK, missed call recovery, booking system for service businesses, digital automation Leeds, automation for tradespeople, automated booking system UK" />
+  <link rel="canonical" href="https://www.tredgolddigital.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.tredgolddigital.com/" />
+  <meta property="og:title" content="Automation for Small Businesses | Tredgold Digital" />
+  <meta property="og:description" content="Simple automation systems for local service businesses. We handle missed calls, bookings, deposits, and reminders — so you never lose work while you're on the job." />
+  <meta property="og:site_name" content="Tredgold Digital Ltd" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Automation for Small Businesses | Tredgold Digital" />
+  <meta name="twitter:description" content="Simple automation systems for local service businesses. Missed call recovery, online booking, deposit collection. Live in under 7 days." />
+
+  <!-- Structured Data: LocalBusiness + Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.tredgolddigital.com/#business",
+        "name": "Tredgold Digital Ltd",
+        "url": "https://www.tredgolddigital.com/",
+        "email": "hello@tredgolddigital.com",
+        "description": "Tredgold Digital provides automation systems for small businesses across the UK, including missed call recovery, online booking, deposit collection, and automated reminders for local service businesses.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Leeds",
+          "addressRegion": "West Yorkshire",
+          "addressCountry": "GB"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "knowsAbout": ["Business automation", "Missed call recovery", "Online booking systems", "Small business automation"],
+        "sameAs": []
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.tredgolddigital.com/#service",
+        "name": "Automation for Small Businesses",
+        "provider": { "@id": "https://www.tredgolddigital.com/#business" },
+        "description": "We design and build simple digital automation systems for small service businesses — including missed call SMS recovery, online booking forms, deposit collection, automated reminders, and lead tracking dashboards.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Automation Packages",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "name": "Missed Call Recovery",
+              "description": "Instant SMS response when you miss a call. From £500 setup, £49–£69/month.",
+              "price": "500",
+              "priceCurrency": "GBP"
+            },
+            {
+              "@type": "Offer",
+              "name": "Online Booking System",
+              "description": "Online booking form, enquiry capture, automated confirmation and lead tracking. From £900 setup, £79–£119/month.",
+              "price": "900",
+              "priceCurrency": "GBP"
+            },
+            {
+              "@type": "Offer",
+              "name": "Booking + Deposits",
+              "description": "Everything in the booking system plus Stripe deposit collection to reduce no-shows. From £1,200 setup, £99–£149/month.",
+              "price": "1200",
+              "priceCurrency": "GBP"
+            },
+            {
+              "@type": "Offer",
+              "name": "Full Automation System",
+              "description": "Complete end-to-end automation including missed call recovery, booking, deposits, reminders, and lead tracking. From £1,500 setup, £129–£199/month.",
+              "price": "1500",
+              "priceCurrency": "GBP"
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is automation for small businesses?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Automation for small businesses means using software to handle repetitive tasks automatically — like responding to missed calls, sending booking confirmations, collecting deposits, and following up with leads — without you having to do it manually."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How quickly can you set up an automation system for my business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most systems are live within 7 days. We handle all the setup, configuration, and testing — no technical knowledge is needed on your end."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What kinds of businesses do you work with?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We work exclusively with small service businesses — including car detailers, cleaners, gardeners, and tradespeople across the UK who rely on fast response times to win work."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I upgrade my package later?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — all packages are designed to grow with your business. You can start with missed call recovery and add booking, deposits, and full automation at any time."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -757,8 +887,8 @@
 <body>
 
   <!-- NAV -->
-  <nav>
-    <a href="#" class="nav-logo">Tredgold<span>.</span></a>
+  <nav aria-label="Main navigation">
+    <a href="#" class="nav-logo" aria-label="Tredgold Digital home">Tredgold<span>.</span></a>
     <ul class="nav-links">
       <li><a href="#how-it-works">How it works</a></li>
       <li><a href="#pricing">Pricing</a></li>
@@ -768,18 +898,20 @@
     <a href="#contact" class="nav-cta">Book a demo</a>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
+  <main>
 
-    <div class="hero-badge">
+  <!-- HERO -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <div class="hero-badge" aria-hidden="true">
       <span class="hero-badge-dot"></span>
       Digital automation for small service businesses
     </div>
 
     <h1>Turn missed enquiries into <em>booked jobs</em> automatically</h1>
 
-    <p class="hero-sub">We build simple automation systems for local service businesses that respond instantly to calls, messages, and enquiries — so you never lose work while you're busy.</p>
+    <p class="hero-sub">We build simple <strong>automation systems for small businesses</strong> in the UK that respond instantly to calls, messages, and enquiries — so you never lose work while you're busy.</p>
 
     <p class="hero-built-for">Built for detailers, cleaners, gardeners, and other service businesses that rely on fast response times to win work.</p>
 
@@ -790,50 +922,50 @@
   </section>
 
   <!-- PROOF BAR -->
-  <div class="proof-bar">
+  <div class="proof-bar" aria-label="Key features">
     <div class="proof-item">
-      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Responds in under 30 seconds
     </div>
     <div class="proof-item">
-      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Custom set up, for you — no tech skills needed
+      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Set up for you — no tech skills needed
     </div>
     <div class="proof-item">
-      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Live in under 7 days
     </div>
     <div class="proof-item">
-      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       Upgrade or cancel anytime
     </div>
   </div>
 
   <!-- HOW IT WORKS -->
-  <section class="section how-section" id="how-it-works">
+  <section class="section how-section" id="how-it-works" aria-labelledby="how-heading">
     <div class="section-inner">
       <span class="section-tag">How it works</span>
-      <h2 class="section-heading">Stop losing jobs while<br>you're on the job</h2>
-      <p class="section-sub">Most service businesses don't lose customers because of their work. They lose them in the gap between an enquiry coming in and a response going out.</p>
+      <h2 class="section-heading" id="how-heading">Stop losing jobs while you're on the job</h2>
+      <p class="section-sub">Most service businesses don't lose customers because of their work. They lose them in the gap between an enquiry coming in and a response going out. Our <strong>small business automation</strong> closes that gap instantly.</p>
 
       <div class="steps">
         <div class="step-card reveal">
-          <div class="step-num">1</div>
+          <div class="step-num" aria-hidden="true">1</div>
           <h3 class="step-title">Customer enquires</h3>
           <p class="step-desc">A potential customer calls, texts, or messages. You're on a job, driving, or simply can't get to the phone.</p>
         </div>
         <div class="step-card reveal">
-          <div class="step-num">2</div>
+          <div class="step-num" aria-hidden="true">2</div>
           <h3 class="step-title">System responds instantly</h3>
           <p class="step-desc">Your automation fires within seconds. The customer gets a professional, personalised reply — not hours later.</p>
         </div>
         <div class="step-card reveal">
-          <div class="step-num">3</div>
+          <div class="step-num" aria-hidden="true">3</div>
           <h3 class="step-title">Booking gets captured</h3>
           <p class="step-desc">They're directed to book, leave details, or pay a deposit — all without you lifting a finger.</p>
         </div>
         <div class="step-card reveal">
-          <div class="step-num">4</div>
+          <div class="step-num" aria-hidden="true">4</div>
           <h3 class="step-title">You stay in control</h3>
           <p class="step-desc">A clear dashboard shows every lead and booking. No chasing messages. No lost enquiries. Just work, ready for you.</p>
         </div>
@@ -842,11 +974,11 @@
   </section>
 
   <!-- PRICING -->
-  <section class="section pricing-section" id="pricing">
+  <section class="section pricing-section" id="pricing" aria-labelledby="pricing-heading">
     <div class="section-inner">
       <span class="section-tag">Pricing</span>
-      <h2 class="section-heading">Simple systems that grow<br>with your business</h2>
-      <p class="section-sub">Choose the level of automation you need. Every package is set up for you — no technical knowledge required. Upgrade anytime.</p>
+      <h2 class="section-heading" id="pricing-heading">Simple automation systems that grow with your business</h2>
+      <p class="section-sub">Choose the level of <strong>automation for your small business</strong>. Every package is set up for you — no technical knowledge required. Upgrade anytime.</p>
 
       <div class="pricing-grid">
 
@@ -942,43 +1074,43 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="section about-section" id="about">
+  <section class="section about-section" id="about" aria-labelledby="about-heading">
     <div class="section-inner">
       <div class="about-inner">
         <div>
           <span class="section-tag">About</span>
-          <h2 class="section-heading">Built for businesses that run on reputation</h2>
+          <h2 class="section-heading" id="about-heading">Built for businesses that run on reputation</h2>
           <div class="about-body reveal">
-            <p>Tredgold Digital is a Leeds-based automation consultancy working exclusively with small service businesses, and anyone else who wins work through fast response and word of mouth.</p>
-            <p>Most of our clients aren't losing customers because of their service. They're losing them in the gap between an enquiry coming in and a response going out. We close that gap with simple, reliable automation that works while you're on the job.</p>
+            <p>Tredgold Digital is a Leeds-based <strong>automation consultancy for small businesses</strong> — working exclusively with service businesses, and anyone who wins work through fast response and word of mouth.</p>
+            <p>Most of our clients aren't losing customers because of their service. They're losing them in the gap between an enquiry coming in and a response going out. We close that gap with simple, reliable <strong>automation for small businesses</strong> that works while you're on the job.</p>
             <p>We handle everything — setup, configuration, testing, and go-live. No technical knowledge needed. Once it's running, it runs. You focus on the work; the system handles the rest.</p>
             <p>We don't oversell, overcomplicate, or lock you into things you don't need. We start with what makes the biggest difference right now, and build from there.</p>
           </div>
         </div>
-        <div class="about-visual reveal">
+        <div class="about-visual reveal" aria-label="How our automation works in practice">
           <div class="about-visual-item">
-            <div class="about-visual-icon">📞</div>
+            <div class="about-visual-icon" aria-hidden="true">📞</div>
             <div class="about-visual-text">
               <strong>Missed call received</strong>
               <span>Automated SMS sent in under 30 seconds</span>
             </div>
           </div>
           <div class="about-visual-item">
-            <div class="about-visual-icon">📅</div>
+            <div class="about-visual-icon" aria-hidden="true">📅</div>
             <div class="about-visual-text">
               <strong>Booking confirmed</strong>
               <span>Customer books directly — no back-and-forth</span>
             </div>
           </div>
           <div class="about-visual-item">
-            <div class="about-visual-icon">💳</div>
+            <div class="about-visual-icon" aria-hidden="true">💳</div>
             <div class="about-visual-text">
               <strong>Deposit collected</strong>
               <span>Stripe payment processed, no-show risk removed</span>
             </div>
           </div>
           <div class="about-visual-item">
-            <div class="about-visual-icon">📊</div>
+            <div class="about-visual-icon" aria-hidden="true">📊</div>
             <div class="about-visual-text">
               <strong>Lead tracked</strong>
               <span>Everything logged in your dashboard</span>
@@ -989,14 +1121,39 @@
     </div>
   </section>
 
+  <!-- FAQ (hidden visually, present for schema reinforcement) -->
+  <section class="section" id="faq" aria-labelledby="faq-heading" style="background:var(--bg-subtle); padding-top:0;">
+    <div class="section-inner">
+      <h2 class="section-heading" id="faq-heading" style="margin-bottom:2rem;">Common questions about small business automation</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;">
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;">
+          <h3 style="font-family:'Sora',sans-serif;font-size:1rem;font-weight:600;margin-bottom:0.6rem;letter-spacing:-0.01em;">What is automation for small businesses?</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;">It means using software to handle repetitive tasks automatically — like responding to missed calls, confirming bookings, collecting deposits, and following up with leads — without doing it manually.</p>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;">
+          <h3 style="font-family:'Sora',sans-serif;font-size:1rem;font-weight:600;margin-bottom:0.6rem;letter-spacing:-0.01em;">How quickly can you set it up?</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;">Most systems are live within 7 days. We handle all the setup, configuration, and testing — no technical knowledge is needed on your end.</p>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;">
+          <h3 style="font-family:'Sora',sans-serif;font-size:1rem;font-weight:600;margin-bottom:0.6rem;letter-spacing:-0.01em;">What kinds of businesses do you work with?</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;">We work with small service businesses across the UK — car detailers, cleaners, gardeners, and tradespeople who rely on fast response times to win work.</p>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.75rem;">
+          <h3 style="font-family:'Sora',sans-serif;font-size:1rem;font-weight:600;margin-bottom:0.6rem;letter-spacing:-0.01em;">Can I upgrade my package later?</h3>
+          <p style="font-size:0.9rem;color:var(--text-muted);line-height:1.7;">Yes — all packages are designed to grow with your business. Start with missed call recovery and add booking, deposits, and full automation at any time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
-  <section class="section contact-section" id="contact">
+  <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
     <div class="section-inner">
       <div class="contact-inner">
         <div>
           <span class="section-tag">Get in touch</span>
-          <h2 class="section-heading">Book a free demo</h2>
-          <p class="section-sub">We'll walk you through what automation would look like for your business — no pressure, no jargon.</p>
+          <h2 class="section-heading" id="contact-heading">Book a free demo</h2>
+          <p class="section-sub">We'll walk you through what <strong>automation for your small business</strong> would look like in practice — no pressure, no jargon.</p>
           <div class="contact-detail">
             <p>Email: <a href="mailto:hello@tredgolddigital.com">hello@tredgolddigital.com</a></p>
             <p>Based in Leeds, UK</p>
@@ -1004,24 +1161,24 @@
         </div>
 
         <div class="form-card reveal">
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" aria-label="Book a demo">
             <input type="hidden" name="form-name" value="contact" />
             <p style="display:none;"><input name="bot-field" /></p>
 
             <div class="form-grid">
               <div class="form-group">
                 <label for="name">Full name</label>
-                <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
               </div>
 
               <div class="form-group">
                 <label for="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+                <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email" />
               </div>
 
               <div class="form-group full">
                 <label for="company">Business name</label>
-                <input type="text" id="company" name="company" placeholder="Smith's Car Detailing" />
+                <input type="text" id="company" name="company" placeholder="Smith's Car Detailing" autocomplete="organization" />
               </div>
 
               <div class="form-group full">
@@ -1046,12 +1203,14 @@
               <button type="submit" id="submitBtn">Book a demo →</button>
             </div>
           </form>
-          <p class="form-success" id="formSuccess">✓ Message received — we'll be in touch shortly.</p>
+          <p class="form-success" id="formSuccess" role="status">✓ Message received — we'll be in touch shortly.</p>
         </div>
 
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
