@@ -3,42 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tredgold Digital Ltd</title>
+  <title>Tredgold Digital — Automation for Small Service Businesses</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --black: #0a0a0a;
-      --white: #f5f5f0;
-      --mid: #888;
-      --border: #222;
+      --bg: #ffffff;
+      --bg-subtle: #f7f8fa;
+      --bg-card: #ffffff;
+      --text: #0f1117;
+      --text-muted: #6b7280;
+      --text-faint: #9ca3af;
+      --border: #e5e7eb;
+      --border-strong: #d1d5db;
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --accent-mid: #93c5fd;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.04);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --radius-pill: 100px;
     }
 
     html { scroll-behavior: smooth; }
 
     body {
-      background: var(--black);
-      color: var(--white);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 300;
-      cursor: crosshair;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-    }
-
-    /* ── NOISE OVERLAY ── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.6;
     }
 
     /* ── NAV ── */
@@ -49,387 +52,705 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.4rem 3rem;
+      padding: 0 2rem;
+      height: 64px;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
-      background: rgba(10,10,10,0.88);
-      backdrop-filter: blur(8px);
     }
 
     .nav-logo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.3rem;
-      letter-spacing: 0.12em;
-      color: var(--white);
+      font-family: 'Sora', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
       text-decoration: none;
+      letter-spacing: -0.01em;
     }
+
+    .nav-logo span { color: var(--accent); }
 
     .nav-links {
       display: flex;
-      gap: 2.4rem;
+      gap: 2rem;
       list-style: none;
     }
 
     .nav-links a {
-      color: var(--mid);
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      transition: color 0.2s;
+      font-size: 0.875rem;
+      font-weight: 400;
+      transition: color 0.15s;
     }
 
-    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1.25rem;
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-radius: var(--radius-pill);
+      transition: background 0.15s, box-shadow 0.15s;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: #1d4ed8;
+      box-shadow: 0 4px 12px rgba(37,99,235,0.35);
+    }
 
     /* ── HERO ── */
     .hero {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-      padding: 0 3rem 4rem;
-      border-bottom: 1px solid var(--border);
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 6rem;
       position: relative;
       overflow: hidden;
     }
 
-    .hero-grid-lines {
+    .hero-bg {
       position: absolute;
       inset: 0;
-      background-image:
-        linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
-      background-size: 80px 80px;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(37,99,235,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(37,99,235,0.04) 0%, transparent 60%);
       pointer-events: none;
     }
 
-    .hero-eyebrow {
-      font-size: 0.72rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin-bottom: 1.2rem;
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.9rem;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 500;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--accent-mid);
+      margin-bottom: 2rem;
       opacity: 0;
-      animation: fadeUp 0.8s 0.2s forwards;
+      animation: fadeUp 0.6s 0.1s forwards;
+    }
+
+    .hero-badge-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
     }
 
     h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(5rem, 14vw, 14rem);
-      line-height: 0.88;
-      letter-spacing: -0.01em;
-      color: var(--white);
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      max-width: 16ch;
       opacity: 0;
-      animation: fadeUp 0.9s 0.4s forwards;
+      animation: fadeUp 0.7s 0.2s forwards;
+    }
+
+    h1 em {
+      font-style: normal;
+      color: var(--accent);
     }
 
     .hero-sub {
-      margin-top: 2.4rem;
-      max-width: 38ch;
-      font-size: 1rem;
-      font-weight: 300;
-      color: var(--mid);
-      line-height: 1.65;
+      margin-top: 1.5rem;
+      max-width: 52ch;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      font-weight: 400;
       opacity: 0;
-      animation: fadeUp 0.9s 0.65s forwards;
+      animation: fadeUp 0.7s 0.35s forwards;
+    }
+
+    .hero-built-for {
+      margin-top: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--text-faint);
+      opacity: 0;
+      animation: fadeUp 0.7s 0.45s forwards;
     }
 
     .hero-cta {
-      margin-top: 2.8rem;
+      margin-top: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      justify-content: center;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.55s forwards;
+    }
+
+    .btn-primary {
       display: inline-flex;
       align-items: center;
-      gap: 0.8rem;
-      opacity: 0;
-      animation: fadeUp 0.9s 0.85s forwards;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 0.85rem 2.2rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 1px solid var(--white);
-      color: var(--black);
-      background: var(--white);
-      transition: background 0.22s, color 0.22s;
-    }
-
-    .btn:hover { background: transparent; color: var(--white); }
-
-    .btn-ghost {
-      background: transparent;
-      color: var(--white);
-    }
-
-    .btn-ghost:hover { background: var(--white); color: var(--black); }
-
-    /* ── TICKER ── */
-    .ticker-wrap {
-      overflow: hidden;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 0.95rem 0;
-      background: var(--black);
-    }
-
-    .ticker {
-      display: flex;
-      gap: 3rem;
-      animation: ticker 22s linear infinite;
-      white-space: nowrap;
-    }
-
-    .ticker span {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1rem;
-      letter-spacing: 0.18em;
-      color: var(--mid);
-    }
-
-    .ticker span.dot { color: var(--white); }
-
-    @keyframes ticker {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
-    }
-
-    /* ── SERVICES ── */
-    .section { padding: 7rem 3rem; border-bottom: 1px solid var(--border); }
-
-    .section-label {
-      font-size: 0.68rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin-bottom: 4rem;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .service-card {
-      padding: 2.8rem 2.2rem;
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      transition: background 0.22s;
-    }
-
-    .service-card:last-child { border-right: none; }
-
-    .service-card:hover { background: rgba(255,255,255,0.03); }
-
-    .service-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 0.85rem;
-      letter-spacing: 0.14em;
-      color: var(--mid);
-      margin-bottom: 1.4rem;
-    }
-
-    .service-title {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2rem;
-      letter-spacing: 0.04em;
-      margin-bottom: 0.9rem;
-    }
-
-    .service-desc {
+      gap: 0.4rem;
+      padding: 0.75rem 1.75rem;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
       font-size: 0.9rem;
-      color: var(--mid);
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: var(--radius-pill);
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s, box-shadow 0.15s, transform 0.1s;
+      box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.75rem 1.75rem;
+      background: transparent;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-strong);
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s, transform 0.1s;
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-subtle);
+      border-color: var(--text-muted);
+      transform: translateY(-1px);
+    }
+
+    /* ── PROOF BAR ── */
+    .proof-bar {
+      background: var(--bg-subtle);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .proof-icon {
+      width: 16px; height: 16px;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ── SECTIONS ── */
+    .section { padding: 6rem 2rem; }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-heading {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.75rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 52ch;
       line-height: 1.7;
     }
 
-    /* ── ABOUT ── */
-    .about-inner {
+    /* ── HOW IT WORKS ── */
+    .how-section { background: var(--bg); }
+
+    .steps {
+      margin-top: 4rem;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem 1.75rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .step-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+
+    .step-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+    }
+
+    .step-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── PRICING ── */
+    .pricing-section { background: var(--bg-subtle); }
+
+    .pricing-grid {
+      margin-top: 3.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
       align-items: start;
     }
 
-    .about-heading {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3rem, 6vw, 5.5rem);
-      line-height: 0.9;
-      letter-spacing: 0.01em;
-    }
-
-    .about-body {
-      font-size: 1rem;
-      color: var(--mid);
-      line-height: 1.8;
-    }
-
-    .about-body p + p { margin-top: 1.2rem; }
-
-    .stat-row {
+    .pricing-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
       display: flex;
-      gap: 4rem;
-      margin-top: 3.5rem;
-      padding-top: 2.5rem;
+      flex-direction: column;
+      transition: box-shadow 0.2s, transform 0.2s;
+      position: relative;
+    }
+
+    .pricing-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .pricing-card.featured {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent), var(--shadow-md);
+    }
+
+    .pricing-card.featured:hover {
+      box-shadow: 0 0 0 1px var(--accent), var(--shadow-lg);
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 0.25rem 0.8rem;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+    }
+
+    .pricing-tier {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 0.4rem;
+    }
+
+    .pricing-name {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.02em;
+    }
+
+    .pricing-tagline {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .pricing-price-block {
+      padding: 1.25rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-setup {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .pricing-monthly {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    .pricing-includes-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 0.75rem;
+    }
+
+    .pricing-features {
+      list-style: none;
+      flex: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-features li {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      padding: 0.4rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      line-height: 1.5;
+    }
+
+    .pricing-features li::before {
+      content: '';
+      display: block;
+      width: 16px; height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Ccircle cx='8' cy='8' r='7' stroke='%232563eb' stroke-width='1.5'/%3E%3Cpath d='M5 8l2 2 4-4' stroke='%232563eb' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .pricing-best-for {
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      line-height: 1.55;
+      padding-top: 1rem;
       border-top: 1px solid var(--border);
     }
 
-    .stat-num {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 3.5rem;
-      line-height: 1;
+    .pricing-best-for strong {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.25rem;
     }
 
-    .stat-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin-top: 0.3rem;
+    /* ── ABOUT ── */
+    .about-section { background: var(--bg); }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-body p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .about-body p:last-child { margin-bottom: 0; }
+
+    .about-visual {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .about-visual-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .about-visual-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1rem;
+    }
+
+    .about-visual-text strong {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    .about-visual-text span {
+      font-size: 0.8rem;
+      color: var(--text-muted);
     }
 
     /* ── CONTACT ── */
+    .contact-section { background: var(--bg-subtle); }
+
     .contact-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 6rem;
+      gap: 5rem;
       align-items: start;
     }
 
-    .contact-heading {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: clamp(3rem, 6vw, 5rem);
-      line-height: 0.9;
-    }
-
     .contact-detail {
-      margin-top: 2.5rem;
-      font-size: 0.8rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--mid);
+      margin-top: 1.5rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
       line-height: 2;
     }
 
-    .contact-detail a { color: var(--white); text-decoration: none; }
+    .contact-detail a { color: var(--accent); text-decoration: none; }
     .contact-detail a:hover { text-decoration: underline; }
 
     /* ── FORM ── */
-    form { display: flex; flex-direction: column; gap: 0; }
+    .form-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
 
     .form-group {
-      border-bottom: 1px solid var(--border);
-      padding: 1.5rem 0;
       display: flex;
       flex-direction: column;
       gap: 0.4rem;
     }
 
+    .form-group.full { grid-column: 1 / -1; }
+
     .form-group label {
-      font-size: 0.65rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--mid);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text);
     }
 
     .form-group input,
     .form-group textarea,
     .form-group select {
-      background: transparent;
-      border: none;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
       outline: none;
-      color: var(--white);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 1rem;
-      font-weight: 300;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
       width: 100%;
+      padding: 0.65rem 0.9rem;
       resize: none;
       appearance: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
     }
 
     .form-group input::placeholder,
-    .form-group textarea::placeholder { color: #444; }
+    .form-group textarea::placeholder { color: var(--text-faint); }
 
-    .form-group select option { background: var(--black); }
-
-    .form-submit {
-      margin-top: 2.4rem;
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+      background: var(--bg);
     }
+
+    .form-group select option { background: var(--bg); }
+
+    .form-submit { margin-top: 1.25rem; }
 
     .form-submit button {
-      all: unset;
-      display: inline-block;
-      padding: 1rem 2.8rem;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.78rem;
+      width: 100%;
+      padding: 0.8rem 1.75rem;
+      background: var(--accent);
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
       font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      background: var(--white);
-      color: var(--black);
-      border: 1px solid var(--white);
+      border: none;
+      border-radius: var(--radius-pill);
       cursor: pointer;
-      transition: background 0.22s, color 0.22s;
+      transition: background 0.15s, box-shadow 0.15s, transform 0.1s;
+      box-shadow: 0 4px 14px rgba(37,99,235,0.3);
     }
 
-    .form-submit button:hover { background: transparent; color: var(--white); }
+    .form-submit button:hover {
+      background: #1d4ed8;
+      box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+      transform: translateY(-1px);
+    }
 
-    /* ── SUCCESS MESSAGE ── */
+    .form-submit button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
     .form-success {
       display: none;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1.8rem;
-      letter-spacing: 0.06em;
-      color: var(--white);
-      margin-top: 2rem;
+      text-align: center;
+      padding: 2rem;
+      font-size: 1rem;
+      color: var(--text);
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity 0.4s;
     }
+
+    .form-success.visible { display: block; opacity: 1; }
 
     /* ── FOOTER ── */
     footer {
-      padding: 2.2rem 3rem;
+      background: var(--text);
+      color: rgba(255,255,255,0.45);
+      padding: 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.72rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--mid);
+      font-size: 0.8rem;
     }
 
     .footer-logo {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 1rem;
-      letter-spacing: 0.12em;
-      color: var(--white);
+      font-family: 'Sora', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #fff;
     }
+
+    .footer-logo span { color: var(--accent-mid); }
 
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(28px); }
+      from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      nav { padding: 1.2rem 1.4rem; }
+      nav { padding: 0 1.25rem; }
       .nav-links { display: none; }
-      .hero { padding: 0 1.4rem 3rem; }
-      .section { padding: 5rem 1.4rem; }
+      .hero { padding: 7rem 1.25rem 4rem; }
+      .section { padding: 4rem 1.25rem; }
       .about-inner,
-      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
-      footer { flex-direction: column; gap: 1rem; text-align: center; }
+      .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .form-grid { grid-template-columns: 1fr; }
+      .proof-bar { gap: 1.25rem; justify-content: flex-start; padding: 1rem 1.25rem; }
+      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
     }
   </style>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRRVWXJF0T"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-RRRVWXJF0T');
   </script>
 </head>
@@ -437,199 +758,349 @@
 
   <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo">TD</a>
+    <a href="#" class="nav-logo">Tredgold<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
+      <li><a href="#how-it-works">How it works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#contact" class="btn" style="font-size:0.7rem;padding:0.6rem 1.4rem;">Get in touch</a>
+    <a href="#contact" class="nav-cta">Book a demo</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-grid-lines"></div>
-    <p class="hero-eyebrow">Digital Marketing · Bramhope, UK</p>
-    <h1>Tredgold<br>Digital</h1>
-    <p class="hero-sub">Specialising in Digital Marketing for small business. Optimising your business' online presence.</p>
+    <div class="hero-bg"></div>
+
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Digital automation for small service businesses
+    </div>
+
+    <h1>Turn missed enquiries into <em>booked jobs</em> automatically</h1>
+
+    <p class="hero-sub">We build simple automation systems for local service businesses that respond instantly to calls, messages, and enquiries — so you never lose work while you're busy.</p>
+
+    <p class="hero-built-for">Built for detailers, cleaners, gardeners, and other service businesses that rely on fast response times to win work.</p>
+
     <div class="hero-cta">
-      <a href="#services" class="btn">Our Services</a>
-      <a href="#contact" class="btn btn-ghost">Start a Project</a>
+      <a href="#contact" class="btn-primary">Book a free demo →</a>
+      <a href="#how-it-works" class="btn-secondary">See how it works</a>
     </div>
   </section>
 
-  <!-- TICKER -->
-  <div class="ticker-wrap">
-    <div class="ticker">
-      <span>SEO</span><span class="dot">✦</span>
-      <span>Paid Media</span><span class="dot">✦</span>
-      <span>Content Strategy</span><span class="dot">✦</span>
-      <span>Social Media</span><span class="dot">✦</span>
-      <span>Analytics</span><span class="dot">✦</span>
-      <span>Email Marketing</span><span class="dot">✦</span>
-      <span>Brand Strategy</span><span class="dot">✦</span>
-      <span>Web Optimisation</span><span class="dot">✦</span>
-      <!-- duplicate for seamless loop -->
-      <span>SEO</span><span class="dot">✦</span>
-      <span>Paid Media</span><span class="dot">✦</span>
-      <span>Content Strategy</span><span class="dot">✦</span>
-      <span>Social Media</span><span class="dot">✦</span>
-      <span>Analytics</span><span class="dot">✦</span>
-      <span>Email Marketing</span><span class="dot">✦</span>
-      <span>Brand Strategy</span><span class="dot">✦</span>
-      <span>Web Optimisation</span><span class="dot">✦</span>
+  <!-- PROOF BAR -->
+  <div class="proof-bar">
+    <div class="proof-item">
+      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Responds in under 30 seconds
+    </div>
+    <div class="proof-item">
+      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Custom set up, for you — no tech skills needed
+    </div>
+    <div class="proof-item">
+      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Live in under 7 days
+    </div>
+    <div class="proof-item">
+      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Upgrade or cancel anytime
     </div>
   </div>
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <p class="section-label">What We Do</p>
-    <div class="services-grid">
-      <div class="service-card">
-        <p class="service-num">01</p>
-        <h3 class="service-title">SEO & Content</h3>
-        <p class="service-desc">Organic visibility that compounds over time. Keyword strategy, technical audits, and content that earns rankings.</p>
+  <!-- HOW IT WORKS -->
+  <section class="section how-section" id="how-it-works">
+    <div class="section-inner">
+      <span class="section-tag">How it works</span>
+      <h2 class="section-heading">Stop losing jobs while<br>you're on the job</h2>
+      <p class="section-sub">Most service businesses don't lose customers because of their work. They lose them in the gap between an enquiry coming in and a response going out.</p>
+
+      <div class="steps">
+        <div class="step-card reveal">
+          <div class="step-num">1</div>
+          <h3 class="step-title">Customer enquires</h3>
+          <p class="step-desc">A potential customer calls, texts, or messages. You're on a job, driving, or simply can't get to the phone.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-num">2</div>
+          <h3 class="step-title">System responds instantly</h3>
+          <p class="step-desc">Your automation fires within seconds. The customer gets a professional, personalised reply — not hours later.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-num">3</div>
+          <h3 class="step-title">Booking gets captured</h3>
+          <p class="step-desc">They're directed to book, leave details, or pay a deposit — all without you lifting a finger.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-num">4</div>
+          <h3 class="step-title">You stay in control</h3>
+          <p class="step-desc">A clear dashboard shows every lead and booking. No chasing messages. No lost enquiries. Just work, ready for you.</p>
+        </div>
       </div>
-      <div class="service-card">
-        <p class="service-num">02</p>
-        <h3 class="service-title">Paid Media</h3>
-        <p class="service-desc">Google, Meta, LinkedIn. Precise targeting, relentless optimisation, and budgets that work harder than you do.</p>
-      </div>
-      <div class="service-card">
-        <p class="service-num">03</p>
-        <h3 class="service-title">Social Media</h3>
-        <p class="service-desc">Strategy and content that builds real audiences. From creative direction to scheduling and community management.</p>
-      </div>
-      <div class="service-card">
-        <p class="service-num">04</p>
-        <h3 class="service-title">Analytics & CRO</h3>
-        <p class="service-desc">Data you can act on. We set up the right tracking, surface what matters, and convert more of your existing traffic.</p>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section pricing-section" id="pricing">
+    <div class="section-inner">
+      <span class="section-tag">Pricing</span>
+      <h2 class="section-heading">Simple systems that grow<br>with your business</h2>
+      <p class="section-sub">Choose the level of automation you need. Every package is set up for you — no technical knowledge required. Upgrade anytime.</p>
+
+      <div class="pricing-grid">
+
+        <div class="pricing-card reveal">
+          <p class="pricing-tier">Starter</p>
+          <h3 class="pricing-name">Missed Call Recovery</h3>
+          <p class="pricing-tagline">Stop losing enquiries immediately.</p>
+          <div class="pricing-price-block">
+            <p class="pricing-setup">From £500 setup</p>
+            <p class="pricing-monthly">then £49–£69 / month</p>
+          </div>
+          <p class="pricing-includes-label">Includes</p>
+          <ul class="pricing-features">
+            <li>Instant SMS when you miss a call</li>
+            <li>Custom message setup</li>
+            <li>Call handling configuration</li>
+            <li>System testing + go-live</li>
+          </ul>
+          <div class="pricing-best-for">
+            <strong>Best for</strong>
+            Detailers, cleaners, and gardeners currently missing calls or DMs
+          </div>
+        </div>
+
+        <div class="pricing-card featured reveal">
+          <div class="pricing-badge">Most popular</div>
+          <p class="pricing-tier">Booking System</p>
+          <h3 class="pricing-name">Online Booking</h3>
+          <p class="pricing-tagline">Move from messages to structured bookings.</p>
+          <div class="pricing-price-block">
+            <p class="pricing-setup">From £900–£1,500 setup</p>
+            <p class="pricing-monthly">then £79–£119 / month</p>
+          </div>
+          <p class="pricing-includes-label">Everything in Starter, plus</p>
+          <ul class="pricing-features">
+            <li>Simple online booking form</li>
+            <li>Enquiry capture page</li>
+            <li>Automated booking confirmation</li>
+            <li>Lead tracking dashboard</li>
+          </ul>
+          <div class="pricing-best-for">
+            <strong>Best for</strong>
+            Businesses that want to reduce back-and-forth messaging
+          </div>
+        </div>
+
+        <div class="pricing-card reveal">
+          <p class="pricing-tier">Booking + Deposits</p>
+          <h3 class="pricing-name">Secure Bookings</h3>
+          <p class="pricing-tagline">Fewer no-shows, more committed customers.</p>
+          <div class="pricing-price-block">
+            <p class="pricing-setup">From £1,200–£1,800 setup</p>
+            <p class="pricing-monthly">then £99–£149 / month</p>
+          </div>
+          <p class="pricing-includes-label">Everything in Booking, plus</p>
+          <ul class="pricing-features">
+            <li>Deposit collection (fixed or %)</li>
+            <li>Stripe payment integration</li>
+            <li>Booking confirmation with payment status</li>
+            <li>No-show reduction system</li>
+          </ul>
+          <div class="pricing-best-for">
+            <strong>Best for</strong>
+            Busy providers with high demand or frequent cancellations
+          </div>
+        </div>
+
+        <div class="pricing-card reveal">
+          <p class="pricing-tier">Complete System</p>
+          <h3 class="pricing-name">Full Automation</h3>
+          <p class="pricing-tagline">Everything automated, end-to-end.</p>
+          <div class="pricing-price-block">
+            <p class="pricing-setup">From £1,500–£2,500 setup</p>
+            <p class="pricing-monthly">then £129–£199 / month</p>
+          </div>
+          <p class="pricing-includes-label">Includes everything</p>
+          <ul class="pricing-features">
+            <li>Missed call SMS recovery</li>
+            <li>Full booking system</li>
+            <li>Deposit collection</li>
+            <li>Automated reminders</li>
+            <li>Lead tracking + dashboard</li>
+            <li>Fully integrated customer journey</li>
+          </ul>
+          <div class="pricing-best-for">
+            <strong>Best for</strong>
+            High-volume detailers, cleaners, and established service businesses
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- ABOUT -->
-  <section class="section" id="about">
-    <p class="section-label">About</p>
-    <div class="about-inner">
-      <div>
-        <h2 class="about-heading"><br>No nonsense.<br>Just results.</h2>
-        <div class="stat-row">
-          <div>
-            <p class="stat-num">8+</p>
-            <p class="stat-label">Years in market</p>
-          </div>
-          <div>
-            <p class="stat-num">60+</p>
-            <p class="stat-label">Clients served</p>
-          </div>
-          <div>
-            <p class="stat-num">90%</p>
-            <p class="stat-label">Repeat client rate</p>
+  <section class="section about-section" id="about">
+    <div class="section-inner">
+      <div class="about-inner">
+        <div>
+          <span class="section-tag">About</span>
+          <h2 class="section-heading">Built for businesses that run on reputation</h2>
+          <div class="about-body reveal">
+            <p>Tredgold Digital is a Leeds-based automation consultancy working exclusively with small service businesses, and anyone else who wins work through fast response and word of mouth.</p>
+            <p>Most of our clients aren't losing customers because of their service. They're losing them in the gap between an enquiry coming in and a response going out. We close that gap with simple, reliable automation that works while you're on the job.</p>
+            <p>We handle everything — setup, configuration, testing, and go-live. No technical knowledge needed. Once it's running, it runs. You focus on the work; the system handles the rest.</p>
+            <p>We don't oversell, overcomplicate, or lock you into things you don't need. We start with what makes the biggest difference right now, and build from there.</p>
           </div>
         </div>
-      </div>
-      <div class="about-body">
-        <p>Tredgold Digital Ltd is an independent digital marketing consultancy. We work with growth-stage businesses and established brands that want more from their marketing investment.</p>
-        <p>We don't offer everything to everyone. We go deep on search, paid media, and analytics — doing fewer things exceptionally well rather than spreading thin across every channel.</p>
-        <p>Every engagement starts with understanding your business, not just your brief. Strategy first, execution second, results always.</p>
+        <div class="about-visual reveal">
+          <div class="about-visual-item">
+            <div class="about-visual-icon">📞</div>
+            <div class="about-visual-text">
+              <strong>Missed call received</strong>
+              <span>Automated SMS sent in under 30 seconds</span>
+            </div>
+          </div>
+          <div class="about-visual-item">
+            <div class="about-visual-icon">📅</div>
+            <div class="about-visual-text">
+              <strong>Booking confirmed</strong>
+              <span>Customer books directly — no back-and-forth</span>
+            </div>
+          </div>
+          <div class="about-visual-item">
+            <div class="about-visual-icon">💳</div>
+            <div class="about-visual-text">
+              <strong>Deposit collected</strong>
+              <span>Stripe payment processed, no-show risk removed</span>
+            </div>
+          </div>
+          <div class="about-visual-item">
+            <div class="about-visual-icon">📊</div>
+            <div class="about-visual-text">
+              <strong>Lead tracked</strong>
+              <span>Everything logged in your dashboard</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="section" id="contact">
-    <p class="section-label">Get in Touch</p>
-    <div class="contact-inner">
-      <div>
-        <h2 class="contact-heading">Let's Talk<br>Strategy.</h2>
-        <div class="contact-detail">
-          <p>Email</p>
-          <p><a href="mailto:hello@tredgolddigital.com">hello@tredgolddigital.com</a></p>
-          <br>
-          <p>Based in</p>
-          <p>Bramhope, United Kingdom</p>
+  <section class="section contact-section" id="contact">
+    <div class="section-inner">
+      <div class="contact-inner">
+        <div>
+          <span class="section-tag">Get in touch</span>
+          <h2 class="section-heading">Book a free demo</h2>
+          <p class="section-sub">We'll walk you through what automation would look like for your business — no pressure, no jargon.</p>
+          <div class="contact-detail">
+            <p>Email: <a href="mailto:hello@tredgolddigital.com">hello@tredgolddigital.com</a></p>
+            <p>Based in Leeds, UK</p>
+          </div>
         </div>
-      </div>
 
-      <div>
-        <!-- Netlify form -->
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
-          <input type="hidden" name="form-name" value="contact" />
-          <p style="display:none;"><input name="bot-field" /></p>
+        <div class="form-card reveal">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none;"><input name="bot-field" /></p>
 
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Jane Smith" required />
-          </div>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+              </div>
 
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="jane@company.com" required />
-          </div>
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+              </div>
 
-          <div class="form-group">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" placeholder="Acme Ltd" />
-          </div>
+              <div class="form-group full">
+                <label for="company">Business name</label>
+                <input type="text" id="company" name="company" placeholder="Smith's Car Detailing" />
+              </div>
 
-          <div class="form-group">
-            <label for="service">Service of Interest</label>
-            <select id="service" name="service">
-              <option value="">Select a service</option>
-              <option value="analytics">Analytics &amp; CRO</option>
-              <option value="paid">Paid Media</option>
-              <option value="seo">SEO &amp; Content</option>
-              <option value="social">Social Media</option>
-              <option value="analytics">Web Design</option>
-              <option value="other">Other / Not Sure</option>
-            </select>
-          </div>
+              <div class="form-group full">
+                <label for="service">I'm interested in</label>
+                <select id="service" name="service">
+                  <option value="">Select a package</option>
+                  <option value="starter">Starter — Missed Call Recovery</option>
+                  <option value="booking">Booking System</option>
+                  <option value="deposits">Booking + Deposits</option>
+                  <option value="complete">Complete Automation System</option>
+                  <option value="other">Not sure yet</option>
+                </select>
+              </div>
 
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project…" required></textarea>
-          </div>
+              <div class="form-group full">
+                <label for="message">Tell us about your business</label>
+                <textarea id="message" name="message" rows="4" placeholder="What kind of service do you run, and what's the main problem you're trying to solve?" required></textarea>
+              </div>
+            </div>
 
-          <div class="form-submit">
-            <button type="submit">Send Message →</button>
-          </div>
-        </form>
-        <p class="form-success" id="formSuccess">Message received — we'll be in touch shortly.</p>
+            <div class="form-submit">
+              <button type="submit" id="submitBtn">Book a demo →</button>
+            </div>
+          </form>
+          <p class="form-success" id="formSuccess">✓ Message received — we'll be in touch shortly.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <span class="footer-logo">Tredgold Digital Ltd</span>
-    <span>© <span id="yr"></span> · All rights reserved</span>
-    <span>Bramhope, UK</span>
+    <span class="footer-logo">Tredgold<span>.</span></span>
+    <span>© <span id="yr"></span> Tredgold Digital Ltd · All rights reserved</span>
+    <span>Leeds, UK</span>
   </footer>
 
   <script>
     document.getElementById('yr').textContent = new Date().getFullYear();
 
-    // Show success message if Netlify redirects back with ?success
-    if (window.location.search.includes('success')) {
-      document.querySelector('form').style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
-    }
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successMsg = document.getElementById('formSuccess');
 
-    // Scroll-triggered fade-in for sections
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+      try {
+        const formData = new FormData(form);
+        await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(formData).toString(),
+        });
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+        requestAnimationFrame(() => successMsg.classList.add('visible'));
+      } catch (err) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Book a demo →';
+        alert('Something went wrong — please try again or email us directly.');
+      }
+    });
+
+    // Staggered scroll reveal
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          e.target.style.opacity = '1';
-          e.target.style.transform = 'translateY(0)';
+          setTimeout(() => e.target.classList.add('in-view'), e.target.dataset.delay || 0);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.service-card, .about-inner, .contact-inner').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(24px)';
-      el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+    document.querySelectorAll('.reveal').forEach((el) => {
+      const siblings = Array.from(el.parentElement.querySelectorAll('.reveal'));
+      const idx = siblings.indexOf(el);
+      el.dataset.delay = idx * 80;
       observer.observe(el);
     });
   </script>
