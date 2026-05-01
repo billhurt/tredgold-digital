@@ -4,52 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>More Work, Better Clients | Tredgold Digital — Leeds, UK</title>
-  <meta name="description" content="Tredgold Digital helps service businesses get found on Google, win more enquiries, and capture every lead automatically — without advertising. Based in Leeds." />
-  <meta name="keywords" content="automation for small businesses, small business automation UK, missed call recovery, booking system for service businesses, digital automation Leeds, Google Business Profile optimisation, website for tradespeople" />
+  <title>Digital Presence for Service Businesses | Tredgold Digital — Leeds, UK</title>
+  <meta name="description" content="Tredgold Digital builds websites and automation systems for service businesses across the UK — from sole traders who need more enquiries, to established businesses that need a digital presence that matches their reputation." />
   <link rel="canonical" href="https://www.tredgolddigital.com/" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.tredgolddigital.com/" />
-  <meta property="og:title" content="More Work, Better Clients | Tredgold Digital" />
-  <meta property="og:description" content="We help service businesses get found on Google, capture every enquiry, and keep their best clients — without spending money on advertising." />
+  <meta property="og:title" content="Digital Presence for Service Businesses | Tredgold Digital" />
+  <meta property="og:description" content="We build websites and automation systems for service businesses — whether you need more enquiries, or a digital presence that reflects the quality of your work." />
   <meta property="og:site_name" content="Tredgold Digital Ltd" />
   <meta property="og:locale" content="en_GB" />
   <meta property="og:image" content="https://www.tredgolddigital.com/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:image" content="https://www.tredgolddigital.com/og-image.png" />
-
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="More Work, Better Clients | Tredgold Digital" />
-  <meta name="twitter:description" content="Google profile, fast website, missed call SMS, online booking and deposit collection. Set up for you in under 7 days." />
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://www.tredgolddigital.com/#business",
-        "name": "Tredgold Digital Ltd",
-        "url": "https://www.tredgolddigital.com/",
-        "email": "hello@tredgolddigital.com",
-        "description": "Tredgold Digital helps small service businesses get found on Google, capture every enquiry, and keep their best clients — without advertising.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Leeds",
-          "addressRegion": "West Yorkshire",
-          "addressCountry": "GB"
-        },
-        "areaServed": { "@type": "Country", "name": "United Kingdom" }
-      }
-    ]
+    "@graph": [{
+      "@type": "LocalBusiness",
+      "@id": "https://www.tredgolddigital.com/#business",
+      "name": "Tredgold Digital Ltd",
+      "url": "https://www.tredgolddigital.com/",
+      "email": "hello@tredgolddigital.com",
+      "description": "Tredgold Digital builds websites and automation systems for service businesses.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Leeds",
+        "addressRegion": "West Yorkshire",
+        "addressCountry": "GB"
+      },
+      "areaServed": { "@type": "Country", "name": "United Kingdom" }
+    }]
   }
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
   <style>
@@ -57,22 +48,16 @@
 
     :root {
       --bg: #ffffff;
-      --bg-subtle: #f7f8fa;
-      --bg-card: #ffffff;
-      --text: #0f1117;
-      --text-muted: #6b7280;
-      --text-faint: #9ca3af;
-      --border: #e5e7eb;
-      --border-strong: #d1d5db;
-      --accent: #2563eb;
-      --accent-light: #eff6ff;
-      --accent-mid: #93c5fd;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-      --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
-      --shadow-lg: 0 12px 40px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.04);
-      --radius: 12px;
-      --radius-sm: 8px;
-      --radius-pill: 100px;
+      --bg-off: #f9f9f8;
+      --text: #0d0d0d;
+      --text-mid: #3a3a3a;
+      --text-muted: #6b6b6b;
+      --text-faint: #a0a0a0;
+      --rule: #d8d8d4;
+      --rule-strong: #b0b0aa;
+      --accent: #1a56db;
+      --accent-subtle: #eef3fd;
+      --radius: 3px;
     }
 
     html { scroll-behavior: smooth; }
@@ -81,13 +66,13 @@
       background: var(--bg);
       color: var(--text);
       font-family: 'Inter', sans-serif;
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 15px;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
 
-    /* ── NAV ── */
+    /* ─── NAV ─── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -95,34 +80,36 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 2rem;
-      height: 64px;
-      background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
+      padding: 0 3rem;
+      height: 60px;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rule);
     }
 
     .nav-logo {
       font-family: 'Sora', sans-serif;
-      font-size: 1.05rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: var(--text);
       text-decoration: none;
-      letter-spacing: -0.01em;
+      letter-spacing: 0.01em;
     }
 
     .nav-logo span { color: var(--accent); }
 
     .nav-links {
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.875rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
       transition: color 0.15s;
     }
 
@@ -131,80 +118,61 @@
     .nav-cta {
       display: inline-flex;
       align-items: center;
-      padding: 0.5rem 1.25rem;
-      background: var(--accent);
+      padding: 0.45rem 1.1rem;
+      background: var(--text);
       color: #fff;
       text-decoration: none;
-      font-size: 0.875rem;
+      font-size: 0.78rem;
       font-weight: 500;
-      border-radius: var(--radius-pill);
-      transition: background 0.15s, box-shadow 0.15s;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      transition: background 0.15s;
     }
 
-    .nav-cta:hover {
-      background: #1d4ed8;
-      box-shadow: 0 4px 12px rgba(37,99,235,0.35);
-    }
+    .nav-cta:hover { background: var(--accent); }
 
-    /* ── HERO ── */
+    /* ─── HERO ─── */
     .hero {
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 8rem 2rem 6rem;
-      position: relative;
-      overflow: hidden;
+      padding: 8rem 3rem 5rem;
+      gap: 6rem;
+      border-bottom: 1px solid var(--rule);
     }
 
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(37,99,235,0.07) 0%, transparent 70%),
-        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(37,99,235,0.04) 0%, transparent 60%);
-      pointer-events: none;
-    }
+    .hero-left {}
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.35rem 0.9rem;
-      background: var(--accent-light);
-      color: var(--accent);
-      font-size: 0.8rem;
+    .hero-eyebrow {
+      font-size: 0.72rem;
       font-weight: 500;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--accent-mid);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-faint);
       margin-bottom: 2rem;
-      opacity: 0;
-      animation: fadeUp 0.6s 0.1s forwards;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
 
-    .hero-badge-dot {
-      width: 6px; height: 6px;
-      border-radius: 50%;
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
       background: var(--accent);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
     }
 
     h1 {
       font-family: 'Sora', sans-serif;
-      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
       font-weight: 700;
-      line-height: 1.05;
+      line-height: 1.06;
       letter-spacing: -0.03em;
       color: var(--text);
-      opacity: 0;
-      animation: fadeUp 0.7s 0.2s forwards;
+      margin-bottom: 2rem;
     }
 
     h1 em {
@@ -213,128 +181,130 @@
     }
 
     .hero-sub {
-      margin-top: 1.5rem;
-      max-width: 50ch;
-      font-size: 1.1rem;
+      font-size: 1rem;
       color: var(--text-muted);
-      line-height: 1.7;
-      opacity: 0;
-      animation: fadeUp 0.7s 0.35s forwards;
+      line-height: 1.75;
+      max-width: 42ch;
+      margin-bottom: 2.5rem;
     }
 
-    .hero-built-for {
-      margin-top: 0.75rem;
-      font-size: 0.85rem;
-      color: var(--text-faint);
-      opacity: 0;
-      animation: fadeUp 0.7s 0.45s forwards;
-    }
-
-    .hero-cta {
-      margin-top: 2.5rem;
+    .hero-actions {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
-      justify-content: center;
-      opacity: 0;
-      animation: fadeUp 0.7s 0.55s forwards;
+      gap: 1.5rem;
     }
 
+    .hero-right {
+      border-left: 1px solid var(--rule);
+      padding-left: 4rem;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0;
+    }
+
+    .hero-stat {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .hero-stat:first-child { border-top: 1px solid var(--rule); }
+
+    .hero-stat-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-stat-value {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-mid);
+      line-height: 1.4;
+    }
+
+    /* ─── BUTTONS ─── */
     .btn-primary {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.75rem 1.75rem;
-      background: var(--accent);
+      gap: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      background: var(--text);
       color: #fff;
       font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
       text-decoration: none;
-      border-radius: var(--radius-pill);
-      border: none;
+      border-radius: var(--radius);
+      border: 1px solid var(--text);
       cursor: pointer;
-      transition: background 0.15s, box-shadow 0.15s, transform 0.1s;
-      box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+      transition: background 0.15s, border-color 0.15s;
     }
 
     .btn-primary:hover {
-      background: #1d4ed8;
-      box-shadow: 0 6px 20px rgba(37,99,235,0.4);
-      transform: translateY(-1px);
+      background: var(--accent);
+      border-color: var(--accent);
     }
 
-    .btn-secondary {
+    .btn-ghost {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.75rem 1.75rem;
-      background: transparent;
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border-strong);
-      cursor: pointer;
-      transition: border-color 0.15s, background 0.15s, transform 0.1s;
-    }
-
-    .btn-secondary:hover {
-      background: var(--bg-subtle);
-      border-color: var(--text-muted);
-      transform: translateY(-1px);
-    }
-
-    /* ── PROOF BAR ── */
-    .proof-bar {
-      background: var(--bg-subtle);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 1rem 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-
-    .proof-item {
-      display: flex;
-      align-items: center;
       gap: 0.5rem;
-      font-size: 0.82rem;
+      padding: 0.7rem 1.5rem;
+      background: transparent;
       color: var(--text-muted);
-    }
-
-    .proof-icon {
-      width: 16px; height: 16px;
-      color: var(--accent);
-      flex-shrink: 0;
-    }
-
-    /* ── SECTIONS ── */
-    .section { padding: 6rem 2rem; }
-
-    .section-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .section-tag {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
+      text-decoration: none;
+      border-radius: var(--radius);
+      border: 1px solid var(--rule-strong);
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .btn-ghost:hover {
+      color: var(--text);
+      border-color: var(--text);
+    }
+
+    /* ─── SECTIONS ─── */
+    .section { padding: 7rem 3rem; }
+    .section-inner { max-width: 1120px; margin: 0 auto; }
+
+    .section-alt { background: var(--bg-off); }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 4rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 4rem;
+      align-items: start;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      padding-top: 0.4rem;
     }
 
     .section-heading {
       font-family: 'Sora', sans-serif;
-      font-size: clamp(1.8rem, 4vw, 2.75rem);
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
       font-weight: 700;
       letter-spacing: -0.025em;
       line-height: 1.15;
@@ -343,314 +313,339 @@
     }
 
     .section-sub {
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
-      max-width: 52ch;
-      line-height: 1.7;
+      max-width: 54ch;
+      line-height: 1.75;
     }
 
-    /* ── FUNNEL ── */
-    .funnel-section { background: var(--bg); }
+    /* ─── AUDIENCES ─── */
+    .audiences-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--rule);
+    }
 
-    .funnel-steps {
-      margin-top: 3.5rem;
+    .audience-card {
+      padding: 3rem;
+    }
+
+    .audience-card + .audience-card {
+      border-left: 1px solid var(--rule);
+    }
+
+    .audience-num {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 1.5rem;
+    }
+
+    .audience-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+    }
+
+    .audience-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .audience-bullets {
+      list-style: none;
+      border-top: 1px solid var(--rule);
+      padding-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .audience-bullets li {
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .audience-bullets li::before {
+      content: '—';
+      color: var(--accent);
+      flex-shrink: 0;
+      font-weight: 500;
+    }
+
+    /* ─── FUNNEL ─── */
+    .funnel-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 0;
-      position: relative;
+      border: 1px solid var(--rule);
     }
 
     .funnel-step {
-      text-align: center;
-      padding: 2rem 1.5rem;
-      position: relative;
+      padding: 2.5rem 2rem;
+      border-right: 1px solid var(--rule);
     }
 
-    .funnel-step:not(:last-child)::after {
-      content: '→';
-      position: absolute;
-      right: -8px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--accent);
-      font-size: 1.2rem;
-      z-index: 1;
-    }
+    .funnel-step:last-child { border-right: none; }
 
     .funnel-num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      background: var(--accent);
-      color: #fff;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin: 0 auto 1rem;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      display: block;
     }
 
     .funnel-title {
       font-family: 'Sora', sans-serif;
-      font-size: 0.95rem;
+      font-size: 1rem;
       font-weight: 700;
       color: var(--text);
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
     }
 
     .funnel-sub {
-      font-size: 0.8rem;
+      font-size: 0.83rem;
       color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.65;
     }
 
-    /* ── HOW IT WORKS ── */
-    .how-section { background: var(--bg-subtle); }
-
-    .steps {
-      margin-top: 3.5rem;
+    /* ─── HOW IT WORKS ─── */
+    .steps-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--rule);
     }
 
     .step-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem 1.75rem;
-      transition: box-shadow 0.2s, transform 0.2s;
+      padding: 2.5rem 2rem;
+      border-right: 1px solid var(--rule);
     }
 
-    .step-card:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
+    .step-card:last-child { border-right: none; }
 
     .step-num {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px; height: 32px;
-      border-radius: 50%;
-      background: var(--accent-light);
-      color: var(--accent);
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 1.25rem;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 1.5rem;
+      display: block;
     }
 
     .step-title {
       font-family: 'Sora', sans-serif;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--text);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.01em;
     }
 
     .step-desc {
-      font-size: 0.9rem;
+      font-size: 0.83rem;
       color: var(--text-muted);
       line-height: 1.65;
     }
 
-    /* ── PRICING ── */
-    .pricing-section { background: var(--bg); }
+    /* ─── TESTIMONIAL ─── */
+    .testimonial-section {
+      padding: 6rem 3rem;
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
 
-    .pricing-grid {
-      margin-top: 3.5rem;
+    .testimonial-inner {
+      max-width: 1120px;
+      margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.25rem;
+      grid-template-columns: 200px 1fr;
+      gap: 4rem;
       align-items: start;
     }
 
-    .pricing-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      transition: box-shadow 0.2s, transform 0.2s;
-      position: relative;
-    }
-
-    .pricing-card:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-
-    .pricing-card.featured {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px var(--accent), var(--shadow-md);
-    }
-
-    .pricing-badge {
-      position: absolute;
-      top: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: var(--accent);
-      color: #fff;
+    .testimonial-label {
       font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      padding: 0.25rem 0.8rem;
-      border-radius: var(--radius-pill);
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      padding-top: 0.5rem;
+    }
+
+    .testimonial-body blockquote {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+      font-weight: 400;
+      line-height: 1.4;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-body cite {
+      font-size: 0.8rem;
+      font-style: normal;
+      color: var(--text-faint);
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── PRICING ─── */
+    .pricing-table {
+      width: 100%;
+      border: 1px solid var(--rule);
+      border-collapse: collapse;
+    }
+
+    .pricing-table thead tr {
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .pricing-table thead th {
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+    }
+
+    .pricing-table tbody tr {
+      border-bottom: 1px solid var(--rule);
+      transition: background 0.15s;
+    }
+
+    .pricing-table tbody tr:last-child { border-bottom: none; }
+    .pricing-table tbody tr:hover { background: var(--accent-subtle); }
+
+    .pricing-table td {
+      padding: 1.75rem 1.5rem;
+      vertical-align: top;
+    }
+
+    .pt-step {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
       white-space: nowrap;
     }
 
-    .pricing-tier {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 0.4rem;
-    }
-
-    .pricing-name {
+    .pt-name {
       font-family: 'Sora', sans-serif;
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       font-weight: 700;
       color: var(--text);
-      margin-bottom: 0.4rem;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.2rem;
     }
 
-    .pricing-tagline {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      margin-bottom: 1.5rem;
-      line-height: 1.5;
-    }
-
-    .pricing-price-block {
-      padding: 1.25rem 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 1.5rem;
-    }
-
-    .pricing-setup {
-      font-family: 'Sora', sans-serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.02em;
-    }
-
-    .pricing-monthly {
+    .pt-tagline {
       font-size: 0.82rem;
       color: var(--text-muted);
-      margin-top: 0.2rem;
     }
 
-    .pricing-includes-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 0.75rem;
+    .pt-price {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
     }
 
-    .pricing-features {
-      list-style: none;
-      flex: 1;
-      margin-bottom: 1.5rem;
-    }
-
-    .pricing-features li {
-      font-size: 0.875rem;
-      color: var(--text-muted);
-      padding: 0.4rem 0;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-      line-height: 1.5;
-    }
-
-    .pricing-features li::before {
-      content: '';
-      display: block;
-      width: 16px; height: 16px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Ccircle cx='8' cy='8' r='7' stroke='%232563eb' stroke-width='1.5'/%3E%3Cpath d='M5 8l2 2 4-4' stroke='%232563eb' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      background-size: contain;
-      background-repeat: no-repeat;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-
-    .pricing-best-for {
+    .pt-recurring {
       font-size: 0.78rem;
       color: var(--text-faint);
-      line-height: 1.55;
-      padding-top: 1rem;
-      border-top: 1px solid var(--border);
+      margin-top: 0.15rem;
     }
 
-    .pricing-best-for strong {
-      display: block;
-      font-size: 0.68rem;
-      font-weight: 600;
+    .pt-includes {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .pt-bestfor {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .pt-popular {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 0.25rem;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.1rem 0.5rem;
+      border-radius: var(--radius);
+      margin-left: 0.6rem;
+      vertical-align: middle;
     }
 
-    /* ── ABOUT ── */
-    .about-section { background: var(--bg-subtle); }
-
-    .about-inner {
+    /* ─── ABOUT ─── */
+    .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: center;
+      gap: 6rem;
+      align-items: start;
     }
 
     .about-body p {
-      font-size: 0.95rem;
+      font-size: 0.93rem;
       color: var(--text-muted);
-      line-height: 1.8;
-      margin-bottom: 1rem;
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
     }
 
-    .about-visual {
-      background: var(--bg-subtle);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2rem;
+    .about-items {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      border: 1px solid var(--rule);
     }
 
-    .about-visual-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 1.25rem;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-      box-shadow: var(--shadow-sm);
+    .about-item {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 1.25rem;
+      padding: 1.5rem;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
     }
 
-    .about-visual-icon {
+    .about-item:last-child { border-bottom: none; }
+
+    .about-item-icon {
       width: 36px; height: 36px;
-      border-radius: 8px;
-      background: var(--accent-light);
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-shrink: 0;
       font-size: 1rem;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      flex-shrink: 0;
     }
 
-    .about-visual-text strong {
+    .about-item-text strong {
       display: block;
       font-size: 0.875rem;
       font-weight: 600;
@@ -658,153 +653,151 @@
       margin-bottom: 0.2rem;
     }
 
-    .about-visual-text span {
+    .about-item-text span {
       font-size: 0.8rem;
       color: var(--text-muted);
+      line-height: 1.5;
     }
 
-    /* ── CONTACT ── */
-    .contact-section { background: var(--bg); }
-
-    .contact-inner {
+    /* ─── CONTACT ─── */
+    .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5rem;
+      gap: 6rem;
       align-items: start;
     }
 
-    .contact-detail {
-      margin-top: 1.5rem;
+    .contact-meta {
+      margin-top: 2rem;
       font-size: 0.875rem;
       color: var(--text-muted);
       line-height: 2;
     }
 
-    .contact-detail a { color: var(--accent); text-decoration: none; }
-    .contact-detail a:hover { text-decoration: underline; }
-
-    /* ── FORM ── */
-    .form-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 2.5rem;
-      box-shadow: var(--shadow-sm);
+    .contact-meta a {
+      color: var(--accent);
+      text-decoration: none;
     }
 
-    .form-grid {
+    .contact-meta a:hover { text-decoration: underline; }
+
+    /* ─── FORM ─── */
+    .form-wrap {
+      border: 1px solid var(--rule);
+      padding: 2.5rem;
+    }
+
+    .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
-    .form-group {
+    .form-field {
       display: flex;
       flex-direction: column;
-      gap: 0.4rem;
+      gap: 0.35rem;
+      margin-bottom: 1.25rem;
     }
 
-    .form-group.full { grid-column: 1 / -1; }
+    .form-field.full { grid-column: 1 / -1; }
 
-    .form-group label {
-      font-size: 0.8rem;
+    .form-field label {
+      font-size: 0.72rem;
       font-weight: 500;
-      color: var(--text);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
     }
 
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      background: var(--bg-subtle);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
+    .form-field input,
+    .form-field textarea,
+    .form-field select {
+      background: var(--bg-off);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
       outline: none;
       color: var(--text);
       font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       width: 100%;
-      padding: 0.65rem 0.9rem;
+      padding: 0.7rem 0.9rem;
       resize: none;
       appearance: none;
-      transition: border-color 0.15s, box-shadow 0.15s;
+      transition: border-color 0.15s;
     }
 
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: var(--text-faint); }
+    .form-field input::placeholder,
+    .form-field textarea::placeholder { color: var(--text-faint); }
 
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus {
+    .form-field input:focus,
+    .form-field textarea:focus,
+    .form-field select:focus {
       border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
       background: var(--bg);
+      outline: none;
     }
 
-    .form-submit { margin-top: 1.25rem; }
+    .form-submit { margin-top: 0.5rem; }
 
     .form-submit button {
       width: 100%;
-      padding: 0.8rem 1.75rem;
-      background: var(--accent);
+      padding: 0.8rem 1.5rem;
+      background: var(--text);
       color: #fff;
       font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
+      font-size: 0.78rem;
       font-weight: 500;
-      border: none;
-      border-radius: var(--radius-pill);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid var(--text);
+      border-radius: var(--radius);
       cursor: pointer;
-      transition: background 0.15s, box-shadow 0.15s, transform 0.1s;
-      box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+      transition: background 0.15s, border-color 0.15s;
     }
 
     .form-submit button:hover {
-      background: #1d4ed8;
-      transform: translateY(-1px);
+      background: var(--accent);
+      border-color: var(--accent);
     }
 
-    .form-submit button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .form-submit button:disabled { opacity: 0.4; cursor: not-allowed; }
 
     .form-success {
       display: none;
       text-align: center;
       padding: 2rem;
-      font-size: 1rem;
-      color: var(--text);
-      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--text-muted);
     }
 
     .form-success.visible { display: block; }
 
-    /* ── FOOTER ── */
+    /* ─── FOOTER ─── */
     footer {
-      background: var(--text);
-      color: rgba(255,255,255,0.45);
-      padding: 2rem;
+      border-top: 1px solid var(--rule);
+      padding: 2rem 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
+      color: var(--text-faint);
     }
 
     .footer-logo {
       font-family: 'Sora', sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 700;
-      color: #fff;
+      color: var(--text);
     }
 
-    .footer-logo span { color: var(--accent-mid); }
+    .footer-logo span { color: var(--accent); }
 
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
+    /* ─── ANIMATIONS ─── */
     .reveal {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(16px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
     }
 
     .reveal.in-view {
@@ -812,23 +805,74 @@
       transform: translateY(0);
     }
 
-    /* ── RESPONSIVE ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow { opacity: 0; animation: fadeUp 0.5s 0.1s forwards; }
+    h1            { opacity: 0; animation: fadeUp 0.6s 0.2s forwards; }
+    .hero-sub     { opacity: 0; animation: fadeUp 0.6s 0.32s forwards; }
+    .hero-actions { opacity: 0; animation: fadeUp 0.6s 0.42s forwards; }
+    .hero-right   { opacity: 0; animation: fadeUp 0.6s 0.52s forwards; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .funnel-grid,
+      .steps-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .funnel-step,
+      .step-card {
+        border-bottom: 1px solid var(--rule);
+      }
+      .funnel-step:nth-child(even),
+      .step-card:nth-child(even) {
+        border-right: none;
+      }
+    }
+
     @media (max-width: 900px) {
-      .funnel-steps { grid-template-columns: repeat(2, 1fr); }
-      .funnel-step:nth-child(2)::after { display: none; }
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        min-height: auto;
+        padding-top: 7rem;
+      }
+      .hero-right {
+        border-left: none;
+        border-top: 1px solid var(--rule);
+        padding-left: 0;
+        padding-top: 2rem;
+      }
+      .hero-stat:first-child { border-top: none; }
+      .audiences-grid { grid-template-columns: 1fr; }
+      .audience-card + .audience-card { border-left: none; border-top: 1px solid var(--rule); }
+      .about-grid,
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .section-header { grid-template-columns: 1fr; gap: 1rem; }
+      .testimonial-inner { grid-template-columns: 1fr; gap: 1.5rem; }
     }
 
     @media (max-width: 768px) {
-      nav { padding: 0 1.25rem; }
+      nav { padding: 0 1.5rem; }
       .nav-links { display: none; }
-      .hero { padding: 7rem 1.25rem 4rem; }
-      .section { padding: 4rem 1.25rem; }
-      .about-inner, .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-      .form-grid { grid-template-columns: 1fr; }
-      .proof-bar { gap: 1.25rem; justify-content: flex-start; padding: 1rem 1.25rem; }
-      .funnel-steps { grid-template-columns: 1fr; }
-      .funnel-step::after { display: none !important; }
-      footer { flex-direction: column; gap: 0.75rem; text-align: center; }
+      .section { padding: 4rem 1.5rem; }
+      .hero { padding: 6rem 1.5rem 3rem; }
+      .testimonial-section { padding: 4rem 1.5rem; }
+      footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .funnel-grid,
+      .steps-grid { grid-template-columns: 1fr; }
+      .funnel-step,
+      .step-card { border-right: none; }
+
+      /* Pricing table responsive */
+      .pricing-table, .pricing-table thead, .pricing-table tbody,
+      .pricing-table th, .pricing-table td, .pricing-table tr { display: block; }
+      .pricing-table thead { display: none; }
+      .pricing-table tr { border-bottom: 1px solid var(--rule); padding: 1.5rem 0; }
+      .pricing-table td { padding: 0.25rem 1.5rem; border: none; }
     }
   </style>
 
@@ -845,421 +889,426 @@
   <nav aria-label="Main navigation">
     <a href="#" class="nav-logo" aria-label="Tredgold Digital home">Tredgold<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="#how-it-works">How it works</a></li>
+      <li><a href="#what-we-do">What we do</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Get in touch</a>
+    <a href="#contact" class="nav-cta">Start a conversation</a>
   </nav>
 
   <main>
 
-  <!-- HERO -->
-  <section class="hero" aria-label="Introduction">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="hero-badge" aria-hidden="true">
-      <span class="hero-badge-dot"></span>
-      For service businesses across the UK
-    </div>
-    <h1>More work.<br><em>Better clients.</em><br>No ad spend.</h1>
-    <p class="hero-sub">We help service businesses get found online, win more enquiries, and never lose a lead — without spending a penny on advertising.</p>
-    <p class="hero-built-for">Built for detailers, cleaners, gardeners, and trades businesses that rely on fast response and word of mouth.</p>
-    <div class="hero-cta">
-      <a href="#contact" class="btn-primary">Get more jobs →</a>
-      <a href="#how-it-works" class="btn-secondary">See how it works</a>
-    </div>
-  </section>
+    <!-- HERO -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-left">
+        <p class="hero-eyebrow">Web &amp; automation — service businesses across the UK</p>
+        <h1>A digital presence that reflects<br><em>the quality of your work.</em></h1>
+        <p class="hero-sub">We build websites and automation systems for service businesses — whether you need more enquiries, or simply a presence that does justice to the reputation you've spent years building.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Start a conversation →</a>
+          <a href="#what-we-do" class="btn-ghost">See what we do</a>
+        </div>
+      </div>
 
-  <!-- PROOF BAR -->
-  <div class="proof-bar" aria-label="Key features">
-    <div class="proof-item">
-      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      40% more enquiries on average
-    </div>
-    <div class="proof-item">
-      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Set up for you — no tech skills needed
-    </div>
-    <div class="proof-item">
-      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      No advertising spend needed
-    </div>
-    <div class="proof-item">
-      <svg class="proof-icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      We handle everything
-    </div>
-  </div>
+      <div class="hero-right" aria-label="Key points">
+        <div class="hero-stat">
+          <p class="hero-stat-label">Who we work with</p>
+          <p class="hero-stat-value">Detailers, cleaners, gardeners, tradespeople, and established service companies across the UK</p>
+        </div>
+        <div class="hero-stat">
+          <p class="hero-stat-label">How we work</p>
+          <p class="hero-stat-value">Set up entirely for you. No technical knowledge required, no lock-in, no ad spend needed</p>
+        </div>
+        <div class="hero-stat">
+          <p class="hero-stat-label">What we don't do</p>
+          <p class="hero-stat-value">We don't oversell. We recommend only what makes a material difference to your business</p>
+        </div>
+        <div class="hero-stat">
+          <p class="hero-stat-label">Based in</p>
+          <p class="hero-stat-value">Leeds, West Yorkshire — working with businesses across the UK</p>
+        </div>
+      </div>
+    </section>
 
-<!-- FUNNEL -->
-<section class="section funnel-section" id="how-it-works" aria-labelledby="funnel-heading">
-  <div class="section-inner">
-    <span class="section-tag">The system</span>
-    <h2 class="section-heading" id="funnel-heading">A complete system for getting more work</h2>
-    <p class="section-sub">We build the full picture — from getting found on Google, to winning enquiries, to capturing every lead, to keeping your best clients coming back without advertising.</p>
-
-    <div class="funnel-steps">
-      <div class="funnel-step reveal">
-        <div class="funnel-num">01</div>
-        <div class="funnel-title">Get found online</div>
-        <div class="funnel-sub">Google Business Profile, local search ranking, and a fast website that shows up when customers are searching locally.</div>
-      </div>
-      <div class="funnel-step reveal">
-        <div class="funnel-num">02</div>
-        <div class="funnel-title">Get enquiries</div>
-        <div class="funnel-sub">A clean, fast website with a clear call to action turns visitors into enquiries — no back-and-forth needed.</div>
-      </div>
-      <div class="funnel-step reveal">
-        <div class="funnel-num">03</div>
-        <div class="funnel-title">Capture every lead</div>
-        <div class="funnel-sub">Missed call SMS, voicemail handling, online booking and deposit collection mean no enquiry slips through the net.</div>
-      </div>
-      <div class="funnel-step reveal">
-        <div class="funnel-num">04</div>
-        <div class="funnel-title">Retain clients</div>
-        <div class="funnel-sub">Automated reviews, email and SMS follow-ups keep your best clients coming back — without you having to chase anyone.</div>
+    <!-- TESTIMONIAL -->
+    <div class="testimonial-section reveal" aria-label="Client testimonial">
+      <div class="testimonial-inner">
+        <p class="testimonial-label">Client — Leeds</p>
+        <div class="testimonial-body">
+          <blockquote>"After 18 years in business, we didn't need a website to chase leads — we needed one that matched our reputation. Will delivered exactly that."</blockquote>
+          <cite>Civil Engineering Business, Leeds</cite>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- HOW IT WORKS -->
-<section class="section how-section" aria-labelledby="how-heading">
-  <div class="section-inner">
-    <span class="section-tag">How it works</span>
-    <h2 class="section-heading" id="how-heading">More work, better clients — without advertising</h2>
-    <p class="section-sub">Most service businesses lose work not because of their service, but because they're hard to find, slow to respond, or easy to forget. We fix all three.</p>
+    <!-- WHO WE WORK WITH -->
+    <section class="section" id="what-we-do" aria-labelledby="audiences-heading">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <p class="section-label">Who we work with</p>
+          <div>
+            <h2 class="section-heading" id="audiences-heading">We build what your business actually needs</h2>
+            <p class="section-sub">Not every business has the same problem. Some need more enquiries. Some need their digital presence to catch up with the quality of their work. We start by understanding which one you are.</p>
+          </div>
+        </div>
 
-    <div class="steps">
-      <div class="step-card reveal">
-        <div class="step-num">1</div>
-        <h3 class="step-title">We get you found</h3>
-        <p class="step-desc">We optimise your Google Business Profile and build a fast, professional website that ranks locally — so customers find you before they find a competitor.</p>
+        <div class="audiences-grid reveal">
+          <div class="audience-card">
+            <p class="audience-num">01 — Growing service businesses</p>
+            <h3 class="audience-title">You do good work. You're just hard to find.</h3>
+            <p class="audience-desc">You're losing jobs you should be winning — not because of your service, but because of the gaps around it. Hard to find, slow to respond, easy to forget. We fix all three.</p>
+            <ul class="audience-bullets">
+              <li>Get found on Google before competitors do</li>
+              <li>Capture every enquiry, even while you're on a job</li>
+              <li>Convert enquiries into confirmed, deposit-paid bookings</li>
+              <li>Keep your best clients coming back automatically</li>
+            </ul>
+          </div>
+          <div class="audience-card">
+            <p class="audience-num">02 — Established businesses</p>
+            <h3 class="audience-title">Your website doesn't reflect what you've built.</h3>
+            <p class="audience-desc">You don't need more leads. You need a digital presence that represents your business the way it deserves to be represented. After years of building a reputation, your website should show it.</p>
+            <ul class="audience-bullets">
+              <li>A website that matches 10, 20, 30 years of expertise</li>
+              <li>Credibility that holds up when clients look you up</li>
+              <li>Accreditations and quality of work presented properly</li>
+              <li>Professional, without being impersonal</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="step-card reveal">
-        <div class="step-num">2</div>
-        <h3 class="step-title">We capture every enquiry</h3>
-        <p class="step-desc">Missed calls get an instant SMS. Visitors get a clear booking page. Every enquiry is captured automatically — even while you're on a job.</p>
-      </div>
-      <div class="step-card reveal">
-        <div class="step-num">3</div>
-        <h3 class="step-title">We convert enquiries into jobs</h3>
-        <p class="step-desc">Online booking, deposit collection, and automated confirmations turn enquiries into confirmed, committed customers — no chasing required.</p>
-      </div>
-      <div class="step-card reveal">
-        <div class="step-num">4</div>
-        <h3 class="step-title">We keep your best clients coming back</h3>
-        <p class="step-desc">Automated review requests, rebooking reminders, and email or SMS follow-ups keep your diary full — without you spending a penny on advertising.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-  <!-- PRICING -->
-  <section class="section pricing-section" id="pricing" aria-labelledby="pricing-heading">
-    <div class="section-inner">
-      <span class="section-tag">Pricing</span>
-      <h2 class="section-heading" id="pricing-heading">Get more jobs, from better clients</h2>
-      <p class="section-sub">Every service is set up for you — no technical knowledge required. Start with what makes the biggest difference right now, and build from there.</p>
- 
-      <div class="pricing-grid">
- 
-        <div class="pricing-card reveal">
-          <p class="pricing-tier">Step 01</p>
-          <h3 class="pricing-name">Google Business Profile</h3>
-          <p class="pricing-tagline">Get found by customers searching locally.</p>
-          <div class="pricing-price-block">
-            <p class="pricing-setup">From £299</p>
-            <p class="pricing-monthly">one-off or retained</p>
-          </div>
-          <p class="pricing-includes-label">Includes</p>
-          <ul class="pricing-features">
-            <li>Full Google profile optimisation</li>
-            <li>Local search ranking improvements</li>
-            <li>Review strategy setup</li>
-            <li>Ongoing management available</li>
-          </ul>
-          <div class="pricing-best-for">
-            <strong>Best for</strong>
-            Businesses that aren't appearing on Google Maps when local customers search
+    <!-- FUNNEL -->
+    <section class="section section-alt" id="how-it-works" aria-labelledby="funnel-heading">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <p class="section-label">The system</p>
+          <div>
+            <h2 class="section-heading" id="funnel-heading">End-to-end — or just the part you need</h2>
+            <p class="section-sub">We can build the whole system or start with what makes the biggest difference right now. Either way, everything is set up for you.</p>
           </div>
         </div>
- 
-        <div class="pricing-card reveal">
-          <p class="pricing-tier">Step 02</p>
-          <h3 class="pricing-name">Fast Website + Clear Call to Action</h3>
-          <p class="pricing-tagline">Turn visitors into enquiries.</p>
-          <div class="pricing-price-block">
-            <p class="pricing-setup">From £749</p>
-            <p class="pricing-monthly">one-off</p>
-          </div>
-          <p class="pricing-includes-label">Includes</p>
-          <ul class="pricing-features">
-            <li>Clean, mobile-first design</li>
-            <li>Optimised for search engines</li>
-            <li>Single clear call to action</li>
-            <li>Loads in under 2 seconds</li>
-          </ul>
-          <div class="pricing-best-for">
-            <strong>Best for</strong>
-            Businesses with no website, or one that doesn't convert visitors into enquiries
-          </div>
-        </div>
- 
-        <div class="pricing-card reveal">
-          <p class="pricing-tier">Step 03</p>
-          <h3 class="pricing-name">Missed Call Recovery</h3>
-          <p class="pricing-tagline">Miss a call, keep the client.</p>
-          <div class="pricing-price-block">
-            <p class="pricing-setup">From £499 setup</p>
-            <p class="pricing-monthly">then £49–£69 / month</p>
-          </div>
-          <p class="pricing-includes-label">Includes</p>
-          <ul class="pricing-features">
-            <li>Instant SMS when you miss a call</li>
-            <li>Voicemail handling</li>
-            <li>Custom message setup</li>
-            <li>System testing + go-live</li>
-          </ul>
-          <div class="pricing-best-for">
-            <strong>Best for</strong>
-            Businesses missing calls while on the job and losing work as a result
-          </div>
-        </div>
- 
-        <div class="pricing-card featured reveal">
-          <div class="pricing-badge">Most popular</div>
-          <p class="pricing-tier">Step 04</p>
-          <h3 class="pricing-name">Online Booking</h3>
-          <p class="pricing-tagline">Confirmed jobs, no back-and-forth.</p>
-          <div class="pricing-price-block">
-            <p class="pricing-setup">From £900 setup</p>
-            <p class="pricing-monthly">then £79–£119 / month</p>
-          </div>
-          <p class="pricing-includes-label">Everything in Missed Call, plus</p>
-          <ul class="pricing-features">
-            <li>Branded booking page</li>
-            <li>Enquiry capture + lead tracking</li>
-            <li>Automated booking confirmation</li>
-            <li>Photo upload for accurate quotes</li>
-          </ul>
-          <div class="pricing-best-for">
-            <strong>Best for</strong>
-            Businesses spending too much time managing messages and calls
-          </div>
-        </div>
- 
-        <div class="pricing-card reveal">
-          <p class="pricing-tier">Step 05</p>
-          <h3 class="pricing-name">Deposit Collection</h3>
-          <p class="pricing-tagline">Committed customers, protected time slots.</p>
-          <div class="pricing-price-block">
-            <p class="pricing-setup">From £1,200 setup</p>
-            <p class="pricing-monthly">then £99–£149 / month</p>
-          </div>
-          <p class="pricing-includes-label">Everything in Booking, plus</p>
-          <ul class="pricing-features">
-            <li>Deposit collection via Stripe</li>
-            <li>Fixed or percentage deposits</li>
-            <li>Payment confirmation to customer</li>
-            <li>No-show reduction system</li>
-          </ul>
-          <div class="pricing-best-for">
-            <strong>Best for</strong>
-            Busy businesses with frequent cancellations or no-shows
-          </div>
-        </div>
- 
-        <div class="pricing-card reveal">
-          <p class="pricing-tier">Step 06</p>
-          <h3 class="pricing-name">Review Generation</h3>
-          <p class="pricing-tagline">More reviews, better reputation, higher rankings.</p>
-          <div class="pricing-price-block">
-            <p class="pricing-setup">From £349 setup</p>
-            <p class="pricing-monthly">then £49–£69 / month</p>
-          </div>
-          <p class="pricing-includes-label">Includes</p>
-          <ul class="pricing-features">
-            <li>Automated review request after every job</li>
-            <li>Google & Facebook review links</li>
-            <li>Custom message setup</li>
-            <li>More reviews, without asking manually</li>
-          </ul>
-          <div class="pricing-best-for">
-            <strong>Best for</strong>
-            Businesses that rely on reputation but struggle to get customers to leave reviews
-          </div>
-        </div>
- 
-        <div class="pricing-card reveal">
-          <p class="pricing-tier">Step 07</p>
-          <h3 class="pricing-name">Email & SMS Marketing</h3>
-          <p class="pricing-tagline">Keep your best clients coming back.</p>
-          <div class="pricing-price-block">
-            <p class="pricing-setup">From £449 setup</p>
-            <p class="pricing-monthly">then £59–£79 / month</p>
-          </div>
-          <p class="pricing-includes-label">Includes</p>
-          <ul class="pricing-features">
-            <li>Automated follow-up after every job</li>
-            <li>Rebooking reminders via email or SMS</li>
-            <li>Seasonal offers to existing clients</li>
-            <li>No ad spend — just repeat business</li>
-          </ul>
-          <div class="pricing-best-for">
-            <strong>Best for</strong>
-            Businesses with a good client base who want more repeat bookings without chasing
-          </div>
-        </div>
- 
-        <div class="pricing-card reveal">
-          <p class="pricing-tier">Complete system</p>
-          <h3 class="pricing-name">Full Automation</h3>
-          <p class="pricing-tagline">Everything, end-to-end.</p>
-          <div class="pricing-price-block">
-            <p class="pricing-setup">From £2,499 setup</p>
-            <p class="pricing-monthly">then £149–£249 / month</p>
-          </div>
-          <p class="pricing-includes-label">Includes everything</p>
-          <ul class="pricing-features">
-            <li>Google profile + website</li>
-            <li>Missed call SMS recovery</li>
-            <li>Online booking + deposits</li>
-            <li>Automated reminders</li>
-            <li>Review generation</li>
-            <li>Email & SMS marketing</li>
-            <li>Lead tracking dashboard</li>
-            <li>Frictionless rebooking</li>
-          </ul>
-          <div class="pricing-best-for">
-            <strong>Best for</strong>
-            Established businesses ready to grow without advertising
-          </div>
-        </div>
- 
-      </div>
-    </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="section about-section" id="about" aria-labelledby="about-heading">
-    <div class="section-inner">
-      <div class="about-inner">
-        <div>
-          <span class="section-tag">About</span>
-          <h2 class="section-heading" id="about-heading">Built for businesses that run on reputation</h2>
+        <div class="funnel-grid reveal">
+          <div class="funnel-step">
+            <span class="funnel-num">01</span>
+            <p class="funnel-title">Get found</p>
+            <p class="funnel-sub">Google Business Profile, local search, and a website that shows up — and holds up — when clients look you up.</p>
+          </div>
+          <div class="funnel-step">
+            <span class="funnel-num">02</span>
+            <p class="funnel-title">Win enquiries</p>
+            <p class="funnel-sub">A clear, fast website that turns visitors into enquiries — whether they're discovering you or checking your credentials.</p>
+          </div>
+          <div class="funnel-step">
+            <span class="funnel-num">03</span>
+            <p class="funnel-title">Capture every lead</p>
+            <p class="funnel-sub">Missed call SMS, online booking, and deposit collection mean no enquiry slips through — even while you're on a job.</p>
+          </div>
+          <div class="funnel-step">
+            <span class="funnel-num">04</span>
+            <p class="funnel-title">Keep clients</p>
+            <p class="funnel-sub">Automated review requests, rebooking reminders, and follow-ups keep your best clients returning without chasing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" aria-labelledby="how-heading">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <p class="section-label">How it works</p>
+          <div>
+            <h2 class="section-heading" id="how-heading">We build it. You run your business.</h2>
+            <p class="section-sub">We set everything up for you — no technical knowledge required, no learning curve, no lengthy back-and-forth.</p>
+          </div>
+        </div>
+
+        <div class="steps-grid reveal">
+          <div class="step-card">
+            <span class="step-num">Step 01</span>
+            <p class="step-title">We understand your business</p>
+            <p class="step-desc">We start with a conversation — not a questionnaire. We want to understand what your business does, how you win work, and what's not working the way it should.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">Step 02</span>
+            <p class="step-title">We recommend only what you need</p>
+            <p class="step-desc">We don't oversell. If you need a better website, we build a better website. If you need the full system, we build the full system. We start with what makes the biggest difference.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">Step 03</span>
+            <p class="step-title">We build and set it up</p>
+            <p class="step-desc">We handle the build, configuration, and go-live. You don't need to understand any of it — you just need to see it working before we hand it over.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">Step 04</span>
+            <p class="step-title">We're here after the build</p>
+            <p class="step-desc">Most of what we build runs itself. When something needs attention, adjusting, or expanding — we're easy to reach and straightforward to work with.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section section-alt" id="pricing" aria-labelledby="pricing-heading">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <p class="section-label">Pricing</p>
+          <div>
+            <h2 class="section-heading" id="pricing-heading">Straightforward pricing, no surprises</h2>
+            <p class="section-sub">Start with one thing or take the full system. Every service is quoted clearly before we start. No retainers you don't need, no lock-in.</p>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <table class="pricing-table" aria-label="Service pricing">
+            <thead>
+              <tr>
+                <th style="width:7%">Step</th>
+                <th style="width:23%">Service</th>
+                <th style="width:15%">Price</th>
+                <th style="width:30%">Includes</th>
+                <th style="width:25%">Best for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><p class="pt-step">01</p></td>
+                <td>
+                  <p class="pt-name">Google Business Profile</p>
+                  <p class="pt-tagline">Found when it matters. First, not fourth.</p>
+                </td>
+                <td>
+                  <p class="pt-price">From £299</p>
+                  <p class="pt-recurring">One-off or retained</p>
+                </td>
+                <td><p class="pt-includes">Full profile optimisation · Local ranking improvements · Review strategy setup · Ongoing management available</p></td>
+                <td><p class="pt-bestfor">Businesses not appearing on Google Maps — or those whose profile doesn't reflect the quality of their work</p></td>
+              </tr>
+              <tr>
+                <td><p class="pt-step">02</p></td>
+                <td>
+                  <p class="pt-name">Website</p>
+                  <p class="pt-tagline">Works hard, or finally does you justice.</p>
+                </td>
+                <td>
+                  <p class="pt-price">From £749</p>
+                  <p class="pt-recurring">One-off</p>
+                </td>
+                <td><p class="pt-includes">Clean professional design · Built for search · Fast and mobile-first · Lead-gen or credibility-led — your choice</p></td>
+                <td><p class="pt-bestfor">Businesses with no website, an outdated one, or one that doesn't reflect what they've built</p></td>
+              </tr>
+              <tr>
+                <td><p class="pt-step">03</p></td>
+                <td>
+                  <p class="pt-name">Missed Call Recovery</p>
+                  <p class="pt-tagline">Miss a call. Keep the client.</p>
+                </td>
+                <td>
+                  <p class="pt-price">From £499</p>
+                  <p class="pt-recurring">Then £49–£69 / month</p>
+                </td>
+                <td><p class="pt-includes">Instant SMS on missed call · Voicemail handling · Custom messages · System testing + go-live</p></td>
+                <td><p class="pt-bestfor">Businesses missing calls while on the job and losing work as a result</p></td>
+              </tr>
+              <tr>
+                <td><p class="pt-step">04</p></td>
+                <td>
+                  <p class="pt-name">Online Booking <span class="pt-popular">Most popular</span></p>
+                  <p class="pt-tagline">Confirmed jobs, without the back-and-forth.</p>
+                </td>
+                <td>
+                  <p class="pt-price">From £900</p>
+                  <p class="pt-recurring">Then £79–£119 / month</p>
+                </td>
+                <td><p class="pt-includes">Everything in Missed Call · Branded booking page · Lead tracking · Photo upload for quotes · Booking confirmation</p></td>
+                <td><p class="pt-bestfor">Businesses spending too much time managing messages and scheduling calls</p></td>
+              </tr>
+              <tr>
+                <td><p class="pt-step">05</p></td>
+                <td>
+                  <p class="pt-name">Deposit Collection</p>
+                  <p class="pt-tagline">Committed clients. Protected time slots.</p>
+                </td>
+                <td>
+                  <p class="pt-price">From £1,200</p>
+                  <p class="pt-recurring">Then £99–£149 / month</p>
+                </td>
+                <td><p class="pt-includes">Everything in Booking · Stripe deposit collection · Fixed or % deposits · No-show reduction</p></td>
+                <td><p class="pt-bestfor">Busy businesses with frequent cancellations or clients who don't show</p></td>
+              </tr>
+              <tr>
+                <td><p class="pt-step">06</p></td>
+                <td>
+                  <p class="pt-name">Review Generation</p>
+                  <p class="pt-tagline">A reputation that precedes you, online.</p>
+                </td>
+                <td>
+                  <p class="pt-price">From £349</p>
+                  <p class="pt-recurring">Then £49–£69 / month</p>
+                </td>
+                <td><p class="pt-includes">Automated request after every job · Google &amp; Facebook links · Custom message setup</p></td>
+                <td><p class="pt-bestfor">Businesses whose online reputation doesn't reflect the quality of their work</p></td>
+              </tr>
+              <tr>
+                <td><p class="pt-step">07</p></td>
+                <td>
+                  <p class="pt-name">Email &amp; SMS Follow-ups</p>
+                  <p class="pt-tagline">The best clients come back. This makes sure they do.</p>
+                </td>
+                <td>
+                  <p class="pt-price">From £449</p>
+                  <p class="pt-recurring">Then £59–£79 / month</p>
+                </td>
+                <td><p class="pt-includes">Automated job follow-up · Rebooking reminders · Seasonal messages · Repeat business without chasing</p></td>
+                <td><p class="pt-bestfor">Businesses with a strong client base who want more repeat bookings without the legwork</p></td>
+              </tr>
+              <tr>
+                <td><p class="pt-step">Full system</p></td>
+                <td>
+                  <p class="pt-name">Full Automation</p>
+                  <p class="pt-tagline">The whole system, built and running.</p>
+                </td>
+                <td>
+                  <p class="pt-price">From £2,499</p>
+                  <p class="pt-recurring">Then £149–£249 / month</p>
+                </td>
+                <td><p class="pt-includes">Google profile + website · Missed call SMS · Booking + deposits · Reminders · Reviews · Email &amp; SMS · Lead dashboard · Rebooking</p></td>
+                <td><p class="pt-bestfor">Established businesses ready to run a tighter, more professional operation — without advertising</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-heading">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <p class="section-label">About</p>
+          <div>
+            <h2 class="section-heading" id="about-heading">We work with businesses that take their work seriously</h2>
+            <p class="section-sub">A Leeds-based consultancy working exclusively with service businesses — from sole traders building momentum to established companies trading for decades.</p>
+          </div>
+        </div>
+
+        <div class="about-grid">
           <div class="about-body reveal">
-            <p>Tredgold Digital is a North Leeds consultancy working exclusively with small service businesses — detailers, cleaners, gardeners, and tradespeople who win work through fast response and word of mouth.</p>
-            <p>Most of our clients aren't losing customers because of their work. They're losing them because they're hard to find, slow to respond, or easy to forget. We fix all three — and keep their best clients coming back.</p>
-            <p>From getting you found on Google and building a website that converts, to automating your enquiries, bookings, deposits, and follow-ups — we build the full system and set it up for you. No technical knowledge needed.</p>
-            <p>We don't oversell, overcomplicate, or lock you into things you don't need. We start with what makes the biggest difference right now, and build from there.</p>
-            <div class="testimonial reveal" style="margin-top: 1.5rem; padding: 1.25rem; background: var(--accent-light); border-left: 3px solid var(--accent); border-radius: var(--radius-sm);">
-              <p style="font-size: 0.95rem; color: var(--text); font-style: italic; margin-bottom: 0.5rem;">"After 18 years in business, we didn't need a website to chase leads — we needed one that matched our reputation. Will delivered exactly that: a site that boosts our credibility, showcases our accreditations, and makes us easy to find."</p>
-              <p style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">— Civil Engineering Business, Leeds</p>
-            </div>
+            <p>What we've found is that our clients tend to fall into two camps. The first needs more enquiries: they do excellent work but they're hard to find, slow to respond, or easy to forget. The second has the opposite problem: they're busy, they're respected, and their digital presence is the one thing that doesn't reflect it.</p>
+            <p>We work well with both — but we're selective about who we take on. We don't work with businesses we can't genuinely help, and we don't recommend things that won't make a material difference.</p>
+            <p>Everything is set up for you. No technical knowledge required, no lengthy handovers, no jargon. You'll know what we're building, why, and what to expect — before we start.</p>
           </div>
-        </div>
-        <div class="about-visual reveal">
-          <div class="about-visual-item">
-            <div class="about-visual-icon">🔍</div>
-            <div class="about-visual-text">
-              <strong>Found on Google</strong>
-              <span>Profile optimised, website ranking — customers find you first</span>
+          <div class="about-items reveal">
+            <div class="about-item">
+              <div class="about-item-icon">🏛️</div>
+              <div class="about-item-text">
+                <strong>Credibility-first design</strong>
+                <span>Websites built to reflect what you've earned — not just to generate clicks</span>
+              </div>
             </div>
-          </div>
-          <div class="about-visual-item">
-            <div class="about-visual-icon">📞</div>
-            <div class="about-visual-text">
-              <strong>Every lead captured</strong>
-              <span>Missed call SMS fired in under 30 seconds — no enquiry lost</span>
+            <div class="about-item">
+              <div class="about-item-icon">🔍</div>
+              <div class="about-item-text">
+                <strong>Found on Google</strong>
+                <span>Profile optimised, website ranking — so clients find you when it counts</span>
+              </div>
             </div>
-          </div>
-          <div class="about-visual-item">
-            <div class="about-visual-icon">📅</div>
-            <div class="about-visual-text">
-              <strong>Bookings confirmed</strong>
-              <span>Customers book and pay a deposit directly — no back-and-forth</span>
+            <div class="about-item">
+              <div class="about-item-icon">📞</div>
+              <div class="about-item-text">
+                <strong>Every enquiry captured</strong>
+                <span>Missed call SMS in under 30 seconds — no lead lost while you're on a job</span>
+              </div>
             </div>
-          </div>
-          <div class="about-visual-item">
-            <div class="about-visual-icon">⭐</div>
-            <div class="about-visual-text">
-              <strong>Reviews generated</strong>
-              <span>Automated requests after every job — more 5-star reviews, no chasing</span>
+            <div class="about-item">
+              <div class="about-item-icon">📅</div>
+              <div class="about-item-text">
+                <strong>Bookings confirmed</strong>
+                <span>Clients book and pay a deposit directly — no chasing, no back-and-forth</span>
+              </div>
             </div>
-          </div>
-          <div class="about-visual-item">
-            <div class="about-visual-icon">🔁</div>
-            <div class="about-visual-text">
-              <strong>Clients retained</strong>
-              <span>Email & SMS follow-ups keep your best clients coming back automatically</span>
+            <div class="about-item">
+              <div class="about-item-icon">🔁</div>
+              <div class="about-item-text">
+                <strong>Clients retained</strong>
+                <span>Automated follow-ups keep your best clients coming back without lifting a finger</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
-    <div class="section-inner">
-      <div class="contact-inner">
-        <div>
-          <span class="section-tag">Get in touch</span>
-          <h2 class="section-heading" id="contact-heading">Get more jobs, from better clients</h2>
-          <p class="section-sub">We'll show you exactly what the system would look like for your business — no pressure, no jargon.</p>
-          <div class="contact-detail">
-            <p>Email: <a href="mailto:hello@tredgolddigital.com">hello@tredgolddigital.com</a></p>
-            <p>Based in Leeds, UK</p>
+    <!-- CONTACT -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-heading">
+      <div class="section-inner">
+        <div class="section-header reveal">
+          <p class="section-label">Get in touch</p>
+          <div>
+            <h2 class="section-heading" id="contact-heading">Tell us about your business</h2>
+            <p class="section-sub">We'll have a straightforward conversation about what you need — no pressure, no jargon, no obligation. If we're a good fit, we'll tell you exactly what we'd recommend and why.</p>
           </div>
         </div>
 
-        <div class="form-card reveal">
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" aria-label="Get in touch">
-            <input type="hidden" name="form-name" value="contact" />
-            <p style="display:none;"><input name="bot-field" /></p>
-            <div class="form-grid">
-              <div class="form-group">
-                <label for="name">Full name</label>
-                <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+        <div class="contact-grid">
+          <div class="reveal">
+            <div class="contact-meta">
+              <p>Email: <a href="mailto:hello@tredgolddigital.com">hello@tredgolddigital.com</a></p>
+              <p>Based in Leeds, UK</p>
+            </div>
+          </div>
+
+          <div class="form-wrap reveal">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" aria-label="Get in touch">
+              <input type="hidden" name="form-name" value="contact" />
+              <p style="display:none;"><input name="bot-field" /></p>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="name">Full name</label>
+                  <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+                </div>
+                <div class="form-field">
+                  <label for="email">Email address</label>
+                  <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email" />
+                </div>
               </div>
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email" />
-              </div>
-              <div class="form-group full">
+              <div class="form-field">
                 <label for="company">Business name</label>
-                <input type="text" id="company" name="company" placeholder="Smith's Car Detailing" autocomplete="organization" />
+                <input type="text" id="company" name="company" placeholder="Smith's Civil Engineering" autocomplete="organization" />
               </div>
-              <div class="form-group full">
-                <label for="service">I'm interested in</label>
+              <div class="form-field">
+                <label for="service">What are you looking for?</label>
                 <select id="service" name="service">
-                  <option value="">Select a package</option>
-                  <option value="google">Google Business Profile</option>
-                  <option value="website">Fast Website + Clear Call to Action</option>
+                  <option value="">Select an option</option>
+                  <option value="credibility">A website that reflects our reputation</option>
+                  <option value="google">Better Google presence</option>
+                  <option value="website">A new website</option>
                   <option value="missed-call">Missed Call Recovery</option>
                   <option value="booking">Online Booking</option>
                   <option value="deposits">Deposit Collection</option>
                   <option value="reviews">Review Generation</option>
-                  <option value="email-sms">Email & SMS Marketing</option>
-                  <option value="complete">Full Automation System</option>
-                  <option value="other">Not sure yet</option>
+                  <option value="email-sms">Email &amp; SMS Follow-ups</option>
+                  <option value="complete">The full system</option>
+                  <option value="other">Not sure yet — happy to talk</option>
                 </select>
               </div>
-              <div class="form-group full">
+              <div class="form-field">
                 <label for="message">Tell us about your business</label>
-                <textarea id="message" name="message" rows="4" placeholder="What kind of service do you run, and what's the main problem you're trying to solve?" required></textarea>
+                <textarea id="message" name="message" rows="4" placeholder="What do you do, how long have you been trading, and what's the one thing you'd most like to change about your digital presence?" required></textarea>
               </div>
-            </div>
-            <div class="form-submit">
-              <button type="submit" id="submitBtn">Get in touch →</button>
-            </div>
-          </form>
-          <p class="form-success" id="formSuccess" role="status">✓ Message received — we'll be in touch shortly.</p>
+              <div class="form-submit">
+                <button type="submit" id="submitBtn">Send message →</button>
+              </div>
+            </form>
+            <p class="form-success" id="formSuccess" role="status">✓ Message received — we'll be in touch shortly.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   </main>
 
@@ -1292,7 +1341,7 @@
         requestAnimationFrame(() => successMsg.classList.add('visible'));
       } catch (err) {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Get in touch →';
+        submitBtn.textContent = 'Send message →';
         alert('Something went wrong — please try again or email us directly.');
       }
     });
@@ -1303,12 +1352,10 @@
           setTimeout(() => e.target.classList.add('in-view'), e.target.dataset.delay || 0);
         }
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
 
-    document.querySelectorAll('.reveal').forEach((el) => {
-      const siblings = Array.from(el.parentElement.querySelectorAll('.reveal'));
-      const idx = siblings.indexOf(el);
-      el.dataset.delay = idx * 80;
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      el.dataset.delay = i * 60;
       observer.observe(el);
     });
   </script>
