@@ -3,45 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Digital Presence for Service Businesses | Tredgold Digital — Leeds, UK</title>
-  <meta name="description" content="Tredgold Digital builds websites and automation systems for service businesses across the UK — from sole traders who need more enquiries, to established businesses that need a digital presence that matches their reputation." />
+  <title>Business Systems for Service Businesses | Tredgold Digital — Leeds, UK</title>
+  <meta name="description" content="Tredgold Digital builds booking systems, lead capture, and automation for service businesses across the UK." />
   <link rel="canonical" href="https://www.tredgolddigital.com/" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.tredgolddigital.com/" />
-  <meta property="og:title" content="Digital Presence for Service Businesses | Tredgold Digital" />
-  <meta property="og:description" content="We build websites and automation systems for service businesses — whether you need more enquiries, or a digital presence that reflects the quality of your work." />
-  <meta property="og:site_name" content="Tredgold Digital Ltd" />
-  <meta property="og:locale" content="en_GB" />
-  <meta property="og:image" content="https://www.tredgolddigital.com/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [{
-      "@type": "LocalBusiness",
-      "@id": "https://www.tredgolddigital.com/#business",
-      "name": "Tredgold Digital Ltd",
-      "url": "https://www.tredgolddigital.com/",
-      "email": "hello@tredgolddigital.com",
-      "description": "Tredgold Digital builds websites and automation systems for service businesses.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Leeds",
-        "addressRegion": "West Yorkshire",
-        "addressCountry": "GB"
-      },
-      "areaServed": { "@type": "Country", "name": "United Kingdom" }
-    }]
-  }
-  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -98,23 +66,6 @@
 
     .nav-logo span { color: var(--accent); }
 
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.8rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      transition: color 0.15s;
-    }
-
-    .nav-links a:hover { color: var(--text); }
-
     .nav-cta {
       display: inline-flex;
       align-items: center;
@@ -135,15 +86,14 @@
     /* ─── HERO ─── */
     .hero {
       min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       padding: 8rem 3rem 5rem;
-      gap: 6rem;
       border-bottom: 1px solid var(--rule);
+      max-width: 860px;
+      margin: 0 auto;
     }
-
-    .hero-left {}
 
     .hero-eyebrow {
       font-size: 0.72rem;
@@ -155,6 +105,8 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      opacity: 0;
+      animation: fadeUp 0.5s 0.1s forwards;
     }
 
     .hero-eyebrow::before {
@@ -163,16 +115,19 @@
       width: 24px;
       height: 1px;
       background: var(--accent);
+      flex-shrink: 0;
     }
 
     h1 {
       font-family: 'Sora', sans-serif;
-      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
       font-weight: 700;
       line-height: 1.06;
       letter-spacing: -0.03em;
       color: var(--text);
-      margin-bottom: 2rem;
+      margin-bottom: 1.75rem;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.2s forwards;
     }
 
     h1 em {
@@ -181,51 +136,35 @@
     }
 
     .hero-sub {
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: var(--text-muted);
       line-height: 1.75;
-      max-width: 42ch;
+      max-width: 52ch;
       margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.32s forwards;
     }
 
     .hero-actions {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.6s 0.42s forwards;
     }
 
-    .hero-right {
-      border-left: 1px solid var(--rule);
-      padding-left: 4rem;
-      align-self: stretch;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 0;
-    }
-
-    .hero-stat {
-      padding: 2rem 0;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .hero-stat:first-child { border-top: 1px solid var(--rule); }
-
-    .hero-stat-label {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+    .hero-location {
+      font-size: 0.78rem;
       color: var(--text-faint);
-      margin-bottom: 0.5rem;
+      letter-spacing: 0.04em;
+      opacity: 0;
+      animation: fadeUp 0.5s 0.54s forwards;
     }
 
-    .hero-stat-value {
-      font-family: 'Sora', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text-mid);
-      line-height: 1.4;
+    .hero-location span {
+      color: var(--text-muted);
     }
 
     /* ─── BUTTONS ─── */
@@ -233,7 +172,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.7rem 1.5rem;
+      padding: 0.75rem 1.6rem;
       background: var(--text);
       color: #fff;
       font-family: 'Inter', sans-serif;
@@ -257,7 +196,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      padding: 0.7rem 1.5rem;
+      padding: 0.75rem 1.6rem;
       background: transparent;
       color: var(--text-muted);
       font-family: 'Inter', sans-serif;
@@ -277,420 +216,154 @@
       border-color: var(--text);
     }
 
-    /* ─── SECTIONS ─── */
-    .section { padding: 7rem 3rem; }
-    .section-inner { max-width: 1120px; margin: 0 auto; }
-
-    .section-alt { background: var(--bg-off); }
-
-    .section-header {
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 4rem;
-      padding-bottom: 4rem;
+    /* ─── WHAT WE OFFER ─── */
+    .offer-section {
+      padding: 7rem 3rem;
       border-bottom: 1px solid var(--rule);
-      margin-bottom: 4rem;
-      align-items: start;
     }
 
-    .section-label {
+    .offer-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .offer-label {
       font-size: 0.7rem;
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--text-faint);
-      padding-top: 0.4rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
     }
 
-    .section-heading {
+    .offer-label::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--rule-strong);
+      flex-shrink: 0;
+    }
+
+    .offer-heading {
       font-family: 'Sora', sans-serif;
-      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-size: clamp(1.4rem, 3vw, 2rem);
       font-weight: 700;
       letter-spacing: -0.025em;
-      line-height: 1.15;
-      color: var(--text);
-      margin-bottom: 1rem;
-    }
-
-    .section-sub {
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      max-width: 54ch;
-      line-height: 1.75;
-    }
-
-    /* ─── AUDIENCES ─── */
-    .audiences-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border: 1px solid var(--rule);
-    }
-
-    .audience-card {
-      padding: 3rem;
-    }
-
-    .audience-card + .audience-card {
-      border-left: 1px solid var(--rule);
-    }
-
-    .audience-num {
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 1.5rem;
-    }
-
-    .audience-title {
-      font-family: 'Sora', sans-serif;
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 1rem;
-      letter-spacing: -0.02em;
       line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 1rem;
     }
 
-    .audience-desc {
-      font-size: 0.9rem;
+    .offer-sub {
+      font-size: 0.93rem;
       color: var(--text-muted);
+      max-width: 50ch;
       line-height: 1.75;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
-    .audience-bullets {
-      list-style: none;
-      border-top: 1px solid var(--rule);
-      padding-top: 1.5rem;
+    .offer-items {
       display: flex;
       flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .audience-bullets li {
-      font-size: 0.85rem;
-      color: var(--text-mid);
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      line-height: 1.5;
-    }
-
-    .audience-bullets li::before {
-      content: '—';
-      color: var(--accent);
-      flex-shrink: 0;
-      font-weight: 500;
-    }
-
-    /* ─── FUNNEL ─── */
-    .funnel-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
       border: 1px solid var(--rule);
     }
 
-    .funnel-step {
-      padding: 2.5rem 2rem;
-      border-right: 1px solid var(--rule);
-    }
-
-    .funnel-step:last-child { border-right: none; }
-
-    .funnel-num {
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.5rem;
-      display: block;
-    }
-
-    .funnel-title {
-      font-family: 'Sora', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.01em;
-    }
-
-    .funnel-sub {
-      font-size: 0.83rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    /* ─── HOW IT WORKS ─── */
-    .steps-grid {
+    .offer-item {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border: 1px solid var(--rule);
-    }
-
-    .step-card {
-      padding: 2.5rem 2rem;
-      border-right: 1px solid var(--rule);
-    }
-
-    .step-card:last-child { border-right: none; }
-
-    .step-num {
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 1.5rem;
-      display: block;
-    }
-
-    .step-title {
-      font-family: 'Sora', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 0.75rem;
-      letter-spacing: -0.01em;
-    }
-
-    .step-desc {
-      font-size: 0.83rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    /* ─── TESTIMONIAL ─── */
-    .testimonial-section {
-      padding: 6rem 3rem;
-      border-top: 1px solid var(--rule);
+      grid-template-columns: 48px 1fr;
+      gap: 1.5rem;
+      padding: 2rem 2rem;
       border-bottom: 1px solid var(--rule);
-    }
-
-    .testimonial-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 4rem;
       align-items: start;
-    }
-
-    .testimonial-label {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      padding-top: 0.5rem;
-    }
-
-    .testimonial-body blockquote {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(1.3rem, 2.5vw, 1.9rem);
-      font-weight: 400;
-      line-height: 1.4;
-      color: var(--text);
-      letter-spacing: -0.02em;
-      margin-bottom: 1.5rem;
-    }
-
-    .testimonial-body cite {
-      font-size: 0.8rem;
-      font-style: normal;
-      color: var(--text-faint);
-      letter-spacing: 0.04em;
-    }
-
-    /* ─── PRICING ─── */
-    .pricing-table {
-      width: 100%;
-      border: 1px solid var(--rule);
-      border-collapse: collapse;
-    }
-
-    .pricing-table thead tr {
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .pricing-table thead th {
-      padding: 1.25rem 1.5rem;
-      text-align: left;
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-    }
-
-    .pricing-table tbody tr {
-      border-bottom: 1px solid var(--rule);
       transition: background 0.15s;
     }
 
-    .pricing-table tbody tr:last-child { border-bottom: none; }
-    .pricing-table tbody tr:hover { background: var(--accent-subtle); }
+    .offer-item:last-child { border-bottom: none; }
+    .offer-item:hover { background: var(--accent-subtle); }
 
-    .pricing-table td {
-      padding: 1.75rem 1.5rem;
-      vertical-align: top;
-    }
-
-    .pt-step {
+    .offer-item-num {
       font-size: 0.68rem;
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--text-faint);
-      white-space: nowrap;
+      color: var(--accent);
+      padding-top: 0.2rem;
     }
 
-    .pt-name {
+    .offer-item-title {
       font-family: 'Sora', sans-serif;
-      font-size: 0.95rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: var(--text);
       letter-spacing: -0.01em;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.3rem;
     }
 
-    .pt-tagline {
-      font-size: 0.82rem;
+    .offer-item-desc {
+      font-size: 0.85rem;
       color: var(--text-muted);
-    }
-
-    .pt-price {
-      font-family: 'Sora', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--text);
-      white-space: nowrap;
-    }
-
-    .pt-recurring {
-      font-size: 0.78rem;
-      color: var(--text-faint);
-      margin-top: 0.15rem;
-    }
-
-    .pt-includes {
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .pt-bestfor {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .pt-popular {
-      display: inline-block;
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      border: 1px solid var(--accent);
-      padding: 0.1rem 0.5rem;
-      border-radius: var(--radius);
-      margin-left: 0.6rem;
-      vertical-align: middle;
-    }
-
-    /* ─── ABOUT ─── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: start;
-    }
-
-    .about-body p {
-      font-size: 0.93rem;
-      color: var(--text-muted);
-      line-height: 1.85;
-      margin-bottom: 1.25rem;
-    }
-
-    .about-items {
-      display: flex;
-      flex-direction: column;
-      border: 1px solid var(--rule);
-    }
-
-    .about-item {
-      display: grid;
-      grid-template-columns: 36px 1fr;
-      gap: 1.25rem;
-      padding: 1.5rem;
-      border-bottom: 1px solid var(--rule);
-      align-items: start;
-    }
-
-    .about-item:last-child { border-bottom: none; }
-
-    .about-item-icon {
-      width: 36px; height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      border: 1px solid var(--rule);
-      border-radius: var(--radius);
-      flex-shrink: 0;
-    }
-
-    .about-item-text strong {
-      display: block;
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 0.2rem;
-    }
-
-    .about-item-text span {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      line-height: 1.5;
+      line-height: 1.65;
     }
 
     /* ─── CONTACT ─── */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
-      align-items: start;
+    .contact-section {
+      padding: 7rem 3rem;
+      background: var(--bg-off);
     }
 
-    .contact-meta {
-      margin-top: 2rem;
-      font-size: 0.875rem;
+    .contact-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .contact-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .contact-label::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--rule-strong);
+      flex-shrink: 0;
+    }
+
+    .contact-heading {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-sub {
+      font-size: 0.93rem;
       color: var(--text-muted);
-      line-height: 2;
+      max-width: 50ch;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
     }
-
-    .contact-meta a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .contact-meta a:hover { text-decoration: underline; }
 
     /* ─── FORM ─── */
     .form-wrap {
       border: 1px solid var(--rule);
       padding: 2.5rem;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
+      background: var(--bg);
     }
 
     .form-field {
@@ -699,8 +372,6 @@
       gap: 0.35rem;
       margin-bottom: 1.25rem;
     }
-
-    .form-field.full { grid-column: 1 / -1; }
 
     .form-field label {
       font-size: 0.72rem;
@@ -711,8 +382,7 @@
     }
 
     .form-field input,
-    .form-field textarea,
-    .form-field select {
+    .form-field textarea {
       background: var(--bg-off);
       border: 1px solid var(--rule);
       border-radius: var(--radius);
@@ -723,7 +393,6 @@
       width: 100%;
       padding: 0.7rem 0.9rem;
       resize: none;
-      appearance: none;
       transition: border-color 0.15s;
     }
 
@@ -731,11 +400,9 @@
     .form-field textarea::placeholder { color: var(--text-faint); }
 
     .form-field input:focus,
-    .form-field textarea:focus,
-    .form-field select:focus {
+    .form-field textarea:focus {
       border-color: var(--accent);
       background: var(--bg);
-      outline: none;
     }
 
     .form-submit { margin-top: 0.5rem; }
@@ -794,6 +461,11 @@
     .footer-logo span { color: var(--accent); }
 
     /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
     .reveal {
       opacity: 0;
       transform: translateY(16px);
@@ -805,451 +477,65 @@
       transform: translateY(0);
     }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero-eyebrow { opacity: 0; animation: fadeUp 0.5s 0.1s forwards; }
-    h1            { opacity: 0; animation: fadeUp 0.6s 0.2s forwards; }
-    .hero-sub     { opacity: 0; animation: fadeUp 0.6s 0.32s forwards; }
-    .hero-actions { opacity: 0; animation: fadeUp 0.6s 0.42s forwards; }
-    .hero-right   { opacity: 0; animation: fadeUp 0.6s 0.52s forwards; }
-
     /* ─── RESPONSIVE ─── */
-    @media (max-width: 1024px) {
-      .funnel-grid,
-      .steps-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-      .funnel-step,
-      .step-card {
-        border-bottom: 1px solid var(--rule);
-      }
-      .funnel-step:nth-child(even),
-      .step-card:nth-child(even) {
-        border-right: none;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-        min-height: auto;
-        padding-top: 7rem;
-      }
-      .hero-right {
-        border-left: none;
-        border-top: 1px solid var(--rule);
-        padding-left: 0;
-        padding-top: 2rem;
-      }
-      .hero-stat:first-child { border-top: none; }
-      .audiences-grid { grid-template-columns: 1fr; }
-      .audience-card + .audience-card { border-left: none; border-top: 1px solid var(--rule); }
-      .about-grid,
-      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .section-header { grid-template-columns: 1fr; gap: 1rem; }
-      .testimonial-inner { grid-template-columns: 1fr; gap: 1.5rem; }
-    }
-
     @media (max-width: 768px) {
       nav { padding: 0 1.5rem; }
-      .nav-links { display: none; }
-      .section { padding: 4rem 1.5rem; }
-      .hero { padding: 6rem 1.5rem 3rem; }
-      .testimonial-section { padding: 4rem 1.5rem; }
+      .hero { padding: 6rem 1.5rem 3rem; min-height: auto; }
+      .offer-section,
+      .contact-section { padding: 4rem 1.5rem; }
       footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
-      .form-row { grid-template-columns: 1fr; }
-      .funnel-grid,
-      .steps-grid { grid-template-columns: 1fr; }
-      .funnel-step,
-      .step-card { border-right: none; }
-
-      /* Pricing table responsive */
-      .pricing-table, .pricing-table thead, .pricing-table tbody,
-      .pricing-table th, .pricing-table td, .pricing-table tr { display: block; }
-      .pricing-table thead { display: none; }
-      .pricing-table tr { border-bottom: 1px solid var(--rule); padding: 1.5rem 0; }
-      .pricing-table td { padding: 0.25rem 1.5rem; border: none; }
+      .form-wrap { padding: 1.5rem; }
     }
   </style>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRRVWXJF0T"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RRRVWXJF0T');
-  </script>
 </head>
 <body>
 
   <nav aria-label="Main navigation">
     <a href="#" class="nav-logo" aria-label="Tredgold Digital home">Tredgold<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="#what-we-do">What we do</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta">Start a conversation</a>
+    <a href="#contact" class="nav-cta">Get in touch</a>
   </nav>
 
   <main>
 
     <!-- HERO -->
     <section class="hero" aria-label="Introduction">
-      <div class="hero-left">
-        <p class="hero-eyebrow">Web &amp; automation — service businesses across the UK</p>
-        <h1>A digital presence that reflects<br><em>the quality of your work.</em></h1>
-        <p class="hero-sub">We build websites and automation systems for service businesses — whether you need more enquiries, or simply a presence that does justice to the reputation you've spent years building.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn-primary">Start a conversation →</a>
-          <a href="#what-we-do" class="btn-ghost">See what we do</a>
-        </div>
+      <p class="hero-eyebrow">Service business systems</p>
+      <h1>Business systems that turn enquiries into <em>paying clients.</em></h1>
+      <p class="hero-sub">Capture leads, automate follow-ups, and get booked without chasing customers.</p>
+      <div class="hero-actions">
+        <a href="https://demo.tredgolddigital.com" class="btn-primary" target="_blank" rel="noopener">See a live demo →</a>
+        <a href="#contact" class="btn-ghost">Get in touch</a>
       </div>
-
-      <div class="hero-right" aria-label="Key points">
-        <div class="hero-stat">
-          <p class="hero-stat-label">Who we work with</p>
-          <p class="hero-stat-value">Detailers, cleaners, gardeners, tradespeople, and established service companies across the UK</p>
-        </div>
-        <div class="hero-stat">
-          <p class="hero-stat-label">How we work</p>
-          <p class="hero-stat-value">Set up entirely for you. No technical knowledge required, no lock-in, no ad spend needed</p>
-        </div>
-        <div class="hero-stat">
-          <p class="hero-stat-label">What we don't do</p>
-          <p class="hero-stat-value">We don't oversell. We recommend only what makes a material difference to your business</p>
-        </div>
-        <div class="hero-stat">
-          <p class="hero-stat-label">Based in</p>
-          <p class="hero-stat-value">Leeds, West Yorkshire — working with businesses across the UK</p>
-        </div>
-      </div>
+      <p class="hero-location">Based in Leeds &nbsp;·&nbsp; <span>Working with service businesses across the UK</span></p>
     </section>
 
-    <!-- TESTIMONIAL -->
-    <div class="testimonial-section reveal" aria-label="Client testimonial">
-      <div class="testimonial-inner">
-        <p class="testimonial-label">Client — Leeds</p>
-        <div class="testimonial-body">
-          <blockquote>"After 18 years in business, we didn't need a website to chase leads — we needed one that matched our reputation. Will delivered exactly that."</blockquote>
-          <cite>Civil Engineering Business, Leeds</cite>
-        </div>
-      </div>
-    </div>
+    <!-- WHAT WE OFFER -->
+    <section class="offer-section" id="what-we-do" aria-labelledby="offer-heading">
+      <div class="offer-inner">
+        <p class="offer-label reveal">What we build</p>
+        <h2 class="offer-heading reveal" id="offer-heading">Everything you need to stop losing work</h2>
+        <p class="offer-sub reveal">We set it all up for you. No technical knowledge needed, no lock-in.</p>
 
-    <!-- WHO WE WORK WITH -->
-    <section class="section" id="what-we-do" aria-labelledby="audiences-heading">
-      <div class="section-inner">
-        <div class="section-header reveal">
-          <p class="section-label">Who we work with</p>
-          <div>
-            <h2 class="section-heading" id="audiences-heading">We build what your business actually needs</h2>
-            <p class="section-sub">Not every business has the same problem. Some need more enquiries. Some need their digital presence to catch up with the quality of their work. We start by understanding which one you are.</p>
-          </div>
-        </div>
-
-        <div class="audiences-grid reveal">
-          <div class="audience-card">
-            <p class="audience-num">01 — Growing service businesses</p>
-            <h3 class="audience-title">You do good work. You're just hard to find.</h3>
-            <p class="audience-desc">You're losing jobs you should be winning — not because of your service, but because of the gaps around it. Hard to find, slow to respond, easy to forget. We fix all three.</p>
-            <ul class="audience-bullets">
-              <li>Get found on Google before competitors do</li>
-              <li>Capture every enquiry, even while you're on a job</li>
-              <li>Convert enquiries into confirmed, deposit-paid bookings</li>
-              <li>Keep your best clients coming back automatically</li>
-            </ul>
-          </div>
-          <div class="audience-card">
-            <p class="audience-num">02 — Established businesses</p>
-            <h3 class="audience-title">Your website doesn't reflect what you've built.</h3>
-            <p class="audience-desc">You don't need more leads. You need a digital presence that represents your business the way it deserves to be represented. After years of building a reputation, your website should show it.</p>
-            <ul class="audience-bullets">
-              <li>A website that matches 10, 20, 30 years of expertise</li>
-              <li>Credibility that holds up when clients look you up</li>
-              <li>Accreditations and quality of work presented properly</li>
-              <li>Professional, without being impersonal</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FUNNEL -->
-    <section class="section section-alt" id="how-it-works" aria-labelledby="funnel-heading">
-      <div class="section-inner">
-        <div class="section-header reveal">
-          <p class="section-label">The system</p>
-          <div>
-            <h2 class="section-heading" id="funnel-heading">End-to-end — or just the part you need</h2>
-            <p class="section-sub">We can build the whole system or start with what makes the biggest difference right now. Either way, everything is set up for you.</p>
-          </div>
-        </div>
-
-        <div class="funnel-grid reveal">
-          <div class="funnel-step">
-            <span class="funnel-num">01</span>
-            <p class="funnel-title">Get found</p>
-            <p class="funnel-sub">Google Business Profile, local search, and a website that shows up — and holds up — when clients look you up.</p>
-          </div>
-          <div class="funnel-step">
-            <span class="funnel-num">02</span>
-            <p class="funnel-title">Win enquiries</p>
-            <p class="funnel-sub">A clear, fast website that turns visitors into enquiries — whether they're discovering you or checking your credentials.</p>
-          </div>
-          <div class="funnel-step">
-            <span class="funnel-num">03</span>
-            <p class="funnel-title">Capture every lead</p>
-            <p class="funnel-sub">Missed call SMS, online booking, and deposit collection mean no enquiry slips through — even while you're on a job.</p>
-          </div>
-          <div class="funnel-step">
-            <span class="funnel-num">04</span>
-            <p class="funnel-title">Keep clients</p>
-            <p class="funnel-sub">Automated review requests, rebooking reminders, and follow-ups keep your best clients returning without chasing.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="section" aria-labelledby="how-heading">
-      <div class="section-inner">
-        <div class="section-header reveal">
-          <p class="section-label">How it works</p>
-          <div>
-            <h2 class="section-heading" id="how-heading">We build it. You run your business.</h2>
-            <p class="section-sub">We set everything up for you — no technical knowledge required, no learning curve, no lengthy back-and-forth.</p>
-          </div>
-        </div>
-
-        <div class="steps-grid reveal">
-          <div class="step-card">
-            <span class="step-num">Step 01</span>
-            <p class="step-title">We understand your business</p>
-            <p class="step-desc">We start with a conversation — not a questionnaire. We want to understand what your business does, how you win work, and what's not working the way it should.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-num">Step 02</span>
-            <p class="step-title">We recommend only what you need</p>
-            <p class="step-desc">We don't oversell. If you need a better website, we build a better website. If you need the full system, we build the full system. We start with what makes the biggest difference.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-num">Step 03</span>
-            <p class="step-title">We build and set it up</p>
-            <p class="step-desc">We handle the build, configuration, and go-live. You don't need to understand any of it — you just need to see it working before we hand it over.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-num">Step 04</span>
-            <p class="step-title">We're here after the build</p>
-            <p class="step-desc">Most of what we build runs itself. When something needs attention, adjusting, or expanding — we're easy to reach and straightforward to work with.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICING -->
-    <section class="section section-alt" id="pricing" aria-labelledby="pricing-heading">
-      <div class="section-inner">
-        <div class="section-header reveal">
-          <p class="section-label">Pricing</p>
-          <div>
-            <h2 class="section-heading" id="pricing-heading">Straightforward pricing, no surprises</h2>
-            <p class="section-sub">Start with one thing, take the full system, or commission a bespoke ecommerce build. Every service is quoted clearly before we start. No retainers you don't need, no lock-in.</p>
-          </div>
-        </div>
-
-        <div class="reveal">
-          <table class="pricing-table" aria-label="Service pricing">
-            <thead>
-              <tr>
-                <th style="width:7%">Step</th>
-                <th style="width:23%">Service</th>
-                <th style="width:15%">Price</th>
-                <th style="width:30%">Includes</th>
-                <th style="width:25%">Best for</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><p class="pt-step">01</p></td>
-                <td>
-                  <p class="pt-name">Google Business Profile</p>
-                  <p class="pt-tagline">Found when it matters. First, not fourth.</p>
-                </td>
-                <td>
-                  <p class="pt-price">From £299</p>
-                  <p class="pt-recurring">One-off or retained</p>
-                </td>
-                <td><p class="pt-includes">Full profile optimisation · Local ranking improvements · Review strategy setup · Ongoing management available</p></td>
-                <td><p class="pt-bestfor">Businesses not appearing on Google Maps — or those whose profile doesn't reflect the quality of their work</p></td>
-              </tr>
-              <tr>
-                <td><p class="pt-step">02</p></td>
-                <td>
-                  <p class="pt-name">Website</p>
-                  <p class="pt-tagline">Works hard, or finally does you justice.</p>
-                </td>
-                <td>
-                  <p class="pt-price">From £749</p>
-                  <p class="pt-recurring">One-off</p>
-                </td>
-                <td><p class="pt-includes">Clean professional design · Built for search · Fast and mobile-first · Lead-gen or credibility-led — your choice</p></td>
-                <td><p class="pt-bestfor">Businesses with no website, an outdated one, or one that doesn't reflect what they've built</p></td>
-              </tr>
-              <tr>
-                <td><p class="pt-step">03</p></td>
-                <td>
-                  <p class="pt-name">Missed Call Recovery</p>
-                  <p class="pt-tagline">Miss a call. Keep the client.</p>
-                </td>
-                <td>
-                  <p class="pt-price">From £499</p>
-                  <p class="pt-recurring">Then £49–£69 / month</p>
-                </td>
-                <td><p class="pt-includes">Instant SMS on missed call · Voicemail handling · Custom messages · System testing + go-live</p></td>
-                <td><p class="pt-bestfor">Businesses missing calls while on the job and losing work as a result</p></td>
-              </tr>
-              <tr>
-                <td><p class="pt-step">04</p></td>
-                <td>
-                  <p class="pt-name">Online Booking <span class="pt-popular">Most popular</span></p>
-                  <p class="pt-tagline">Confirmed jobs, without the back-and-forth.</p>
-                </td>
-                <td>
-                  <p class="pt-price">From £900</p>
-                  <p class="pt-recurring">Then £79–£119 / month</p>
-                </td>
-                <td><p class="pt-includes">Everything in Missed Call · Branded booking page · Lead tracking · Photo upload for quotes · Booking confirmation</p></td>
-                <td><p class="pt-bestfor">Businesses spending too much time managing messages and scheduling calls</p></td>
-              </tr>
-              <tr>
-                <td><p class="pt-step">05</p></td>
-                <td>
-                  <p class="pt-name">Deposit Collection</p>
-                  <p class="pt-tagline">Committed clients. Protected time slots.</p>
-                </td>
-                <td>
-                  <p class="pt-price">From £1,200</p>
-                  <p class="pt-recurring">Then £99–£149 / month</p>
-                </td>
-                <td><p class="pt-includes">Everything in Booking · Stripe deposit collection · Fixed or % deposits · No-show reduction</p></td>
-                <td><p class="pt-bestfor">Busy businesses with frequent cancellations or clients who don't show</p></td>
-              </tr>
-              <tr>
-                <td><p class="pt-step">06</p></td>
-                <td>
-                  <p class="pt-name">Review Generation</p>
-                  <p class="pt-tagline">A reputation that precedes you, online.</p>
-                </td>
-                <td>
-                  <p class="pt-price">From £349</p>
-                  <p class="pt-recurring">Then £49–£69 / month</p>
-                </td>
-                <td><p class="pt-includes">Automated request after every job · Google &amp; Facebook links · Custom message setup</p></td>
-                <td><p class="pt-bestfor">Businesses whose online reputation doesn't reflect the quality of their work</p></td>
-              </tr>
-              <tr>
-                <td><p class="pt-step">07</p></td>
-                <td>
-                  <p class="pt-name">Email &amp; SMS Follow-ups</p>
-                  <p class="pt-tagline">The best clients come back. This makes sure they do.</p>
-                </td>
-                <td>
-                  <p class="pt-price">From £449</p>
-                  <p class="pt-recurring">Then £59–£79 / month</p>
-                </td>
-                <td><p class="pt-includes">Automated job follow-up · Rebooking reminders · Seasonal messages · Repeat business without chasing</p></td>
-                <td><p class="pt-bestfor">Businesses with a strong client base who want more repeat bookings without the legwork</p></td>
-              </tr>
-              <tr>
-                <td><p class="pt-step">Full system</p></td>
-                <td>
-                  <p class="pt-name">Full Automation</p>
-                  <p class="pt-tagline">The whole system, built and running.</p>
-                </td>
-                <td>
-                  <p class="pt-price">From £2,499</p>
-                  <p class="pt-recurring">Then £149–£249 / month</p>
-                </td>
-                <td><p class="pt-includes">Google profile + website · Missed call SMS · Booking + deposits · Reminders · Reviews · Email &amp; SMS · Lead dashboard · Rebooking</p></td>
-                <td><p class="pt-bestfor">Established businesses ready to run a tighter, more professional operation — without advertising</p></td>
-              </tr>
-              <tr>
-                <td><p class="pt-step">Ecommerce</p></td>
-                <td>
-                  <p class="pt-name">Bespoke Ecommerce</p>
-                  <p class="pt-tagline">Built for your products, your customers, your margins.</p>
-                </td>
-                <td>
-                  <p class="pt-price">From £3,500</p>
-                  <p class="pt-recurring">Then £99–£199 / month</p>
-                </td>
-                <td><p class="pt-includes">Custom-built to your requirements · No off-the-shelf templates · Product catalogue, checkout, and payments · Ongoing support and hosting available</p></td>
-                <td><p class="pt-bestfor">Businesses that need an ecommerce presence built properly — not a generic template that undersells what they sell</p></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section" id="about" aria-labelledby="about-heading">
-      <div class="section-inner">
-        <div class="section-header reveal">
-          <p class="section-label">About</p>
-          <div>
-            <h2 class="section-heading" id="about-heading">We work with businesses that take their work seriously</h2>
-            <p class="section-sub">A Leeds-based consultancy working exclusively with service businesses — from sole traders building momentum to established companies trading for decades.</p>
-          </div>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-body reveal">
-            <p>What we've found is that our clients tend to fall into two camps. The first needs more enquiries: they do excellent work but they're hard to find, slow to respond, or easy to forget. The second has the opposite problem: they're busy, they're respected, and their digital presence is the one thing that doesn't reflect it.</p>
-            <p>We work well with both — but we're selective about who we take on. We don't work with businesses we can't genuinely help, and we don't recommend things that won't make a material difference.</p>
-            <p>Everything is set up for you. No technical knowledge required, no lengthy handovers, no jargon. You'll know what we're building, why, and what to expect — before we start.</p>
-          </div>
-          <div class="about-items reveal">
-            <div class="about-item">
-              <div class="about-item-icon">🏛️</div>
-              <div class="about-item-text">
-                <strong>Credibility-first design</strong>
-                <span>Websites built to reflect what you've earned — not just to generate clicks</span>
-              </div>
+        <div class="offer-items reveal">
+          <div class="offer-item">
+            <p class="offer-item-num">01</p>
+            <div>
+              <p class="offer-item-title">Booking &amp; payment systems</p>
+              <p class="offer-item-desc">Clients book and pay a deposit directly — confirmed jobs, no back-and-forth, no no-shows.</p>
             </div>
-            <div class="about-item">
-              <div class="about-item-icon">🔍</div>
-              <div class="about-item-text">
-                <strong>Found on Google</strong>
-                <span>Profile optimised, website ranking — so clients find you when it counts</span>
-              </div>
+          </div>
+          <div class="offer-item">
+            <p class="offer-item-num">02</p>
+            <div>
+              <p class="offer-item-title">Lead capture &amp; automation</p>
+              <p class="offer-item-desc">Capture every enquiry automatically, then follow up without lifting a finger — even while you're on a job.</p>
             </div>
-            <div class="about-item">
-              <div class="about-item-icon">📞</div>
-              <div class="about-item-text">
-                <strong>Every enquiry captured</strong>
-                <span>Missed call SMS in under 30 seconds — no lead lost while you're on a job</span>
-              </div>
-            </div>
-            <div class="about-item">
-              <div class="about-item-icon">📅</div>
-              <div class="about-item-text">
-                <strong>Bookings confirmed</strong>
-                <span>Clients book and pay a deposit directly — no chasing, no back-and-forth</span>
-              </div>
-            </div>
-            <div class="about-item">
-              <div class="about-item-icon">🔁</div>
-              <div class="about-item-text">
-                <strong>Clients retained</strong>
-                <span>Automated follow-ups keep your best clients coming back without lifting a finger</span>
-              </div>
+          </div>
+          <div class="offer-item">
+            <p class="offer-item-num">03</p>
+            <div>
+              <p class="offer-item-title">Missed-call &amp; follow-up systems</p>
+              <p class="offer-item-desc">Miss a call? An instant SMS goes out in seconds — so you keep the client even when you can't pick up.</p>
             </div>
           </div>
         </div>
@@ -1257,69 +543,33 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="section section-alt" id="contact" aria-labelledby="contact-heading">
-      <div class="section-inner">
-        <div class="section-header reveal">
-          <p class="section-label">Get in touch</p>
-          <div>
-            <h2 class="section-heading" id="contact-heading">Tell us about your business</h2>
-            <p class="section-sub">We'll have a straightforward conversation about what you need — no pressure, no jargon, no obligation. If we're a good fit, we'll tell you exactly what we'd recommend and why.</p>
-          </div>
-        </div>
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="contact-inner">
+        <p class="contact-label reveal">Get in touch</p>
+        <h2 class="contact-heading reveal" id="contact-heading">Tell us about your business</h2>
+        <p class="contact-sub reveal">No pressure, no jargon. If we can help, we'll tell you exactly what we'd recommend and why.</p>
 
-        <div class="contact-grid">
-          <div class="reveal">
-            <div class="contact-meta">
-              <p>Email: <a href="mailto:hello@tredgolddigital.com">hello@tredgolddigital.com</a></p>
-              <p>Based in Leeds, UK</p>
+        <div class="form-wrap reveal">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" aria-label="Contact form">
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none;"><input name="bot-field" /></p>
+            <div class="form-field">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
             </div>
-          </div>
-
-          <div class="form-wrap reveal">
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" aria-label="Get in touch">
-              <input type="hidden" name="form-name" value="contact" />
-              <p style="display:none;"><input name="bot-field" /></p>
-              <div class="form-row">
-                <div class="form-field">
-                  <label for="name">Full name</label>
-                  <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
-                </div>
-                <div class="form-field">
-                  <label for="email">Email address</label>
-                  <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email" />
-                </div>
-              </div>
-              <div class="form-field">
-                <label for="company">Business name</label>
-                <input type="text" id="company" name="company" placeholder="Smith's Civil Engineering" autocomplete="organization" />
-              </div>
-              <div class="form-field">
-                <label for="service">What are you looking for?</label>
-                <select id="service" name="service">
-                  <option value="">Select an option</option>
-                  <option value="credibility">A website that reflects our reputation</option>
-                  <option value="google">Better Google presence</option>
-                  <option value="website">A new website</option>
-                  <option value="missed-call">Missed Call Recovery</option>
-                  <option value="booking">Online Booking</option>
-                  <option value="deposits">Deposit Collection</option>
-                  <option value="reviews">Review Generation</option>
-                  <option value="email-sms">Email &amp; SMS Follow-ups</option>
-                  <option value="complete">The full system</option>
-                  <option value="ecommerce">A bespoke ecommerce site</option>
-                  <option value="other">Not sure yet — happy to talk</option>
-                </select>
-              </div>
-              <div class="form-field">
-                <label for="message">Tell us about your business</label>
-                <textarea id="message" name="message" rows="4" placeholder="What do you do, how long have you been trading, and what's the one thing you'd most like to change about your digital presence?" required></textarea>
-              </div>
-              <div class="form-submit">
-                <button type="submit" id="submitBtn">Send message →</button>
-              </div>
-            </form>
-            <p class="form-success" id="formSuccess" role="status">✓ Message received — we'll be in touch shortly.</p>
-          </div>
+            <div class="form-field">
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email" />
+            </div>
+            <div class="form-field">
+              <label for="message">Tell us about your business</label>
+              <textarea id="message" name="message" rows="5" placeholder="What do you do, and what's the one thing you'd most like to change about how you win or keep clients?" required></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" id="submitBtn">Send message →</button>
+            </div>
+          </form>
+          <p class="form-success" id="formSuccess" role="status">✓ Message received — we'll be in touch shortly.</p>
         </div>
       </div>
     </section>
@@ -1369,7 +619,7 @@
     }, { threshold: 0.08 });
 
     document.querySelectorAll('.reveal').forEach((el, i) => {
-      el.dataset.delay = i * 60;
+      el.dataset.delay = i * 80;
       observer.observe(el);
     });
   </script>
