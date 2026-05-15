@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Business Systems for Service Businesses | Tredgold Digital — Leeds, UK</title>
-  <meta name="description" content="Tredgold Digital builds booking systems, lead capture, and automation for service businesses across the UK." />
+  <title>Digital Systems for Service Businesses | Tredgold Digital — Leeds, UK</title>
+  <meta name="description" content="Tredgold Digital builds practical digital systems that help service businesses manage enquiries, bookings, payments and customer communication more efficiently." />
   <link rel="canonical" href="https://www.tredgolddigital.com/" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -309,6 +309,188 @@
       line-height: 1.65;
     }
 
+    /* ─── TRUST ─── */
+    .trust-section {
+      padding: 7rem 3rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .trust-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .trust-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .trust-label::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--rule-strong);
+      flex-shrink: 0;
+    }
+
+    .trust-heading {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .trust-body {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    .trust-points {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-top: 0.5rem;
+    }
+
+    .trust-point {
+      border-left: 2px solid var(--rule);
+      padding-left: 1.25rem;
+    }
+
+    .trust-point-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .trust-point-desc {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    @media (max-width: 768px) {
+      .trust-section { padding: 4rem 1.5rem; }
+      .trust-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+
+    /* ─── RECENT WORK ─── */
+    .work-section {
+      padding: 7rem 3rem;
+      border-bottom: 1px solid var(--rule);
+      background: var(--bg-off);
+    }
+
+    .work-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .work-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .work-label::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--rule-strong);
+      flex-shrink: 0;
+    }
+
+    .work-heading {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .work-sub {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+      max-width: 50ch;
+      line-height: 1.75;
+      margin-bottom: 3rem;
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--rule);
+    }
+
+    .work-card {
+      padding: 2rem;
+      border-right: 1px solid var(--rule);
+      transition: background 0.15s;
+    }
+
+    .work-card:last-child { border-right: none; }
+    .work-card:hover { background: var(--bg); }
+
+    .work-card-sector {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .work-card-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .work-card-desc {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    @media (max-width: 768px) {
+      .work-section { padding: 4rem 1.5rem; }
+      .work-grid { grid-template-columns: 1fr; }
+      .work-card { border-right: none; border-bottom: 1px solid var(--rule); }
+      .work-card:last-child { border-bottom: none; }
+    }
+
     /* ─── CONTACT ─── */
     .contact-section {
       padding: 7rem 3rem;
@@ -499,11 +681,11 @@
 
     <!-- HERO -->
     <section class="hero" aria-label="Introduction">
-      <p class="hero-eyebrow">Service business systems</p>
-      <h1>Business systems that turn enquiries into <em>paying clients.</em></h1>
-      <p class="hero-sub">Capture leads, automate follow-ups, and get booked without chasing customers.</p>
+      <p class="hero-eyebrow">Digital systems for service businesses</p>
+      <h1>Practical digital systems for <em>service businesses.</em></h1>
+      <p class="hero-sub">We help local businesses streamline enquiries, bookings, customer communication and payments through practical digital systems — fully set up for you.</p>
       <div class="hero-actions">
-        <a href="https://demo.tredgolddigital.com" class="btn-primary" target="_blank" rel="noopener">See a live demo →</a>
+        <a href="#what-we-do" class="btn-primary">See how it works →</a>
         <a href="#contact" class="btn-ghost">Get in touch</a>
       </div>
       <p class="hero-location">Based in Leeds &nbsp;·&nbsp; <span>Working with service businesses across the UK</span></p>
@@ -513,8 +695,8 @@
     <section class="offer-section" id="what-we-do" aria-labelledby="offer-heading">
       <div class="offer-inner">
         <p class="offer-label reveal">What we build</p>
-        <h2 class="offer-heading reveal" id="offer-heading">Stop missing bookings. Start getting paid upfront.</h2>
-        <p class="offer-sub reveal">We set it all up for you. No technical knowledge needed, no lock-in.</p>
+        <h2 class="offer-heading reveal" id="offer-heading">Practical systems that reduce admin and improve how your business operates.</h2>
+        <p class="offer-sub reveal">Fully set up for your business — with straightforward support and no long-term contracts.</p>
 
         <div class="offer-items reveal">
           <div class="offer-item">
@@ -527,8 +709,8 @@
           <div class="offer-item">
             <p class="offer-item-num">02</p>
             <div>
-              <p class="offer-item-title">Lead capture &amp; automation</p>
-              <p class="offer-item-desc">Capture every enquiry automatically, then follow up without lifting a finger — even while you're on a job.</p>
+              <p class="offer-item-title">Enquiry capture &amp; follow-up</p>
+              <p class="offer-item-desc">Every enquiry is captured automatically and followed up instantly — even when you're busy on-site or with customers.</p>
             </div>
           </div>
           <div class="offer-item">
@@ -537,6 +719,58 @@
               <p class="offer-item-title">Missed-call &amp; follow-up systems</p>
               <p class="offer-item-desc">Miss a call? An instant SMS goes out in seconds — so you keep the client even when you can't pick up.</p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section class="trust-section" aria-labelledby="trust-heading">
+      <div class="trust-inner">
+        <div>
+          <p class="trust-label reveal">Built for real service businesses</p>
+          <h2 class="trust-heading reveal" id="trust-heading">Based in Leeds. Working across the UK.</h2>
+          <p class="trust-body reveal">Tredgold Digital works with service businesses to improve how they handle enquiries, bookings and customer communication. We focus on practical systems that reduce admin, improve response times and help businesses operate more efficiently.</p>
+        </div>
+        <div class="trust-points reveal">
+          <div class="trust-point">
+            <p class="trust-point-title">Reduce admin</p>
+            <p class="trust-point-desc">Automated follow-ups, booking confirmations and reminders replace manual tasks — freeing up time you can put back into the business.</p>
+          </div>
+          <div class="trust-point">
+            <p class="trust-point-title">Respond faster</p>
+            <p class="trust-point-desc">Enquiries are captured and acknowledged instantly, so you're never losing work to a competitor who picked up first.</p>
+          </div>
+          <div class="trust-point">
+            <p class="trust-point-title">We handle the setup</p>
+            <p class="trust-point-desc">We build, configure and integrate everything for you — no technical knowledge needed on your end.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECENT WORK -->
+    <section class="work-section" aria-labelledby="work-heading">
+      <div class="work-inner">
+        <p class="work-label reveal">Recent work</p>
+        <h2 class="work-heading reveal" id="work-heading">Industry-specific systems, built properly.</h2>
+        <p class="work-sub reveal">We build across sectors — from regulated industries to global professional services.</p>
+
+        <div class="work-grid reveal">
+          <div class="work-card">
+            <p class="work-card-sector">Civil Engineering</p>
+            <p class="work-card-title">RAMS Generator</p>
+            <p class="work-card-desc">Cuts safety documentation from over an hour to under five minutes — built for project managers working to UK compliance standards.</p>
+          </div>
+          <div class="work-card">
+            <p class="work-card-sector">Aviation</p>
+            <p class="work-card-title">Crew Duty Swap</p>
+            <p class="work-card-desc">Lets UK air crew share rosters and check the legality of proposed swaps instantly — replacing manual cross-referencing of flight time limitations.</p>
+          </div>
+          <div class="work-card">
+            <p class="work-card-sector">Oil &amp; Gas</p>
+            <p class="work-card-title">Global Recruitment Platform</p>
+            <p class="work-card-desc">Website and candidate-facing system for an international oil and gas recruitment firm, designed for a professional global audience.</p>
           </div>
         </div>
       </div>
