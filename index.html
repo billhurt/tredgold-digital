@@ -472,17 +472,19 @@
 
     .work-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       border: 1px solid var(--rule);
     }
 
     .work-card {
       padding: 2rem;
       border-right: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
       transition: background 0.15s;
     }
 
-    .work-card:last-child { border-right: none; }
+    .work-card:nth-child(2n) { border-right: none; }
+    .work-card:nth-last-child(-n+2) { border-bottom: none; }
     .work-card:hover { background: var(--bg); }
 
     .work-card-sector {
@@ -788,23 +790,28 @@
       <div class="work-inner">
         <p class="work-label reveal">Recent work</p>
         <h2 class="work-heading reveal" id="work-heading">Friction removed. In production.</h2>
-        <p class="work-sub reveal">Three examples of what removing friction actually looks like — different industries, same problem.</p>
+        <p class="work-sub reveal">Four examples of what removing friction actually looks like — different industries, same problem.</p>
 
         <div class="work-grid reveal">
           <div class="work-card">
             <p class="work-card-sector">Aviation · SaaS</p>
             <p class="work-card-title">CrewSwap</p>
-            <p class="work-card-desc">UK airline crew were spending hours manually cross-referencing flight time limitation rules to check whether a duty swap was legal. CrewSwap does that check instantly — live product, real paying users, hours of manual work eliminated per swap.</p>
+            <p class="work-card-desc">Finding cover or a swap shouldn't mean scrolling through group chats. CrewSwap gives UK airline crew a simple, direct way to post and pick up shift swaps — live today with a large base of professional pilots and cabin crew.</p>
           </div>
           <div class="work-card">
             <p class="work-card-sector">Construction · SaaS</p>
             <p class="work-card-title">SiteForge</p>
-            <p class="work-card-desc">UK civils subcontractors were managing CHAS, SMAS and Constructionline Gold accreditation through paper forms and back-and-forth emails — a process that cost them days and sometimes contracts. SiteForge replaces that with a structured digital workflow that keeps them compliant and audit-ready.</p>
+            <p class="work-card-desc">Pre-start packs, training matrices and CHAS, SMAS and Constructionline Gold renewals are usually scattered across spreadsheets and email threads. SiteForge brings that into one workflow — in use by several UK civils and construction businesses to manage pre-start processes end to end.</p>
           </div>
           <div class="work-card">
             <p class="work-card-sector">Aviation · AI</p>
             <p class="work-card-title">Ask Atlas</p>
-            <p class="work-card-desc">Airline pilots needed answers from dense technical manuals under time pressure. Ask Atlas is a RAG-powered B2B SaaS tool that lets them ask questions in plain English and get precise, sourced answers instantly — instead of digging through hundreds of pages.</p>
+            <p class="work-card-desc">Too much training knowledge lives in one experienced instructor's head, and sim time gets lost re-explaining things a trainee should already know. Ask Atlas gives crew instant, cited answers from an organisation's own training material — and gives training departments visibility into where the knowledge gaps actually are. In active pilot conversations with airlines, logistics carriers and aviation consultants.</p>
+          </div>
+          <div class="work-card">
+            <p class="work-card-sector">Cross-industry · Consulting</p>
+            <p class="work-card-title">Digital Presence &amp; Process Automation</p>
+            <p class="work-card-desc">Beyond our own products, we work directly with businesses — from garden services to oil and gas — to modernise their digital presence and automate the manual admin eating into their time. Recent work includes automated certification tracking and sales pipeline management for a landscaping business, and improved online visibility and lead generation for clients in construction and energy.</p>
           </div>
         </div>
       </div>
