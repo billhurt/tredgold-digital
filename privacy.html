@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Tredgold Digital</title>
+  <meta name="description" content="How Tredgold Digital Ltd collects, uses and protects your personal data, and the rights you have over it." />
+  <link rel="canonical" href="https://www.tredgolddigital.com/privacy" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.tredgolddigital.com/privacy" />
+  <meta property="og:site_name"   content="Tredgold Digital" />
+  <meta property="og:title"       content="Privacy Policy | Tredgold Digital" />
+  <meta property="og:description" content="How Tredgold Digital Ltd collects, uses and protects your personal data, and the rights you have over it." />
+  <meta property="og:image"       content="https://www.tredgolddigital.com/og-image.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Privacy Policy | Tredgold Digital" />
+  <meta name="twitter:description" content="How Tredgold Digital Ltd collects, uses and protects your personal data, and the rights you have over it." />
+  <meta name="twitter:image"       content="https://www.tredgolddigital.com/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --bg-off: #f9f9f8;
+      --text: #0d0d0d;
+      --text-mid: #3a3a3a;
+      --text-muted: #6b6b6b;
+      --text-faint: #a0a0a0;
+      --rule: #d8d8d4;
+      --rule-strong: #b0b0aa;
+      --accent: #1a56db;
+      --accent-subtle: #eef3fd;
+      --radius: 3px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 3rem;
+      height: 60px;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-logo {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45rem 1.1rem;
+      background: var(--text);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      transition: background 0.15s;
+    }
+
+    .nav-cta:hover { background: var(--accent); }
+
+    /* ─── POLICY ─── */
+    .policy {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 8rem 3rem 5rem;
+    }
+
+    .policy-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .policy-label::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .policy h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .policy-updated {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .policy section { margin-bottom: 2.5rem; }
+
+    .policy h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .policy p,
+    .policy li {
+      font-size: 0.93rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      max-width: 68ch;
+    }
+
+    .policy p + p,
+    .policy p + ul,
+    .policy ul + p { margin-top: 0.75rem; }
+
+    .policy ul { padding-left: 1.25rem; }
+    .policy li + li { margin-top: 0.4rem; }
+    .policy strong { font-weight: 500; color: var(--text); }
+
+    .policy a {
+      color: var(--accent);
+      text-underline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    .policy a:focus-visible,
+    .nav-logo:focus-visible,
+    .nav-cta:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .todo {
+      background: #fff3bf;
+      color: #5c3c00;
+      font-weight: 500;
+      padding: 0.05rem 0.35rem;
+      border-radius: 2px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.78rem;
+      color: var(--text-faint);
+    }
+
+    .footer-legal { text-align: center; }
+
+    footer > span:not(.footer-legal) { white-space: nowrap; flex-shrink: 0; }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    footer a:hover { color: var(--accent); }
+
+    footer a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .footer-logo {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .footer-logo span { color: var(--accent); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      nav { padding: 0 1.5rem; }
+      .policy { padding: 6rem 1.5rem 3rem; }
+      footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="Tredgold Digital home">Tredgold<span>.</span></a>
+    <a href="/#contact" class="nav-cta">Start a conversation</a>
+  </nav>
+
+  <main class="policy">
+    <p class="policy-label">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="policy-updated">Last updated: 15 October 2026</p>
+
+    <section aria-labelledby="who-we-are">
+      <h2 id="who-we-are">Who we are</h2>
+      <p>This website is run by Tredgold Digital Ltd, a company registered in England and Wales with company number 16955781. We are the data controller for the personal data described in this policy, which means we decide how and why it is used.</p>
+      <p>If you have any questions about this policy or your personal data, email us at <a href="mailto:hello@tredgolddigital.com">hello@tredgolddigital.com</a>.</p>
+      <p>We are registered with the Information Commissioner's Office (ICO) under registration reference ZC156526.</p>
+    </section>
+
+    <section aria-labelledby="what-we-collect">
+      <h2 id="what-we-collect">What we collect</h2>
+      <p><strong>When you use our contact form</strong>, we collect your full name, your email address and what you tell us about your business, along with anything else you choose to include in your message.</p>
+      <p><strong>When you email us</strong>, we receive your email address and whatever you include in your message.</p>
+      <p><strong>If you become a client</strong>, we keep the contact and billing details we need to deliver our work and invoice you.</p>
+      <p><strong>When you visit the site</strong>, our hosting provider automatically processes technical information that every website needs to work, such as your IP address, browser and device type, the page you asked for and the time of your visit. This is used to deliver the site and keep it secure.</p>
+      <p><strong>Fonts.</strong> The site loads its fonts from Google Fonts. To do this, your browser connects to Google's servers, which means Google receives your IP address and basic browser information.</p>
+      <p>We do not use analytics or tracking tools on this website. <span class="todo">TODO: confirm whether Netlify Analytics is turned on for this site in the Netlify dashboard. If it is, describe it here (it collects server-side visit data, not cookies).</span></p>
+    </section>
+
+    <section aria-labelledby="why-we-use-it">
+      <h2 id="why-we-use-it">Why we use it, and our lawful basis</h2>
+      <p>UK data protection law says we must have a lawful basis for using your personal data. We rely on the following:</p>
+      <ul>
+        <li><strong>Replying to your enquiry.</strong> We use your details to respond to you and discuss your needs. Our lawful basis is our legitimate interest in answering enquiries about our services, or taking steps at your request before entering into a contract with you.</li>
+        <li><strong>Working with clients.</strong> If you become a client, we use your details to deliver the work we have agreed and to manage our relationship with you. Our lawful basis is the performance of our contract with you.</li>
+        <li><strong>Meeting legal obligations.</strong> We keep some records, such as invoices and accounts, because the law requires us to. Our lawful basis is compliance with a legal obligation.</li>
+        <li><strong>Running and securing the website.</strong> Technical information about visits is processed to deliver the site and protect it from misuse. Our lawful basis is our legitimate interest in running a secure website.</li>
+      </ul>
+      <p>We do not use your details for marketing, and we never sell your personal data.</p>
+    </section>
+
+    <section aria-labelledby="who-we-share-with">
+      <h2 id="who-we-share-with">Who we share it with</h2>
+      <p>We use a small number of trusted providers to run this website and our business. They act on our instructions and may only use your data to provide their service to us.</p>
+      <ul>
+        <li><strong>Netlify, Inc.</strong> hosts this website and receives and stores messages sent through the contact form. <span class="todo">TODO: confirm whether Netlify's spam filtering for form submissions (which uses a third-party service, Akismet) applies to this form, and name it here if so.</span></li>
+        <li><strong>Google</strong> provides the fonts used on the site through Google Fonts (see "What we collect").</li>
+        <li><strong>Namecheap, Inc.</strong> provides our email service (Private Email), so emails you send to us, and replies we send you, pass through and are stored on its systems. <span class="todo">TODO: confirm which email address Netlify sends contact form notifications to, and whether any other provider handles them.</span></li>
+      </ul>
+      <p>We may also share personal data where the law requires it, for example with HMRC or other public authorities.</p>
+    </section>
+
+    <section aria-labelledby="international-transfers">
+      <h2 id="international-transfers">International transfers</h2>
+      <p>Netlify, Google and Namecheap are based in the United States, so your personal data may be transferred to and stored outside the UK. Where this happens, we make sure appropriate safeguards are in place, such as the UK Extension to the EU–US Data Privacy Framework or the International Data Transfer Agreement or Addendum approved under UK law. <span class="todo">TODO: confirm the safeguard each provider relies on (check each provider's data processing agreement).</span></p>
+    </section>
+
+    <section aria-labelledby="how-long">
+      <h2 id="how-long">How long we keep it</h2>
+      <ul>
+        <li><strong>Enquiries</strong> that don't lead to work are kept for <span class="todo">TODO: set a retention period, e.g. 12 months</span> after our last contact with you, then deleted.</li>
+        <li><strong>Client records</strong> are kept for as long as we work together, and financial records for at least six years after the end of the financial year they relate to, as UK law requires.</li>
+        <li><strong>Technical visit data</strong> is kept by our hosting provider in line with its own retention policy.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="your-rights">
+      <h2 id="your-rights">Your rights</h2>
+      <p>Under UK data protection law you have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> the personal data we hold about you and receive a copy.</li>
+        <li><strong>Rectification:</strong> ask us to correct data that is wrong or incomplete.</li>
+        <li><strong>Erasure:</strong> ask us to delete your data.</li>
+        <li><strong>Restriction:</strong> ask us to limit how we use your data.</li>
+        <li><strong>Portability:</strong> ask for your data in a commonly used format, or for us to send it to another organisation.</li>
+        <li><strong>Objection:</strong> object to us using your data where we rely on legitimate interests.</li>
+        <li><strong>Withdraw consent</strong> at any time, where we rely on your consent.</li>
+      </ul>
+      <p>Some of these rights only apply in certain circumstances. To use any of them, email <a href="mailto:hello@tredgolddigital.com">hello@tredgolddigital.com</a>. There is no charge, and we will reply within one month.</p>
+    </section>
+
+    <section aria-labelledby="complaints">
+      <h2 id="complaints">Complaints</h2>
+      <p>If you are unhappy with how we have handled your personal data, please contact us first so we can try to put it right. You also have the right to complain to the Information Commissioner's Office (ICO), the UK's data protection regulator, at <a href="https://ico.org.uk" rel="noopener">ico.org.uk</a>.</p>
+    </section>
+
+    <section aria-labelledby="cookies">
+      <h2 id="cookies">Cookies</h2>
+      <p>This website does not use cookies or similar tracking technologies. Loading fonts from Google Fonts does not set cookies. If we ever add cookies that are not strictly necessary, we will update this policy and ask for your consent first.</p>
+    </section>
+
+    <section aria-labelledby="children">
+      <h2 id="children">Children</h2>
+      <p>Our website and services are aimed at businesses and are not intended for children.</p>
+    </section>
+
+    <section aria-labelledby="changes">
+      <h2 id="changes">Changes to this policy</h2>
+      <p>We may update this policy from time to time. The latest version will always be on this page, with the date it was last updated at the top.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span class="footer-logo">Tredgold<span>.</span></span>
+    <span class="footer-legal">© Tredgold Digital Ltd · Registered in England and Wales, company number 16955781 · <a href="/privacy">Privacy Policy</a></span>
+    <span>Leeds, UK</span>
+  </footer>
+
+</body>
+</html>

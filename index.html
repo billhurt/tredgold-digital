@@ -657,8 +657,27 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 1.5rem;
       font-size: 0.78rem;
       color: var(--text-faint);
+    }
+
+    .footer-legal { text-align: center; }
+
+    footer > span:not(.footer-legal) { white-space: nowrap; flex-shrink: 0; }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    footer a:hover { color: var(--accent); }
+
+    footer a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
     }
 
     .footer-logo {
@@ -853,13 +872,11 @@
 
   <footer>
     <span class="footer-logo">Tredgold<span>.</span></span>
-    <span>© <span id="yr"></span> Tredgold Digital Ltd · All rights reserved</span>
+    <span class="footer-legal">© Tredgold Digital Ltd · Registered in England and Wales, company number 16955781 · <a href="/privacy">Privacy Policy</a></span>
     <span>Leeds, UK</span>
   </footer>
 
   <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-
     const form = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const successMsg = document.getElementById('formSuccess');
