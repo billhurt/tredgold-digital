@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>We Automate What Slows You Down | Tredgold Digital</title>
   <meta name="description" content="We automate and optimise business processes — internal workflows, customer systems and our own SaaS products, CrewSwap, SiteForge and Ask Atlas." />
-  <link rel="canonical" href="https://www.tredgolddigital.com/" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="canonical" href="https://tredgolddigital.com/" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://www.tredgolddigital.com/" />
+  <meta property="og:url"         content="https://tredgolddigital.com/" />
   <meta property="og:site_name"   content="Tredgold Digital" />
   <meta property="og:title"       content="We Automate What Slows You Down" />
   <meta property="og:description" content="We automate and optimise business processes — and build our own SaaS products: CrewSwap, SiteForge and Ask Atlas." />
-  <meta property="og:image"       content="https://www.tredgolddigital.com/og-image.png" />
+  <meta property="og:image"       content="https://tredgolddigital.com/og-image.png" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
 
@@ -22,7 +24,115 @@
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="We Automate What Slows You Down" />
   <meta name="twitter:description" content="We automate and optimise business processes — internal workflows, customer systems and our own SaaS products, CrewSwap, SiteForge and Ask Atlas." />
-  <meta name="twitter:image"       content="https://www.tredgolddigital.com/og-image.png" />
+  <meta name="twitter:image"       content="https://tredgolddigital.com/og-image.png" />
+
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://tredgolddigital.com/#organization",
+        "name": "Tredgold Digital Ltd",
+        "legalName": "Tredgold Digital Ltd",
+        "url": "https://tredgolddigital.com/",
+        "logo": "https://tredgolddigital.com/logo.png",
+        "email": "hello@tredgolddigital.com",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "Companies House number",
+          "value": "16955781"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "William Hurt",
+          "jobTitle": "Director"
+        }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://tredgolddigital.com/#business",
+        "name": "Tredgold Digital Ltd",
+        "description": "We automate and optimise business processes — internal workflows, customer systems and our own SaaS products, CrewSwap, SiteForge and Ask Atlas.",
+        "url": "https://tredgolddigital.com/",
+        "email": "hello@tredgolddigital.com",
+        "image": "https://tredgolddigital.com/og-image.png",
+        "logo": "https://tredgolddigital.com/logo.png",
+        "parentOrganization": {
+          "@id": "https://tredgolddigital.com/#organization"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Leeds",
+          "addressRegion": "West Yorkshire",
+          "addressCountry": "GB"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Leeds"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "West Yorkshire"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "North Yorkshire"
+          },
+          {
+            "@type": "Country",
+            "name": "United Kingdom"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Process automation and digital systems",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Manual admin and internal workflow automation"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Connecting disconnected systems and data"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Websites, booking systems and customer portals"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Dashboards and reporting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://tredgolddigital.com/#website",
+        "url": "https://tredgolddigital.com/",
+        "name": "Tredgold Digital",
+        "publisher": {
+          "@id": "https://tredgolddigital.com/#organization"
+        },
+        "inLanguage": "en-GB"
+      }
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -100,6 +210,35 @@
 
     .nav-cta:hover { background: var(--accent); }
 
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+
+    .nav-link {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: 2px;
+    }
+
+    .nav-link:hover { color: var(--accent); }
+
+    .nav-link:focus-visible, .nav-cta:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    nav { gap: 1rem; }
+    .nav-cta { white-space: nowrap; }
+
+    @media (max-width: 480px) {
+      nav { padding: 0 1rem; }
+      .nav-links { gap: 0.9rem; }
+      .nav-link, .nav-cta { font-size: 0.66rem; letter-spacing: 0.02em; }
+      .nav-cta { padding: 0.45rem 0.7rem; }
+    }
+
     /* ─── HERO ─── */
     .hero {
       min-height: 100vh;
@@ -122,8 +261,6 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      opacity: 0;
-      animation: fadeUp 0.5s 0.1s forwards;
     }
 
     .hero-eyebrow::before {
@@ -143,8 +280,6 @@
       letter-spacing: -0.03em;
       color: var(--text);
       margin-bottom: 1.75rem;
-      opacity: 0;
-      animation: fadeUp 0.6s 0.2s forwards;
     }
 
     h1 em {
@@ -158,8 +293,6 @@
       line-height: 1.75;
       max-width: 52ch;
       margin-bottom: 2.5rem;
-      opacity: 0;
-      animation: fadeUp 0.6s 0.32s forwards;
     }
 
     .hero-actions {
@@ -168,16 +301,12 @@
       gap: 1rem;
       flex-wrap: wrap;
       margin-bottom: 3rem;
-      opacity: 0;
-      animation: fadeUp 0.6s 0.42s forwards;
     }
 
     .hero-location {
       font-size: 0.78rem;
       color: var(--text-faint);
       letter-spacing: 0.04em;
-      opacity: 0;
-      animation: fadeUp 0.5s 0.54s forwards;
     }
 
     .hero-location span {
@@ -721,7 +850,10 @@
 
   <nav aria-label="Main navigation">
     <a href="#" class="nav-logo" aria-label="Tredgold Digital home">Tredgold<span>.</span></a>
-    <a href="#contact" class="nav-cta">Start a conversation</a>
+    <div class="nav-links">
+      <a href="/products" class="nav-link">Products</a>
+      <a href="#contact" class="nav-cta">Start a conversation</a>
+    </div>
   </nav>
 
   <main>
@@ -873,7 +1005,7 @@
   <footer>
     <span class="footer-logo">Tredgold<span>.</span></span>
     <span class="footer-legal">© Tredgold Digital Ltd · Registered in England and Wales, company number 16955781 · <a href="/privacy">Privacy Policy</a></span>
-    <span>Leeds, UK</span>
+    <span>Leeds, UK · <a href="mailto:hello@tredgolddigital.com">hello@tredgolddigital.com</a></span>
   </footer>
 
   <script>

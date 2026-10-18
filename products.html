@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products: CrewSwap, SiteForge, Ask Atlas | Tredgold Digital</title>
+  <meta name="description" content="CrewSwap, SiteForge and Ask Atlas: live SaaS products built and run by Tredgold Digital in Leeds, used by real businesses today." />
+  <link rel="canonical" href="https://tredgolddigital.com/products" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://tredgolddigital.com/products" />
+  <meta property="og:site_name"   content="Tredgold Digital" />
+  <meta property="og:title"       content="Products: CrewSwap, SiteForge, Ask Atlas | Tredgold Digital" />
+  <meta property="og:description" content="CrewSwap, SiteForge and Ask Atlas: live SaaS products built and run by Tredgold Digital in Leeds, used by real businesses today." />
+  <meta property="og:image"       content="https://tredgolddigital.com/og-image.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Products: CrewSwap, SiteForge, Ask Atlas | Tredgold Digital" />
+  <meta name="twitter:description" content="CrewSwap, SiteForge and Ask Atlas: live SaaS products built and run by Tredgold Digital in Leeds, used by real businesses today." />
+  <meta name="twitter:image"       content="https://tredgolddigital.com/og-image.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --bg-off: #f9f9f8;
+      --text: #0d0d0d;
+      --text-mid: #3a3a3a;
+      --text-muted: #6b6b6b;
+      --text-faint: #a0a0a0;
+      --rule: #d8d8d4;
+      --rule-strong: #b0b0aa;
+      --accent: #1a56db;
+      --accent-subtle: #eef3fd;
+      --radius: 3px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 3rem;
+      height: 60px;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-logo {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.01em;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45rem 1.1rem;
+      background: var(--text);
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: var(--radius);
+      transition: background 0.15s;
+    }
+
+    .nav-cta:hover { background: var(--accent); }
+
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+
+    .nav-link {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-radius: 2px;
+    }
+
+    .nav-link:hover { color: var(--accent); }
+
+    .nav-link:focus-visible, .nav-cta:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    nav { gap: 1rem; }
+    .nav-cta { white-space: nowrap; }
+
+    @media (max-width: 480px) {
+      nav { padding: 0 1rem; }
+      .nav-links { gap: 0.9rem; }
+      .nav-link, .nav-cta { font-size: 0.66rem; letter-spacing: 0.02em; }
+      .nav-cta { padding: 0.45rem 0.7rem; }
+    }
+
+    /* ─── POLICY ─── */
+    .policy {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 8rem 3rem 5rem;
+    }
+
+    .policy-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .policy-label::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .policy h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .policy-updated {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .policy section { margin-bottom: 2.5rem; }
+
+    .policy h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .policy p,
+    .policy li {
+      font-size: 0.93rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      max-width: 68ch;
+    }
+
+    .policy p + p,
+    .policy p + ul,
+    .policy ul + p { margin-top: 0.75rem; }
+
+    .policy ul { padding-left: 1.25rem; }
+    .policy li + li { margin-top: 0.4rem; }
+    .policy strong { font-weight: 500; color: var(--text); }
+
+    .policy a {
+      color: var(--accent);
+      text-underline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    .policy a:focus-visible,
+    .nav-logo:focus-visible,
+    .nav-cta:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+
+    /* ─── PRODUCTS ─── */
+    .products { display: grid; gap: 0; border: 1px solid var(--rule); margin-top: 0.5rem; }
+    .product { padding: 2rem; border-bottom: 1px solid var(--rule); }
+    .product:last-child { border-bottom: none; }
+    .product-sector {
+      font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.4rem;
+    }
+    .policy .product h2 { margin-bottom: 0.5rem; }
+    .not-found-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+    .btn {
+      display: inline-flex; align-items: center; padding: 0.7rem 1.4rem; border-radius: var(--radius);
+      font-size: 0.8rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none;
+    }
+    .btn-primary { background: var(--text); color: #fff; }
+    .btn-primary:hover { background: var(--accent); }
+    .btn-ghost { border: 1px solid var(--rule-strong); color: var(--text-mid); }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+    .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .policy a.btn { text-decoration: none; }
+    .policy a.btn-primary { color: #fff; }
+    .policy a.btn-ghost { color: var(--text-mid); }
+    .policy a.btn-ghost:hover { color: var(--accent); }
+
+    /* ─── FOOTER ─── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.78rem;
+      color: var(--text-faint);
+    }
+
+    .footer-legal { text-align: center; }
+
+    footer > span:not(.footer-legal) { white-space: nowrap; flex-shrink: 0; }
+
+    footer a {
+      color: var(--text-muted);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    footer a:hover { color: var(--accent); }
+
+    footer a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .footer-logo {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .footer-logo span { color: var(--accent); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      nav { padding: 0 1.5rem; }
+      .policy { padding: 6rem 1.5rem 3rem; }
+      footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="Tredgold Digital home">Tredgold<span>.</span></a>
+    <div class="nav-links">
+      <a href="/products" class="nav-link">Products</a>
+      <a href="/#contact" class="nav-cta">Start a conversation</a>
+    </div>
+  </nav>
+
+  <main class="policy">
+    <p class="policy-label">Products</p>
+    <h1>Our products</h1>
+    <p class="policy-updated">Tredgold Digital operates three live SaaS products — CrewSwap, SiteForge and Ask Atlas — used by real businesses today. That's not a portfolio exercise: it means we understand what it actually takes to design, ship and support production software, and we bring that same rigour to the systems we build for our clients.</p>
+
+    <div class="products">
+      <article class="product">
+        <p class="product-sector">Aviation · SaaS</p>
+        <h2>CrewSwap</h2>
+        <p>Finding cover or a swap shouldn't mean scrolling through group chats. CrewSwap gives UK airline crew a simple, direct way to post and pick up shift swaps — live today with a large base of professional pilots and cabin crew.</p>
+      </article>
+      <article class="product">
+        <p class="product-sector">Construction · SaaS</p>
+        <h2>SiteForge</h2>
+        <p>Pre-start packs, training matrices and CHAS, SMAS and Constructionline Gold renewals are usually scattered across spreadsheets and email threads. SiteForge brings that into one workflow — in use by several UK civils and construction businesses to manage pre-start processes end to end.</p>
+      </article>
+      <article class="product">
+        <p class="product-sector">Aviation · AI</p>
+        <h2>Ask Atlas</h2>
+        <p>Too much training knowledge lives in one experienced instructor's head, and sim time gets lost re-explaining things a trainee should already know. Ask Atlas gives crew instant, cited answers from an organisation's own training material — and gives training departments visibility into where the knowledge gaps actually are. In active pilot conversations with airlines, logistics carriers and aviation consultants.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-logo">Tredgold<span>.</span></span>
+    <span class="footer-legal">© Tredgold Digital Ltd · Registered in England and Wales, company number 16955781 · <a href="/privacy">Privacy Policy</a></span>
+    <span>Leeds, UK · <a href="mailto:hello@tredgolddigital.com">hello@tredgolddigital.com</a></span>
+  </footer>
+
+</body>
+</html>
