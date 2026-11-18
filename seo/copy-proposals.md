@@ -1,10 +1,16 @@
 # Copy proposals for approval
 
-Nothing in this file is live. Each item has a key; the code on the `seo/foundation` branch holds `{{copy:key}}` placeholders until you approve.
+## Decision (18 November 2026)
 
-**How to approve:** tick the box, or write your own wording underneath. Where there are options, delete the ones you don't want. Anything left unticked stays out of the site.
+- **Applied: metadata only, option A wherever there was a choice.** That covers titles, meta descriptions, OG/Twitter tags, OG alt text, structured data (including the three optional extra services) and llms.txt / llms-full.txt.
+- **Not applied: all visible page copy stays exactly as it is.** That means `home.leadership` and `home.trades` (section 2) are not used. They stay here as options for later.
+- **Profiles:** LinkedIn and the Companies House officer page are added to the Person `sameAs`.
+- **Verification:** Search Console is already verified; both meta tags are removed, and Bing will import from Search Console.
+- **Prices:** none, so Capstone and Ask Atlas won't qualify for Google's software rich result.
 
-Voice used throughout: plain English, short sentences, no jargon. That matches the homepage.
+---
+
+The original proposals follow, unchanged. Voice used throughout: plain English, short sentences, no jargon. That matches the homepage.
 
 ---
 

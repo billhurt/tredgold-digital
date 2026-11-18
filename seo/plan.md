@@ -107,11 +107,15 @@ Each new page gets: one H1, a unique title and meta description, a canonical URL
 
 **Markup:** WebPage + BreadcrumbList (Home › Work › Client). Add a `Review` only if the client gives a written review that's shown on the page. Google doesn't show review stars for a business's reviews of itself, so don't expect stars.
 
-| Case study | Sector page it supports | Target search | Facts I need |
-|---|---|---|---|
-| **Clumber Construction** | Civils (and the construction searches) | bespoke software developer Yorkshire construction | Their trade and location; what they used before; what you built (the site's client card mentions online visibility and lead generation for construction clients — is this them?); results; quote; permission to name; logo use |
-| **JRW Garden Services** | Landscaping & grounds maintenance | software for landscaping companies Leeds | Is this the landscaping client with certification tracking and sales pipeline automation? Location; before and after; numbers; quote from Jack; permission |
-| **Penleigh International** | Civils (if it fits), otherwise Home only | to be decided | What they do and where. The client card mentions energy and oil and gas; if they aren't a Yorkshire specialist contractor, this case study still proves delivery but won't support a sector page. Same facts as above |
+| Case study | What it covers | Supports | Target search | Facts still needed |
+|---|---|---|---|---|
+| **Clumber Construction** (construction) | Training matrix and certificate tracking; H&S accreditation support; fleet tracking; takeoffs; pre-start packs | Civils sector page | bespoke software developer Yorkshire construction; track CSCS cards and CHAS renewals automatically (#5, #13, #14) | Location and trade mix; what they used before; which accreditations; hours or errors saved; renewals no longer missed; quote; permission to name; logo use |
+| **JRW Garden Services** (landscaping) | Consultancy: website rebuild, GA4/GTM, Google Ads, PQS accreditation, setting up commercial subcontracting. **This work led to Capstone.** | Landscaping & grounds maintenance sector page, linking to /products (Capstone) | software for landscaping companies Leeds (#6); also supports #7 and #8 through the Capstone link | Location; before and after (enquiries, ad results, commercial work won); which PQS; how it led to Capstone; quote from Jack; permission |
+| **Penleigh International** (executive search, oil and gas) | Web design and online visibility | **No sector page.** Use as a credibility and web design example on `/work` only | None of the contractor searches; brand and proof only | What you built; results (enquiries, visibility); quote; permission |
+
+Clumber's work maps closely onto the civils topic list (pre-start packs, card tracking, accreditation renewals), so the civils page can lead with it. JRW's story, from consultancy to a product, is the strongest proof for the landscaping page. Keep Penleigh off the contractor pages so that the sector pages stay focused on contractors.
+
+**Visible copy check (not changed, per your decision):** the homepage client card says *"automated certification tracking and sales pipeline management for a landscaping business"*. From your corrections, certificate tracking was Clumber's (construction), not the landscaping client's. You may want to correct that card when the case studies go live.
 
 ### 3.3 How we work / discovery session (`/how-we-work`)
 **Sections:**
@@ -174,6 +178,6 @@ They answer from what they've crawled and from search indexes (Bing matters as w
 1. Approve `copy-proposals.md`, then merge this branch.
 2. Off-site quick wins: Search Console, Bing, Google Business Profile, reviews (`offsite.md`).
 3. Gather the case study facts and quotes.
-4. Build the landscaping sector page and the JRW case study first, since Capstone gives that page extra proof. Then civils + Clumber, then roofing & cladding.
+4. Build the landscaping sector page and the JRW case study first (the consultancy that led to Capstone gives that page the strongest proof). Then civils + Clumber, then roofing & cladding (which has no case study yet). Add Penleigh to `/work` as a web design example.
 5. Build `/how-we-work`.
 6. After 8 to 12 weeks of Search Console data, revisit section 2 and the area-page decision.

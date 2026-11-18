@@ -43,12 +43,11 @@ Ordered by impact for local B2B search and AI assistants. Copy the wording from 
 
 ## 3. Google Search Console and Bing Webmaster Tools
 
-- [ ] **Search Console:** add a **Domain** property (verified by a DNS TXT record at your DNS host) or a URL-prefix property (put the code in the `google-site-verification` meta tag on this branch).
+- [x] **Search Console:** already verified.
 - [ ] Submit `https://tredgolddigital.com/sitemap.xml`.
 - [ ] Inspect `/`, `/products` and `/privacy`, and request indexing.
-- [ ] **Bing Webmaster Tools:** sign in and use **Import from Google Search Console** (this verifies and imports the sitemap in one step), or use the `msvalidate.01` meta tag.
+- [ ] **Bing Webmaster Tools:** sign in and use **Import from Google Search Console** (this verifies the site and brings the sitemap across in one step).
 - [ ] In Bing, turn on **IndexNow** if offered. Bing's index feeds Copilot and ChatGPT search.
-- [ ] Send me the verification codes, or tell me you used DNS and I'll remove the two placeholder meta tags.
 
 ## 4. LinkedIn
 
@@ -63,7 +62,7 @@ Ordered by impact for local B2B search and AI assistants. Copy the wording from 
 - [ ] Headline naming what you do, who for, and where (e.g. software and automation for Yorkshire contractors). Use the approved wording.
 - [ ] Experience: Director, Tredgold Digital Ltd, with the same description
 - [ ] Featured: the site, Capstone, and each case study as it goes live
-- [ ] Send me the profile URL for the site's Person `sameAs`
+- [x] Profile URL added to the site's Person `sameAs`
 
 ## 5. Consistent details across the web (citations)
 
