@@ -1,0 +1,33 @@
+# Netlify response headers.
+# File names are not fingerprinted (there is no build step), so caching is
+# kept bounded: browsers reuse a file for a while, then quietly revalidate it.
+
+/assets/css/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/assets/js/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/assets/img/*
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=2592000
+
+/og-image.png
+  Cache-Control: public, max-age=604800
+
+/logo.png
+  Cache-Control: public, max-age=2592000
+
+/favicon.svg
+  Cache-Control: public, max-age=2592000
+
+/favicon.png
+  Cache-Control: public, max-age=2592000
+
+/apple-touch-icon.png
+  Cache-Control: public, max-age=2592000
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8
