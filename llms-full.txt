@@ -1,0 +1,11 @@
+# Tredgold Digital: full detail
+
+> {{copy:llms.summary}}
+
+{{copy:llms-full.body}}
+
+## Contact
+
+- Email: hello@tredgolddigital.com
+- Enquiry form: https://tredgolddigital.com/#contact
+- Tredgold Digital Ltd, registered in England and Wales, company number 16955781

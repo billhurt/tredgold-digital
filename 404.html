@@ -20,11 +20,82 @@
   <meta property="og:image"        content="https://tredgolddigital.com/og-image.png?v=3" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt"    content="Tredgold Digital: We automate what slows you down." />
+  <meta property="og:image:alt"    content="{{copy:og.alt}}" />
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Page Not Found | Tredgold Digital" />
   <meta name="twitter:description" content="The page you were looking for could not be found." />
   <meta name="twitter:image"       content="https://tredgolddigital.com/og-image.png?v=3" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://tredgolddigital.com/#organization",
+      "name": "Tredgold Digital Ltd",
+      "legalName": "Tredgold Digital Ltd",
+      "alternateName": "Tredgold Digital",
+      "url": "https://tredgolddigital.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://tredgolddigital.com/logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "email": "hello@tredgolddigital.com",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "Companies House number",
+        "value": "16955781"
+      },
+      "founder": {
+        "@id": "https://tredgolddigital.com/#william-hurt"
+      },
+      "sameAs": [
+        "https://find-and-update.company-information.service.gov.uk/company/16955781"
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Leeds"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "West Yorkshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "North Yorkshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "South Yorkshire"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "East Riding of Yorkshire"
+        },
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        }
+      ],
+      "knowsAbout": "{{copy:schema.knowsAbout}}"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://tredgolddigital.com/#website",
+      "url": "https://tredgolddigital.com/",
+      "name": "Tredgold Digital",
+      "publisher": {
+        "@id": "https://tredgolddigital.com/#organization"
+      },
+      "inLanguage": "en-GB"
+    }
+  ]
+}
+  </script>
 
   <script>document.documentElement.className = 'js';</script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
