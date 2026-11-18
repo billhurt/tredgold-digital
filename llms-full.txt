@@ -1,0 +1,53 @@
+# Tredgold Digital: full detail
+
+> Tredgold Digital is a Leeds software and automation company. We build bespoke software, AI and automation for specialist contractors in Yorkshire, especially civils, roofing and cladding, and landscaping and grounds maintenance firms.
+
+We sit down with the people who do the work, find what's costing them time, and build one system that fixes it. We also build and run our own software, so everything we deliver is production software we support after launch.
+
+## Who we work for
+
+- Specialist contractors in Leeds and across Yorkshire: civils, roofing and cladding, and landscaping and grounds maintenance.
+- Firms that run on spreadsheets, email chains, paper forms and apps that don't talk to each other.
+- We also work with contractors elsewhere in the UK.
+
+## What we build
+
+- Automation of manual admin: re-typed data, approvals, timesheets and certificate tracking.
+- Connected systems: CRM, accounts, job sheets and spreadsheets, so data goes in once.
+- Customer-facing systems: enquiry forms, booking systems and client portals.
+- Dashboards and reporting that show what's happening now.
+- Our own products: Capstone (https://capstoneops.co.uk), job management for UK trades; and Ask Atlas (https://flyatlas.app), AI training support for aviation.
+
+### Where inefficiency costs you
+
+It doesn't show up on the P&L, but you feel it every week. Good people losing hours to admin the business has outgrown.
+
+1. Manual admin & internal workflows. Re-typing the same data, chasing approvals, tracking certificates on a spreadsheet nobody trusts. We automate the repetitive work so your team can get back to the job.
+2. Disconnected systems & data. Your CRM, accounts, job sheets and spreadsheets each hold part of the picture. We connect them so data goes in once and shows up everywhere it's needed.
+3. Customer-facing friction. Enquiries that go unanswered. Bookings by phone tag. We build forms, booking systems and portals that make you easy to buy from.
+4. Reporting & visibility. You can't manage what you can't see. We build dashboards that show what's happening now, not last month.
+
+## Where we work
+
+Based in Leeds. We work across West, North and South Yorkshire and the East Riding, on site or by call, and with contractors elsewhere in the UK.
+
+## How we work
+
+1. Discovery session. An in-depth session with the people who do the work, on site or on a call. We map how things really run and where the time goes. No code until the plan is agreed.
+2. Plan. A clear written plan: what we'll build, what it fixes, what it costs and how long it takes. You sign it off before anything starts.
+3. Build, alongside you. Short cycles, with working software in front of your team early. Their feedback shapes every release.
+4. Launch. We roll it out with your team, not at them. Training, data migration and support from day one.
+5. Run & improve. We look after it and keep improving it as your business changes.
+
+## Proof
+
+We build and run two live products of our own, Capstone and Ask Atlas. Client case studies are coming soon.
+
+- Capstone (https://capstoneops.co.uk): Job management for UK trades. Enquiries, scheduling, timesheets, client reports and finances in one place, with an AI assistant that knows your business.
+- Ask Atlas (https://flyatlas.app): AI training support for pilots, instructors and flight schools. Cited answers from your own manuals, examiner-style practice, and a clear view of where knowledge gaps are.
+
+## Contact
+
+- Email: hello@tredgolddigital.com
+- Enquiry form: https://tredgolddigital.com/#contact
+- Tredgold Digital Ltd, registered in England and Wales, company number 16955781

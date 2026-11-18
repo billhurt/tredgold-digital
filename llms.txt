@@ -1,0 +1,48 @@
+# Tredgold Digital
+
+> Tredgold Digital is a Leeds software and automation company. We build bespoke software, AI and automation for specialist contractors in Yorkshire, especially civils, roofing and cladding, and landscaping and grounds maintenance firms.
+
+We sit down with the people who do the work, find what's costing them time, and build one system that fixes it. We also build and run our own software, so everything we deliver is production software we support after launch.
+
+## Who we work for
+
+- Specialist contractors in Leeds and across Yorkshire: civils, roofing and cladding, and landscaping and grounds maintenance.
+- Firms that run on spreadsheets, email chains, paper forms and apps that don't talk to each other.
+- We also work with contractors elsewhere in the UK.
+
+## What we build
+
+- Automation of manual admin: re-typed data, approvals, timesheets and certificate tracking.
+- Connected systems: CRM, accounts, job sheets and spreadsheets, so data goes in once.
+- Customer-facing systems: enquiry forms, booking systems and client portals.
+- Dashboards and reporting that show what's happening now.
+- Our own products: Capstone (https://capstoneops.co.uk), job management for UK trades; and Ask Atlas (https://flyatlas.app), AI training support for aviation.
+
+## Where we work
+
+Based in Leeds. We work across West, North and South Yorkshire and the East Riding, on site or by call, and with contractors elsewhere in the UK.
+
+## How we work
+
+1. Discovery session: an in-depth session with the people who do the work, on site or on a call.
+2. Plan: a clear written plan of what we'll build, what it fixes, what it costs and how long it takes. No code until it's agreed.
+3. Build, alongside you: short cycles, with working software in front of your team early.
+4. Launch: training, data migration and support from day one.
+5. Run and improve: we look after it and keep improving it.
+
+## Proof
+
+We build and run two live products of our own, Capstone and Ask Atlas. Client case studies are coming soon.
+
+## Pages
+
+- [Home](https://tredgolddigital.com/): What we do, how we work, and how to get in touch.
+- [Products](https://tredgolddigital.com/products): Capstone and Ask Atlas, the software we build and run ourselves.
+- [Privacy policy](https://tredgolddigital.com/privacy): How we handle personal data.
+- [Full detail for AI assistants](https://tredgolddigital.com/llms-full.txt): The same information in more detail.
+
+## Contact
+
+- Email: hello@tredgolddigital.com
+- Enquiry form: https://tredgolddigital.com/#contact
+- Tredgold Digital Ltd, registered in England and Wales, company number 16955781
