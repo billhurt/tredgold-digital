@@ -115,7 +115,7 @@ Each new page gets: one H1, a unique title and meta description, a canonical URL
 
 Clumber's work maps closely onto the civils topic list (pre-start packs, card tracking, accreditation renewals), so the civils page can lead with it. JRW's story, from consultancy to a product, is the strongest proof for the landscaping page. Keep Penleigh off the contractor pages so that the sector pages stay focused on contractors.
 
-**Visible copy check (not changed, per your decision):** the homepage client card says *"automated certification tracking and sales pipeline management for a landscaping business"*. From your corrections, certificate tracking was Clumber's (construction), not the landscaping client's. You may want to correct that card when the case studies go live.
+**Visible copy check:** the homepage client card now credits certification tracking to the construction client and the website rebuild, Google Ads and accreditation support to the landscaping client (updated 18 November 2026, with your wording).
 
 ### 3.3 How we work / discovery session (`/how-we-work`)
 **Sections:**
