@@ -4,26 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>We Automate What Slows You Down | Tredgold Digital</title>
-  <meta name="description" content="We automate and optimise business processes — internal workflows, customer systems and our own SaaS products, CrewSwap, SiteForge and Ask Atlas." />
+  <meta name="description" content="We automate business processes for UK specialist contractors, and build our own software: Capstone for trades and Ask Atlas for aviation training." />
   <link rel="canonical" href="https://tredgolddigital.com/" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0d0d0d" />
 
   <!-- Open Graph / social preview -->
   <meta property="og:type"         content="website" />
   <meta property="og:site_name"    content="Tredgold Digital" />
   <meta property="og:url"          content="https://tredgolddigital.com/" />
   <meta property="og:title"        content="We Automate What Slows You Down" />
-  <meta property="og:description"  content="We automate and optimise business processes — and build our own SaaS products: CrewSwap, SiteForge and Ask Atlas." />
-  <meta property="og:image"        content="https://tredgolddigital.com/og-image.png?v=2" />
+  <meta property="og:description"  content="We automate business processes for UK specialist contractors, and build our own software: Capstone for trades and Ask Atlas for aviation training." />
+  <meta property="og:image"        content="https://tredgolddigital.com/og-image.png?v=3" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt"    content="Tredgold Digital: Bespoke AI software for specialist contractors. You run the site. We'll run the paperwork." />
+  <meta property="og:image:alt"    content="Tredgold Digital: We automate what slows you down." />
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="We Automate What Slows You Down" />
-  <meta name="twitter:description" content="We automate and optimise business processes — internal workflows, customer systems and our own SaaS products, CrewSwap, SiteForge and Ask Atlas." />
-  <meta name="twitter:image"       content="https://tredgolddigital.com/og-image.png?v=2" />
+  <meta name="twitter:description" content="We automate business processes for UK specialist contractors, and build our own software: Capstone for trades and Ask Atlas for aviation training." />
+  <meta name="twitter:image"       content="https://tredgolddigital.com/og-image.png?v=3" />
 
   <script type="application/ld+json">
 {
@@ -52,7 +53,7 @@
         "@type": "ProfessionalService",
         "@id": "https://tredgolddigital.com/#business",
         "name": "Tredgold Digital Ltd",
-        "description": "We automate and optimise business processes — internal workflows, customer systems and our own SaaS products, CrewSwap, SiteForge and Ask Atlas.",
+        "description": "We automate business processes for UK specialist contractors, and build our own software: Capstone for trades and Ask Atlas for aviation training.",
         "url": "https://tredgolddigital.com/",
         "email": "hello@tredgolddigital.com",
         "image": "https://tredgolddigital.com/og-image.png",
@@ -120,6 +121,30 @@
         }
       },
       {
+        "@type": "SoftwareApplication",
+        "@id": "https://tredgolddigital.com/#capstone",
+        "name": "Capstone",
+        "url": "https://capstoneops.co.uk/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Job management for UK trades. Enquiries, scheduling, timesheets, client reports and finances in one place, with an AI assistant that knows your business.",
+        "publisher": {
+          "@id": "https://tredgolddigital.com/#organization"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://tredgolddigital.com/#ask-atlas",
+        "name": "Ask Atlas",
+        "url": "https://flyatlas.app/",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "description": "AI training support for pilots, instructors and flight schools. Cited answers from your own manuals, examiner-style practice, and a clear view of where knowledge gaps are.",
+        "publisher": {
+          "@id": "https://tredgolddigital.com/#organization"
+        }
+      },
+      {
         "@type": "WebSite",
         "@id": "https://tredgolddigital.com/#website",
         "url": "https://tredgolddigital.com/",
@@ -133,919 +158,496 @@
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <script>document.documentElement.className = 'js';</script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Sora:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg: #ffffff;
-      --bg-off: #f9f9f8;
-      --text: #0d0d0d;
-      --text-mid: #3a3a3a;
-      --text-muted: #6b6b6b;
-      --text-faint: #a0a0a0;
-      --rule: #d8d8d4;
-      --rule-strong: #b0b0aa;
-      --accent: #1a56db;
-      --accent-subtle: #eef3fd;
-      --radius: 3px;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
-    /* ─── NAV ─── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 3rem;
-      height: 60px;
-      background: rgba(255,255,255,0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .nav-logo {
-      font-family: 'Sora', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--text);
-      text-decoration: none;
-      letter-spacing: 0.01em;
-    }
-
-    .nav-logo span { color: var(--accent); }
-
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.45rem 1.1rem;
-      background: var(--text);
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      border-radius: var(--radius);
-      transition: background 0.15s;
-    }
-
-    .nav-cta:hover { background: var(--accent); }
-
-    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
-
-    .nav-link {
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      text-decoration: none;
-      border-radius: 2px;
-    }
-
-    .nav-link:hover { color: var(--accent); }
-
-    .nav-link:focus-visible, .nav-cta:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-    }
-
-    nav { gap: 1rem; }
-    .nav-cta { white-space: nowrap; }
-
-    @media (max-width: 480px) {
-      nav { padding: 0 1rem; }
-      .nav-links { gap: 0.9rem; }
-      .nav-link, .nav-cta { font-size: 0.66rem; letter-spacing: 0.02em; }
-      .nav-cta { padding: 0.45rem 0.7rem; }
-    }
-
-    /* ─── HERO ─── */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 8rem 3rem 5rem;
-      border-bottom: 1px solid var(--rule);
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    .hero-eyebrow {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 24px;
-      height: 1px;
-      background: var(--accent);
-      flex-shrink: 0;
-    }
-
-    h1 {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 700;
-      line-height: 1.06;
-      letter-spacing: -0.03em;
-      color: var(--text);
-      margin-bottom: 1.75rem;
-    }
-
-    h1 em {
-      font-style: normal;
-      color: var(--accent);
-    }
-
-    .hero-sub {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      line-height: 1.75;
-      max-width: 52ch;
-      margin-bottom: 2.5rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 3rem;
-    }
-
-    .hero-location {
-      font-size: 0.78rem;
-      color: var(--text-faint);
-      letter-spacing: 0.04em;
-    }
-
-    .hero-location span {
-      color: var(--text-muted);
-    }
-
-    /* ─── BUTTONS ─── */
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.6rem;
-      background: var(--text);
-      color: #fff;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: var(--radius);
-      border: 1px solid var(--text);
-      cursor: pointer;
-      transition: background 0.15s, border-color 0.15s;
-    }
-
-    .btn-primary:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.6rem;
-      background: transparent;
-      color: var(--text-muted);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: var(--radius);
-      border: 1px solid var(--rule-strong);
-      cursor: pointer;
-      transition: color 0.15s, border-color 0.15s;
-    }
-
-    .btn-ghost:hover {
-      color: var(--text);
-      border-color: var(--text);
-    }
-
-    /* ─── WHAT WE OFFER ─── */
-    .offer-section {
-      padding: 7rem 3rem;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .offer-inner {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    .offer-label {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .offer-label::before {
-      content: '';
-      display: block;
-      width: 24px;
-      height: 1px;
-      background: var(--rule-strong);
-      flex-shrink: 0;
-    }
-
-    .offer-heading {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 1.2;
-      color: var(--text);
-      margin-bottom: 1rem;
-    }
-
-    .offer-sub {
-      font-size: 0.93rem;
-      color: var(--text-muted);
-      max-width: 50ch;
-      line-height: 1.75;
-      margin-bottom: 3rem;
-    }
-
-    .offer-items {
-      display: flex;
-      flex-direction: column;
-      border: 1px solid var(--rule);
-    }
-
-    .offer-item {
-      display: grid;
-      grid-template-columns: 48px 1fr;
-      gap: 1.5rem;
-      padding: 2rem 2rem;
-      border-bottom: 1px solid var(--rule);
-      align-items: start;
-      transition: background 0.15s;
-    }
-
-    .offer-item:last-child { border-bottom: none; }
-    .offer-item:hover { background: var(--accent-subtle); }
-
-    .offer-item-num {
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      padding-top: 0.2rem;
-    }
-
-    .offer-item-title {
-      font-family: 'Sora', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.01em;
-      margin-bottom: 0.3rem;
-    }
-
-    .offer-item-desc {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    /* ─── TRUST ─── */
-    .trust-section {
-      padding: 7rem 3rem;
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .trust-inner {
-      max-width: 860px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
-    }
-
-    .trust-label {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .trust-label::before {
-      content: '';
-      display: block;
-      width: 24px;
-      height: 1px;
-      background: var(--rule-strong);
-      flex-shrink: 0;
-    }
-
-    .trust-heading {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 1.2;
-      color: var(--text);
-      margin-bottom: 1rem;
-    }
-
-    .trust-body {
-      font-size: 0.93rem;
-      color: var(--text-muted);
-      line-height: 1.75;
-    }
-
-    .trust-founder {
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--rule);
-      font-size: 0.85rem;
-      color: var(--text-mid);
-      line-height: 1.7;
-    }
-
-    .trust-points {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      padding-top: 0.5rem;
-    }
-
-    .trust-point {
-      border-left: 2px solid var(--rule);
-      padding-left: 1.25rem;
-    }
-
-    .trust-point-title {
-      font-family: 'Sora', sans-serif;
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 0.25rem;
-      letter-spacing: -0.01em;
-    }
-
-    .trust-point-desc {
-      font-size: 0.83rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    @media (max-width: 768px) {
-      .trust-section { padding: 4rem 1.5rem; }
-      .trust-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-    }
-
-    /* ─── RECENT WORK ─── */
-    .work-section {
-      padding: 7rem 3rem;
-      border-bottom: 1px solid var(--rule);
-      background: var(--bg-off);
-    }
-
-    .work-inner {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    .work-label {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .work-label::before {
-      content: '';
-      display: block;
-      width: 24px;
-      height: 1px;
-      background: var(--rule-strong);
-      flex-shrink: 0;
-    }
-
-    .work-heading {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 1.2;
-      color: var(--text);
-      margin-bottom: 0.75rem;
-    }
-
-    .work-sub {
-      font-size: 0.93rem;
-      color: var(--text-muted);
-      max-width: 50ch;
-      line-height: 1.75;
-      margin-bottom: 3rem;
-    }
-
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      border: 1px solid var(--rule);
-    }
-
-    .work-card {
-      padding: 2rem;
-      border-right: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
-      transition: background 0.15s;
-    }
-
-    .work-card:nth-child(2n) { border-right: none; }
-    .work-card:nth-last-child(-n+2) { border-bottom: none; }
-    .work-card:hover { background: var(--bg); }
-
-    .work-card-sector {
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.75rem;
-    }
-
-    .work-card-title {
-      font-family: 'Sora', sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.01em;
-      margin-bottom: 0.5rem;
-      line-height: 1.2;
-    }
-
-    .work-card-desc {
-      font-size: 0.83rem;
-      color: var(--text-muted);
-      line-height: 1.65;
-    }
-
-    @media (max-width: 768px) {
-      .work-section { padding: 4rem 1.5rem; }
-      .work-grid { grid-template-columns: 1fr; }
-      .work-card { border-right: none; border-bottom: 1px solid var(--rule); }
-      .work-card:last-child { border-bottom: none; }
-    }
-
-    /* ─── CONTACT ─── */
-    .contact-section {
-      padding: 7rem 3rem;
-      background: var(--bg-off);
-    }
-
-    .contact-inner {
-      max-width: 860px;
-      margin: 0 auto;
-    }
-
-    .contact-label {
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-faint);
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .contact-label::before {
-      content: '';
-      display: block;
-      width: 24px;
-      height: 1px;
-      background: var(--rule-strong);
-      flex-shrink: 0;
-    }
-
-    .contact-heading {
-      font-family: 'Sora', sans-serif;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      font-weight: 700;
-      letter-spacing: -0.025em;
-      line-height: 1.2;
-      color: var(--text);
-      margin-bottom: 0.75rem;
-    }
-
-    .contact-sub {
-      font-size: 0.93rem;
-      color: var(--text-muted);
-      max-width: 50ch;
-      line-height: 1.75;
-      margin-bottom: 2.5rem;
-    }
-
-    /* ─── FORM ─── */
-    .form-wrap {
-      border: 1px solid var(--rule);
-      padding: 2.5rem;
-      background: var(--bg);
-    }
-
-    .form-field {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .form-field label {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-
-    .form-field input,
-    .form-field textarea {
-      background: var(--bg-off);
-      border: 1px solid var(--rule);
-      border-radius: var(--radius);
-      outline: none;
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.88rem;
-      width: 100%;
-      padding: 0.7rem 0.9rem;
-      resize: none;
-      transition: border-color 0.15s;
-    }
-
-    .form-field input::placeholder,
-    .form-field textarea::placeholder { color: var(--text-faint); }
-
-    .form-field input:focus,
-    .form-field textarea:focus {
-      border-color: var(--accent);
-      background: var(--bg);
-    }
-
-    .form-submit { margin-top: 0.5rem; }
-
-    .form-submit button {
-      width: 100%;
-      padding: 0.8rem 1.5rem;
-      background: var(--text);
-      color: #fff;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      border: 1px solid var(--text);
-      border-radius: var(--radius);
-      cursor: pointer;
-      transition: background 0.15s, border-color 0.15s;
-    }
-
-    .form-submit button:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .form-submit button:disabled { opacity: 0.4; cursor: not-allowed; }
-
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .form-success.visible { display: block; }
-
-    /* ─── FOOTER ─── */
-    footer {
-      border-top: 1px solid var(--rule);
-      padding: 2rem 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1.5rem;
-      font-size: 0.78rem;
-      color: var(--text-faint);
-    }
-
-    .footer-legal { text-align: center; }
-
-    footer > span:not(.footer-legal) { white-space: nowrap; flex-shrink: 0; }
-
-    footer a {
-      color: var(--text-muted);
-      text-decoration: underline;
-      text-underline-offset: 2px;
-      border-radius: 2px;
-    }
-
-    footer a:hover { color: var(--accent); }
-
-    footer a:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-    }
-
-    .footer-logo {
-      font-family: 'Sora', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--text);
-    }
-
-    .footer-logo span { color: var(--accent); }
-
-    /* ─── ANIMATIONS ─── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
-    }
-
-    .reveal.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 768px) {
-      nav { padding: 0 1.5rem; }
-      .hero { padding: 6rem 1.5rem 3rem; min-height: auto; }
-      .offer-section,
-      .contact-section { padding: 4rem 1.5rem; }
-      footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
-      .form-wrap { padding: 1.5rem; }
-    }
-  </style>
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/sora/v17/xMQ9uFFYT72X5wkB_18qmnndmSdSnh2BAfO5mnuyOo1lfiQwV6-x.woff2" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+  <script defer src="/assets/js/art.js"></script>
+  <script defer src="/assets/js/site.js"></script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <nav aria-label="Main navigation">
-    <a href="#" class="nav-logo" aria-label="Tredgold Digital home">Tredgold<span>.</span></a>
-    <div class="nav-links">
-      <a href="/products" class="nav-link">Products</a>
-      <a href="#contact" class="nav-cta">Start a conversation</a>
-    </div>
-  </nav>
-
-  <main>
-
-    <!-- HERO -->
-    <section class="hero" aria-label="Introduction">
-      <p class="hero-eyebrow">Process automation &amp; digital systems</p>
-      <h1>We automate what <em>slows you down.</em></h1>
-      <p class="hero-sub">Manual processes, disconnected systems and clunky customer journeys quietly cost businesses money — in lost admin time, lost enquiries, and lost repeat business. We build the software and automation that fixes that: from internal workflows and SaaS products to the websites and booking systems your customers interact with.</p>
-      <div class="hero-actions">
-        <a href="#what-we-do" class="btn-primary">See how it works →</a>
-        <a href="#contact" class="btn-ghost">Start a conversation</a>
+  <header class="nav nav--ink nav--top" id="nav">
+    <nav class="nav-in wrap" aria-label="Main navigation">
+      <a href="#top" class="wordmark" aria-label="Tredgold Digital home">Tredgold<span class="dot">.</span></a>
+      <div class="nav-links">
+        <a href="#how" class="nav-link">How we work</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="/products" class="nav-link">Products</a>
+        <a href="#contact" class="nav-cta">Start a conversation</a>
       </div>
-      <p class="hero-location">Based in Leeds &nbsp;·&nbsp; <span>Working with businesses worldwide</span></p>
-    </section>
+      <button class="nav-burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    </nav>
+  </header>
 
-    <!-- WHAT WE OFFER -->
-    <section class="offer-section" id="what-we-do" aria-labelledby="offer-heading">
-      <div class="offer-inner">
-        <p class="offer-label reveal">Where inefficiency costs you</p>
-        <h2 class="offer-heading reveal" id="offer-heading">Every manual process is a cost you can't see.</h2>
-        <p class="offer-sub reveal">Spreadsheets, email chains and disconnected tools don't just waste time — they create errors, slow decisions and frustrate the people relying on them. We find where that's happening and fix it end to end.</p>
+  <div class="menu" id="menu" aria-hidden="true">
+    <ul>
+      <li><a href="#how">How we work</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="/products">Products</a></li>
+      <li><a href="#contact">Start a conversation</a></li>
+    </ul>
+  </div>
 
-        <div class="offer-items reveal">
-          <div class="offer-item">
-            <p class="offer-item-num">01</p>
-            <div>
-              <p class="offer-item-title">Manual admin &amp; internal workflows</p>
-              <p class="offer-item-desc">Data entry, approvals, compliance tracking and reporting eat hours of time that doesn't need a person behind it. We automate the repetitive work so your team can focus on what actually needs judgement.</p>
+  <main id="main">
+
+    <!-- 00 HERO -->
+    <section class="hero t-ink" id="top" data-nav="ink" aria-label="Introduction">
+      <canvas class="hero-canvas" data-art="tangle" data-eager aria-hidden="true"></canvas>
+      <div class="wrap hero-in">
+        <p class="eyebrow hero-eyebrow">00 — Process automation &amp; digital systems</p>
+        <h1 class="display hero-h1"><span class="line"><span>We automate what</span></span> <span class="line"><span><em>slows you down.</em></span></span></h1>
+        <div class="grid hero-foot">
+          <div class="hero-lead">
+            <p class="body hero-sub">Spreadsheets, email chains, paper forms and apps that don't talk to each other. We sit down with your team, find what's costing you time, and build one system that fixes it.</p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary" data-magnetic>Book a discovery session</a>
+              <a href="#what-we-do" class="link-arrow">See how it works →</a>
             </div>
           </div>
-          <div class="offer-item">
-            <p class="offer-item-num">02</p>
-            <div>
-              <p class="offer-item-title">Disconnected systems &amp; data</p>
-              <p class="offer-item-desc">When your CRM, spreadsheets and operational tools don't talk to each other, work gets duplicated and information gets lost. We connect them and automate the flow of data between them.</p>
-            </div>
-          </div>
-          <div class="offer-item">
-            <p class="offer-item-num">03</p>
-            <div>
-              <p class="offer-item-title">Customer-facing friction</p>
-              <p class="offer-item-desc">A hard-to-use enquiry form or a booking process that takes three phone calls costs you both new work and repeat business. We build the websites, booking systems and portals that remove that friction.</p>
-            </div>
-          </div>
-          <div class="offer-item">
-            <p class="offer-item-num">04</p>
-            <div>
-              <p class="offer-item-title">Reporting &amp; visibility</p>
-              <p class="offer-item-desc">Decisions get made on gut feel when there's no clear view of what's actually happening in the business. We build the dashboards and reporting layers that give you that visibility in real time.</p>
-            </div>
+          <div class="hero-meta">
+            <p class="caption">Based in Leeds · Working across the UK</p>
+            <p class="scroll-cue" aria-hidden="true"><span>Scroll</span><i></i></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- TRUST -->
-    <section class="trust-section" aria-labelledby="trust-heading">
-      <div class="trust-inner">
-        <div>
-          <p class="trust-label reveal">Built by people who ship software</p>
-          <h2 class="trust-heading reveal" id="trust-heading">We don't just advise — we build and run our own products.</h2>
-          <p class="trust-body reveal">Tredgold Digital operates three live SaaS products — CrewSwap, SiteForge and Ask Atlas — used by real businesses today. That's not a portfolio exercise: it means we understand what it actually takes to design, ship and support production software, and we bring that same rigour to the systems we build for our clients.</p>
-          <p class="trust-founder reveal">Tredgold Digital is led by William Hurt — working with businesses worldwide on the systems and automation that sit behind their operations.</p>
+    <div class="spine" aria-hidden="true"><i></i></div>
+
+    <!-- MARQUEE -->
+    <section class="marquee t-white" data-nav="light" aria-label="What slows you down">
+      <div class="marquee-track">
+        <ul class="marquee-group">
+          <li class="marquee-item">Spreadsheets</li>
+          <li class="marquee-item">Email chains</li>
+          <li class="marquee-item">Paper timesheets</li>
+          <li class="marquee-item">WhatsApp groups</li>
+          <li class="marquee-item">Double data entry</li>
+          <li class="marquee-item">Lost enquiries</li>
+          <li class="marquee-item">Expiring certificates</li>
+          <li class="marquee-item">Copy and paste</li>
+          <li class="marquee-item">"Which version is the latest?"</li>
+        </ul>
+        <ul class="marquee-group" aria-hidden="true">
+          <li class="marquee-item">Spreadsheets</li>
+          <li class="marquee-item">Email chains</li>
+          <li class="marquee-item">Paper timesheets</li>
+          <li class="marquee-item">WhatsApp groups</li>
+          <li class="marquee-item">Double data entry</li>
+          <li class="marquee-item">Lost enquiries</li>
+          <li class="marquee-item">Expiring certificates</li>
+          <li class="marquee-item">Copy and paste</li>
+          <li class="marquee-item">"Which version is the latest?"</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 01 PROBLEM -->
+    <section class="problem sec t-off" id="what-we-do" data-nav="light" aria-labelledby="problem-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow" data-rise>01 — Where inefficiency costs you</p>
+          <h2 class="h2" id="problem-h" data-split>Every manual process is a cost you can't see.</h2>
+          <p class="body" data-rise>It doesn't show up on the P&amp;L, but you feel it every week. Good people losing hours to admin the business has outgrown.</p>
         </div>
-        <div class="trust-points reveal">
-          <div class="trust-point">
-            <p class="trust-point-title">We build production software</p>
-            <p class="trust-point-desc">Our own SaaS products are in active use by real customers — proof we can deliver working systems, not just a brochure site.</p>
+
+        <div class="grid problem-split">
+          <div class="problem-panel" aria-hidden="true">
+            <span class="panel-idx">01</span>
+
+            <!-- 01: paper sheets shuffling and duplicating -->
+            <svg class="scene is-active" viewBox="0 0 400 400">
+              <rect class="f" x="62" y="104" width="150" height="196" rx="3" style="transform:rotate(-10deg)"/>
+              <g class="s1-b"><rect class="f" x="100" y="78" width="150" height="196" rx="3"/><path class="m" d="M120 110h84M120 134h104M120 158h66M120 182h96M120 206h54"/></g>
+              <g class="s1-a"><rect class="f" x="146" y="112" width="150" height="196" rx="3"/><path d="M166 144h84M166 168h104M166 192h66M166 216h96M166 240h54"/></g>
+              <g class="s1-dup"><rect class="a" x="146" y="112" width="150" height="196" rx="3" stroke-dasharray="5 6"/><path class="a" d="M166 144h84M166 168h104M166 192h66" stroke-dasharray="5 6"/></g>
+            </svg>
+
+            <!-- 02: app tiles with broken, flickering connectors -->
+            <svg class="scene" viewBox="0 0 400 400">
+              <rect class="f" x="56" y="56" width="92" height="92" rx="3"/><path d="M74 84h56M74 102h56M74 120h56M96 72v60"/>
+              <rect class="f" x="252" y="56" width="92" height="92" rx="3"/><path d="M270 82h56v40h-56zM270 82l28 22 28-22"/>
+              <rect class="f" x="56" y="252" width="92" height="92" rx="3"/><path d="M78 322v-22M96 322v-38M114 322v-14M132 322v-30"/>
+              <rect class="f" x="252" y="252" width="92" height="92" rx="3"/><circle cx="298" cy="288" r="9"/><path d="M280 326a18 18 0 0 1 36 0"/>
+              <path class="m s2-flick" d="M148 102h36"/><path class="m s2-flick d2" d="M216 102h36" stroke-dasharray="4 6"/>
+              <path class="m s2-flick d3" d="M102 148v34"/><path class="m s2-flick" d="M102 218v34" stroke-dasharray="4 6"/>
+              <path class="m s2-flick d2" d="M298 148v30" stroke-dasharray="4 6"/><path class="m s2-flick d3" d="M298 222v30"/>
+              <path class="m s2-flick" d="M148 298h28" stroke-dasharray="4 6"/><path class="m s2-flick d2" d="M224 298h28"/>
+              <path class="a s2-reach" d="M148 148l104 104"/>
+            </svg>
+
+            <!-- 03: a form that resets, and an enquiry dropping away -->
+            <svg class="scene" viewBox="0 0 400 400">
+              <rect class="f" x="70" y="64" width="260" height="212" rx="3"/>
+              <path class="m" d="M96 98h64"/>
+              <rect x="96" y="114" width="208" height="46" rx="3"/>
+              <path class="s3-type" d="M112 137h130"/>
+              <path class="a s3-cursor" d="M114 126v22"/>
+              <rect x="96" y="186" width="100" height="42" rx="3"/><path d="M126 207h40"/>
+              <path class="m" d="M200 290v84" stroke-dasharray="2 7"/>
+              <circle class="af s3-dot" cx="200" cy="276" r="7"/>
+            </svg>
+
+            <!-- 04: a dashboard with blurred and missing values -->
+            <svg class="scene" viewBox="0 0 400 400">
+              <rect class="f" x="50" y="66" width="300" height="268" rx="3"/>
+              <path d="M50 100h300"/><path class="m" d="M66 83h.01M78 83h.01M90 83h.01" stroke-width="5"/>
+              <rect x="70" y="118" width="78" height="58" rx="3"/><path class="m" d="M84 134h26"/><path d="M84 158h40" stroke-width="7"/>
+              <rect x="161" y="118" width="78" height="58" rx="3"/><path class="m" d="M175 134h26"/><path class="s4-blur" d="M175 158h46" stroke-width="9"/>
+              <rect x="252" y="118" width="78" height="58" rx="3"/><path class="m" d="M266 134h26"/><path class="m s4-miss" d="M266 158h10M284 158h10M302 158h10"/>
+              <path d="M70 312h260"/>
+              <rect x="84" y="250" width="26" height="62"/><rect x="124" y="228" width="26" height="84"/>
+              <rect class="m s4-miss" x="164" y="262" width="26" height="50" stroke-dasharray="4 5"/>
+              <rect class="a" x="204" y="212" width="26" height="100" stroke-dasharray="4 5"/>
+              <rect x="244" y="244" width="26" height="68"/>
+              <rect class="m" x="284" y="270" width="26" height="42" stroke-dasharray="4 5"/>
+            </svg>
           </div>
-          <div class="trust-point">
-            <p class="trust-point-title">End-to-end delivery</p>
-            <p class="trust-point-desc">Websites, internal tools, automation, AI — different tools for the same goal: fewer manual processes, less friction, better data.</p>
-          </div>
-          <div class="trust-point">
-            <p class="trust-point-title">No lock-in to one type of solution</p>
-            <p class="trust-point-desc">We recommend whichever approach actually solves the problem, not whatever we happen to sell.</p>
-          </div>
+
+          <ol class="problem-list">
+            <li class="problem-item is-active">
+              <p class="problem-num" aria-hidden="true">01</p>
+              <h3 class="h3">Manual admin &amp; internal workflows</h3>
+              <p class="body">Re-typing the same data, chasing approvals, tracking certificates on a spreadsheet nobody trusts. We automate the repetitive work so your team can get back to the job.</p>
+            </li>
+            <li class="problem-item">
+              <p class="problem-num" aria-hidden="true">02</p>
+              <h3 class="h3">Disconnected systems &amp; data</h3>
+              <p class="body">Your CRM, accounts, job sheets and spreadsheets each hold part of the picture. We connect them so data goes in once and shows up everywhere it's needed.</p>
+            </li>
+            <li class="problem-item">
+              <p class="problem-num" aria-hidden="true">03</p>
+              <h3 class="h3">Customer-facing friction</h3>
+              <p class="body">Enquiries that go unanswered. Bookings by phone tag. We build forms, booking systems and portals that make you easy to buy from.</p>
+            </li>
+            <li class="problem-item">
+              <p class="problem-num" aria-hidden="true">04</p>
+              <h3 class="h3">Reporting &amp; visibility</h3>
+              <p class="body">You can't manage what you can't see. We build dashboards that show what's happening now, not last month.</p>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
 
-    <!-- RECENT WORK -->
-    <section class="work-section" aria-labelledby="work-heading">
-      <div class="work-inner">
-        <p class="work-label reveal">Recent work</p>
-        <h2 class="work-heading reveal" id="work-heading">Friction removed. In production.</h2>
-        <p class="work-sub reveal">Four examples of automation and process improvement in practice — three of them our own SaaS products, across different industries.</p>
-
-        <div class="work-grid reveal">
-          <div class="work-card">
-            <p class="work-card-sector">Aviation · SaaS</p>
-            <p class="work-card-title">CrewSwap</p>
-            <p class="work-card-desc">Finding cover or a swap shouldn't mean scrolling through group chats. CrewSwap gives UK airline crew a simple, direct way to post and pick up shift swaps — live today with a large base of professional pilots and cabin crew.</p>
+    <!-- 02 MANY → ONE DIAGRAM -->
+    <section class="diagram sec t-ink" id="system" data-nav="ink" data-blueprint aria-labelledby="diagram-h">
+      <div class="wrap grid diagram-in">
+        <div class="diagram-text">
+          <p class="eyebrow">02 — What we do</p>
+          <h2 class="h2" id="diagram-h" data-split>Many tools in. One system out.</h2>
+          <div class="dg-steps" aria-hidden="true"><i class="is-on"></i><i></i><i></i></div>
+          <div class="dg-captions">
+            <p class="dg-cap"><strong>Before.</strong> Eight tools, five logins, and the important stuff lives in someone's head.</p>
+            <p class="dg-cap"><strong>Discovery.</strong> We start with the people who do the work, and how it really happens, not how the process document says it does.</p>
+            <p class="dg-cap"><strong>After.</strong> One system built around your team. Enter it once, see it everywhere.</p>
           </div>
-          <div class="work-card">
-            <p class="work-card-sector">Construction · SaaS</p>
-            <p class="work-card-title">SiteForge</p>
-            <p class="work-card-desc">Pre-start packs, training matrices and CHAS, SMAS and Constructionline Gold renewals are usually scattered across spreadsheets and email threads. SiteForge brings that into one workflow — in use by several UK civils and construction businesses to manage pre-start processes end to end.</p>
-          </div>
-          <div class="work-card">
-            <p class="work-card-sector">Aviation · AI</p>
-            <p class="work-card-title">Ask Atlas</p>
-            <p class="work-card-desc">Too much training knowledge lives in one experienced instructor's head, and sim time gets lost re-explaining things a trainee should already know. Ask Atlas gives crew instant, cited answers from an organisation's own training material — and gives training departments visibility into where the knowledge gaps actually are. In active pilot conversations with airlines, logistics carriers and aviation consultants.</p>
-          </div>
-          <div class="work-card">
-            <p class="work-card-sector">Cross-industry · Consulting</p>
-            <p class="work-card-title">Digital Presence &amp; Process Automation</p>
-            <p class="work-card-desc">Beyond our own products, we work directly with businesses — from construction to oil and gas — to modernise their digital presence and automate the manual admin eating into their time. Recent work includes automated certification tracking and sales pipeline management for a landscaping business, and improved online visibility and lead generation for clients in construction and energy.</p>
-          </div>
+        </div>
+        <div class="diagram-stage">
+          <svg class="dg-svg" id="diagram" role="img" aria-label="Before. Eight tools, five logins, and the important stuff lives in someone's head. Discovery. We start with the people who do the work, and how it really happens, not how the process document says it does. After. One system built around your team. Enter it once, see it everywhere."></svg>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
-      <div class="contact-inner">
-        <p class="contact-label reveal">Get in touch</p>
-        <h2 class="contact-heading reveal" id="contact-heading">Tell us about the process you want to fix.</h2>
-        <p class="contact-sub reveal">Manual admin, disconnected systems, or a customer journey that's costing you business — we can usually tell you quickly what it would take to fix. No jargon, no obligation.</p>
+    <!-- 03 HOW WE WORK -->
+    <section class="how sec t-white" id="how" data-nav="light" aria-labelledby="how-h">
+      <div class="wrap">
+        <div class="sec-head how-head">
+          <p class="eyebrow">03 — How we work</p>
+          <h2 class="h2" id="how-h" data-split>Built with you. Not handed to you.</h2>
+          <p class="how-labels caption"><span>Your team</span><span>We build</span></p>
+        </div>
+      </div>
+      <div class="wrap how-body">
+        <span class="how-build" aria-hidden="true"></span>
+        <ol class="how-track">
+          <li class="stage stage--1">
+            <span class="stage-dot" aria-hidden="true"></span>
+            <span class="track-label track-label--team" aria-hidden="true">Your team</span>
+            <span class="track-label track-label--build" aria-hidden="true">We build</span>
+            <div class="stage-top" aria-hidden="true">
+              <span class="stage-num">1</span>
+              <!-- two figures at a table -->
+              <svg class="stage-icon" viewBox="0 0 160 120">
+                <circle cx="44" cy="46" r="9"/><path d="M26 82a18 18 0 0 1 36 0"/>
+                <circle cx="116" cy="46" r="9"/><path d="M98 82a18 18 0 0 1 36 0"/>
+                <path d="M14 96h132M34 96v18M126 96v18"/>
+                <path class="i-talk" d="M64 40q7 6 0 12M71 34q12 12 0 24"/>
+                <path class="a i-talk d2" d="M96 40q-7 6 0 12M89 34q-12 12 0 24"/>
+              </svg>
+            </div>
+            <div class="stage-body">
+              <h3 class="h3">Discovery session</h3>
+              <p class="body">An in-depth session with the people who do the work, on site or on a call. We map how things really run and where the time goes.</p>
+              <p class="stage-tag">No code until the plan is agreed.</p>
+            </div>
+          </li>
+          <li class="stage">
+            <span class="stage-dot" aria-hidden="true"></span>
+            <div class="stage-top" aria-hidden="true">
+              <span class="stage-num">2</span>
+              <!-- a rough sketch straightening into a clean flowchart -->
+              <svg class="stage-icon" viewBox="0 0 160 120">
+                <g class="i-rough">
+                  <path d="M17 29q17-6 37 0q4 11-1 23q-19 5-37-1q-3-10 1-22zM103 26q18-4 38 2q2 12-2 22q-18 5-36 0q-4-12 0-24zM61 80q19-5 37 0q3 11-1 22q-17 5-37 0q-3-11 1-22z"/>
+                  <path d="M56 40q22-9 46-2M124 52q6 30-24 40"/>
+                </g>
+                <g class="i-clean">
+                  <rect x="18" y="26" width="38" height="26" rx="3"/><rect x="104" y="26" width="38" height="26" rx="3"/><rect x="61" y="80" width="38" height="26" rx="3"/>
+                  <path d="M56 39h48"/><path class="a" d="M123 52v41H99"/>
+                </g>
+              </svg>
+            </div>
+            <div class="stage-body">
+              <h3 class="h3">Plan</h3>
+              <p class="body">A clear written plan: what we'll build, what it fixes, what it costs and how long it takes. You sign it off before anything starts.</p>
+            </div>
+          </li>
+          <li class="stage">
+            <span class="stage-dot" aria-hidden="true"></span>
+            <!-- feedback arcs looping between the two tracks -->
+            <svg class="stage-arcs stage-arcs-v" viewBox="0 0 28 96" aria-hidden="true"><path d="M14 8A14 40 0 0 1 14 88"/><path class="a" d="M14 88A14 40 0 0 1 14 8"/></svg>
+            <svg class="stage-arcs stage-arcs-h" viewBox="0 0 150 64" preserveAspectRatio="none" aria-hidden="true"><path d="M75 0A45 32 0 0 1 75 64"/><path class="a" d="M75 64A45 32 0 0 1 75 0"/><polyline points="85,58 76,64 85,70"/><polyline class="a" points="65,-6 74,0 65,6"/></svg>
+            <div class="stage-top" aria-hidden="true">
+              <span class="stage-num">3</span>
+              <!-- a figure and a screen with feedback arcs -->
+              <svg class="stage-icon" viewBox="0 0 160 120">
+                <circle cx="36" cy="52" r="9"/><path d="M18 90a18 18 0 0 1 36 0"/>
+                <rect x="92" y="36" width="54" height="40" rx="3"/><path d="M119 76v12M107 88h24"/>
+                <path d="M101 48h22M101 64h14"/><path class="a" d="M101 56h34"/>
+                <path class="i-arc" d="M50 38q22-24 46-8"/><path class="a i-arc" d="M96 86q-20 22-38 8"/>
+              </svg>
+            </div>
+            <div class="stage-body">
+              <h3 class="h3">Build, alongside you</h3>
+              <p class="body">Short cycles, with working software in front of your team early. Their feedback shapes every release.</p>
+            </div>
+          </li>
+          <li class="stage">
+            <span class="stage-dot" aria-hidden="true"></span>
+            <div class="stage-top" aria-hidden="true">
+              <span class="stage-num">4</span>
+              <!-- a figure holding a device with a signal ring -->
+              <svg class="stage-icon" viewBox="0 0 160 120">
+                <circle cx="56" cy="46" r="9"/><path d="M38 84a18 18 0 0 1 36 0"/>
+                <path d="M72 76l20-6"/>
+                <rect class="f" x="92" y="52" width="24" height="40" rx="3"/><path d="M100 86h8"/>
+                <circle class="a i-signal" cx="104" cy="52" r="20"/><circle class="a i-signal d2" cx="104" cy="52" r="32"/>
+              </svg>
+            </div>
+            <div class="stage-body">
+              <h3 class="h3">Launch</h3>
+              <p class="body">We roll it out with your team, not at them. Training, data migration and support from day one.</p>
+            </div>
+          </li>
+          <li class="stage">
+            <span class="stage-dot" aria-hidden="true"></span>
+            <div class="stage-top" aria-hidden="true">
+              <span class="stage-num">5</span>
+              <!-- a steady pulsing status line -->
+              <svg class="stage-icon" viewBox="0 0 160 120">
+                <rect x="10" y="26" width="140" height="74" rx="3"/>
+                <path class="m" d="M24 66h34l8-20 12 38 8-18h50" style="stroke:var(--rule-strong)"/>
+                <path class="a i-status" d="M24 66h34l8-20 12 38 8-18h50"/>
+                <circle class="af i-beat" cx="136" cy="66" r="4"/>
+              </svg>
+            </div>
+            <div class="stage-body">
+              <h3 class="h3">Run &amp; improve</h3>
+              <p class="body">We look after it and keep improving it as your business changes.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-        <div class="form-wrap reveal">
-          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" aria-label="Contact form">
-            <input type="hidden" name="form-name" value="contact" />
-            <p style="display:none;"><input name="bot-field" /></p>
-            <div class="form-field">
-              <label for="name">Full name</label>
-              <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+    <!-- 04 CREDIBILITY -->
+    <section class="cred sec t-off" data-nav="light" aria-labelledby="cred-h">
+      <canvas class="cred-contour" data-art="contour" aria-hidden="true"></canvas>
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow" data-rise>04 — Built by people who ship software</p>
+          <h2 class="h2" id="cred-h" data-split>We don't just advise — we build and run our own products.</h2>
+        </div>
+        <div class="grid cred-grid">
+          <div class="cred-copy" data-rise>
+            <p class="body">We run two SaaS products of our own, Capstone and Ask Atlas. Everything we learn building and supporting them goes into the systems we build for clients.</p>
+            <p class="cred-founder">Tredgold Digital is led by William Hurt — working with businesses worldwide on the systems and automation that sit behind their operations.</p>
+          </div>
+          <ul class="cred-points">
+            <li class="cred-point" data-rise>
+              <h3 class="h3">We build production software</h3>
+              <p>Our own SaaS products are in active use by real customers — proof we can deliver working systems, not just a brochure site.</p>
+            </li>
+            <li class="cred-point" data-rise>
+              <h3 class="h3">End-to-end delivery</h3>
+              <p>Websites, internal tools, automation, AI — different tools for the same goal: fewer manual processes, less friction, better data.</p>
+            </li>
+            <li class="cred-point" data-rise>
+              <h3 class="h3">No lock-in to one type of solution</h3>
+              <p>We recommend whichever approach actually solves the problem, not whatever we happen to sell.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 PRODUCTS -->
+    <section class="products sec t-white" id="work" data-nav="light" aria-labelledby="work-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow" data-rise>05 — Our products</p>
+          <h2 class="h2" id="work-h" data-split>Friction removed. In production.</h2>
+        </div>
+
+        <div class="products-list">
+          <article class="grid product">
+            <a class="frame product-frame" href="https://capstoneops.co.uk/?utm_source=tredgolddigital&amp;utm_medium=referral" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true" data-cursor data-curtain>
+              <span class="frame-bar"><i></i><i></i><i></i><span class="frame-url">capstoneops.co.uk</span></span>
+              <span class="frame-view">
+                <picture>
+                  <source media="(max-width: 700px)" type="image/avif" srcset="/assets/img/products/capstone-mobile-800.avif" width="780" height="2000" />
+                  <source media="(max-width: 700px)" type="image/webp" srcset="/assets/img/products/capstone-mobile-800.webp" width="780" height="2000" />
+                  <source type="image/avif" srcset="/assets/img/products/capstone-desktop-800.avif 800w, /assets/img/products/capstone-desktop-1600.avif 1600w" sizes="(max-width: 1000px) 100vw, 56vw" />
+                  <source type="image/webp" srcset="/assets/img/products/capstone-desktop-800.webp 800w, /assets/img/products/capstone-desktop-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 56vw" />
+                  <img src="/assets/img/products/capstone-desktop-800.webp" width="1600" height="4444" alt="" loading="lazy" decoding="async" />
+                </picture>
+              </span>
+            </a>
+            <div class="product-info">
+              <p class="caption" data-rise><span>Trades · SaaS</span><span>Founding users now</span></p>
+              <h3 class="product-name" data-split>Capstone</h3>
+              <p class="product-tagline" data-rise>Less time on admin. More time for everything else.</p>
+              <p class="body" data-rise>Job management for UK trades. Enquiries, scheduling, timesheets, client reports and finances in one place, with an AI assistant that knows your business.</p>
+              <a class="link-arrow" data-rise href="https://capstoneops.co.uk/?utm_source=tredgolddigital&amp;utm_medium=referral" target="_blank" rel="noopener">Visit Capstone →</a>
             </div>
-            <div class="form-field">
-              <label for="email">Email address</label>
-              <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email" />
+          </article>
+
+          <article class="grid product product--flip">
+            <a class="frame product-frame" href="https://flyatlas.app/?utm_source=tredgolddigital&amp;utm_medium=referral" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true" data-cursor data-curtain>
+              <span class="frame-bar"><i></i><i></i><i></i><span class="frame-url">flyatlas.app</span></span>
+              <span class="frame-view">
+                <picture>
+                  <source media="(max-width: 700px)" type="image/avif" srcset="/assets/img/products/atlas-mobile-800.avif" width="780" height="2000" />
+                  <source media="(max-width: 700px)" type="image/webp" srcset="/assets/img/products/atlas-mobile-800.webp" width="780" height="2000" />
+                  <source type="image/avif" srcset="/assets/img/products/atlas-desktop-800.avif 800w, /assets/img/products/atlas-desktop-1600.avif 1600w" sizes="(max-width: 1000px) 100vw, 56vw" />
+                  <source type="image/webp" srcset="/assets/img/products/atlas-desktop-800.webp 800w, /assets/img/products/atlas-desktop-1600.webp 1600w" sizes="(max-width: 1000px) 100vw, 56vw" />
+                  <img src="/assets/img/products/atlas-desktop-800.webp" width="1600" height="4444" alt="" loading="lazy" decoding="async" />
+                </picture>
+              </span>
+            </a>
+            <div class="product-info">
+              <p class="caption" data-rise><span>Aviation · AI</span><span>Live</span></p>
+              <h3 class="product-name" data-split>Ask Atlas</h3>
+              <p class="product-tagline" data-rise>The knowledge of your best instructors. Always available.</p>
+              <p class="body" data-rise>AI training support for pilots, instructors and flight schools. Cited answers from your own manuals, examiner-style practice, and a clear view of where knowledge gaps are.</p>
+              <a class="link-arrow" data-rise href="https://flyatlas.app/?utm_source=tredgolddigital&amp;utm_medium=referral" target="_blank" rel="noopener">Visit Ask Atlas →</a>
             </div>
-            <div class="form-field">
-              <label for="message">Tell us about your business</label>
-              <textarea id="message" name="message" rows="5" placeholder="What do you do, and what's the one manual process or system you'd most like to fix?" required></textarea>
+          </article>
+        </div>
+
+        <!-- CLIENT WORK -->
+        <div class="client">
+          <div class="sec-head">
+            <p class="eyebrow" data-rise>Client work</p>
+          </div>
+          <article class="grid client-tile">
+            <div class="client-art" data-curtain><canvas data-art="converge" aria-hidden="true"></canvas></div>
+            <div class="client-info">
+              <p class="caption" data-rise><span>Cross-industry · Consulting</span><span>Client work</span></p>
+              <h3 class="h3" data-rise>Digital Presence &amp; Process Automation</h3>
+              <p class="body" data-rise>Beyond our own products, we work directly with businesses — from construction to oil and gas — to modernise their digital presence and automate the manual admin eating into their time. Recent work includes automated certification tracking and sales pipeline management for a landscaping business, and improved online visibility and lead generation for clients in construction and energy.</p>
             </div>
-            <div class="form-submit">
-              <button type="submit" id="submitBtn">Send message →</button>
-            </div>
-          </form>
-          <p class="form-success" id="formSuccess" role="status">✓ Message received — we'll be in touch shortly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFESTO -->
+    <section class="manifesto sec t-ink" data-nav="ink" aria-label="Manifesto">
+      <canvas class="manifesto-canvas" data-art="flow" data-line-y=".5" aria-hidden="true"></canvas>
+      <div class="wrap">
+        <div class="manifesto-lines">
+          <p class="manifesto-line" data-split>Software should fit the way you work.</p>
+          <p class="manifesto-line" data-split>Not the other way round.</p>
+          <p class="manifesto-line" data-split>We listen first. We build second.</p>
+          <p class="manifesto-line" data-split>And we don't disappear after launch.</p>
+        </div>
+        <ul class="trust">
+          <li data-rise>
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 28s-9-8.5-9-15a9 9 0 0 1 18 0c0 6.5-9 15-9 15z"/><circle class="a" cx="16" cy="13" r="3"/></svg>
+            Based in Leeds
+          </li>
+          <li data-rise>
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 27h22L5 5z"/><path class="a" d="M10 22h7l-7-7z"/></svg>
+            Bespoke, not off-the-shelf
+          </li>
+          <li data-rise>
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7h22v15H14l-6 5v-5H5z"/><path class="a" d="M10 12.5h12M10 17h7"/></svg>
+            Plain English, no jargon
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 06 CONTACT -->
+    <section class="contact sec t-ink" id="contact" data-nav="ink" aria-labelledby="contact-heading">
+      <svg class="contact-outline" aria-hidden="true"><path d=""/></svg>
+      <div class="wrap">
+        <div class="grid contact-grid">
+          <div class="contact-copy">
+            <p class="eyebrow" data-rise>06 — Get in touch</p>
+            <h2 class="h2" id="contact-heading" data-split>Tell us about the process you want to fix.</h2>
+            <p class="body" data-rise>Admin that eats your week, systems that don't talk, customers slipping through the gaps. Tell us what's slowing you down and we'll get back to you about a discovery session.</p>
+          </div>
+
+          <div class="form-card">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" aria-label="Contact form">
+              <input type="hidden" name="form-name" value="contact" />
+              <p style="display:none;"><input name="bot-field" /></p>
+              <div class="form-field">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+              </div>
+              <div class="form-field">
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email" />
+              </div>
+              <div class="form-field">
+                <label for="message">Tell us about your business</label>
+                <textarea id="message" name="message" rows="5" placeholder="What do you do, and what's the one manual process or system you'd most like to fix?" required></textarea>
+              </div>
+              <div class="form-submit">
+                <button type="submit" id="submitBtn" class="btn btn-primary" data-magnetic>Send message →</button>
+              </div>
+            </form>
+            <p class="form-success" id="formSuccess" role="status">
+              <svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20"/><path d="M13 22.5l6.5 6.5L31.5 16"/></svg>
+              <span>Message received — we'll be in touch shortly.</span>
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
   </main>
 
-  <footer>
-    <span class="footer-logo">Tredgold<span>.</span></span>
-    <span class="footer-legal">© Tredgold Digital Ltd · Registered in England and Wales, company number 16955781 · <a href="/privacy">Privacy Policy</a></span>
-    <span>Leeds, UK · <a href="mailto:hello@tredgolddigital.com">hello@tredgolddigital.com</a></span>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-row">
+        <span class="footer-legal">© Tredgold Digital Ltd · Registered in England and Wales, company number 16955781 · <a href="/privacy">Privacy Policy</a></span>
+        <span>Leeds, UK · <a href="mailto:hello@tredgolddigital.com">hello@tredgolddigital.com</a></span>
+      </div>
+    </div>
+    <span class="footer-mark" aria-hidden="true">Tredgold<span>.</span></span>
   </footer>
 
-  <script>
-    const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const successMsg = document.getElementById('formSuccess');
-
-    form.addEventListener('submit', async function (e) {
-      e.preventDefault();
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending…';
-      try {
-        const formData = new FormData(form);
-        await fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams(formData).toString(),
-        });
-        form.style.display = 'none';
-        successMsg.style.display = 'block';
-        requestAnimationFrame(() => successMsg.classList.add('visible'));
-      } catch (err) {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send message →';
-        alert('Something went wrong — please try again or email us directly.');
-      }
-    });
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          setTimeout(() => e.target.classList.add('in-view'), e.target.dataset.delay || 0);
-        }
-      });
-    }, { threshold: 0.08 });
-
-    document.querySelectorAll('.reveal').forEach((el, i) => {
-      el.dataset.delay = i * 80;
-      observer.observe(el);
-    });
-  </script>
+  <div class="cursor-label" aria-hidden="true">Visit</div>
 
 </body>
 </html>
