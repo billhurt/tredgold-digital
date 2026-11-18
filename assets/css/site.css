@@ -461,7 +461,7 @@ html:not(.js) .diagram-text { grid-column: 1 / -1; }
   .motion .how-labels { display: none; }
   .motion .how-track { display: flex; width: max-content; height: 100%; margin: 0; padding-left: calc(var(--spine-x) + var(--gutter) * 1.5 + 9px); padding-right: 12vw; will-change: transform; }
   .motion .how-build { left: var(--spine-x); right: 0; top: var(--line-y); bottom: auto; width: auto; height: 1.5px; margin-top: -.75px; transform-origin: 0 50%; z-index: 1; }
-  .motion .stage { display: block; flex: 0 0 clamp(460px, 40vw, 640px); height: 100%; padding: 0; }
+  .motion .stage { display: block; flex: none; width: clamp(460px, 40vw, 640px); height: 100%; padding: 0; }
   .motion .stage::before { left: 0; right: 0; width: auto; bottom: auto; top: calc(var(--line-y) - var(--gap-y)); height: 1.5px; margin: -.75px 0 0; }
   .motion .stage--1::before { height: 7px; margin-top: -3.5px; width: auto; }
   .motion .stage::after { content: ''; position: absolute; left: 0; right: 0; top: var(--line-y); height: 1px; background: var(--rule); }
@@ -643,3 +643,9 @@ html:not(.js) .diagram-text { grid-column: 1 / -1; }
   .marquee-item::after { transform: scaleX(1); }
   .scroll-cue i::after { transform: translateY(75%); }
 }
+
+html:not(.motion) .dg-steps { display: none; }
+
+/* hero headline: keep each authored line whole once there is room for it */
+.hero-h1 { font-size: clamp(3rem, 9vw, 9.2rem); }
+@media (min-width: 600px) { .hero-h1 .line > span { white-space: nowrap; } }

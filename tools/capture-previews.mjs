@@ -33,7 +33,7 @@ const SITES = [
 const SHOTS = [
   { kind: 'desktop', viewport: { width: 1440, height: 900 }, widths: [800, 1600], isMobile: false, maxHeight: MAX_CSS_HEIGHT },
   // Mobile frames only ever show the top of the page, so a shorter crop keeps the file sharp and small.
-  { kind: 'mobile', viewport: { width: 390, height: 844 }, widths: [800], isMobile: true, maxHeight: 1600 },
+  { kind: 'mobile', viewport: { width: 390, height: 844 }, widths: [800], isMobile: true, maxHeight: 1000 },
 ];
 
 const COOKIE_BUTTONS = /^(accept( all)?( cookies)?|allow( all)?( cookies)?|agree|i agree|got it|ok(ay)?|reject( all)?|decline|dismiss|close)$/i;

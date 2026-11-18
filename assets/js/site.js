@@ -119,7 +119,11 @@
         });
         form.style.display = 'none';
         successMsg.style.display = 'block';
-        requestAnimationFrame(function () { successMsg.classList.add('visible'); });
+        requestAnimationFrame(function () {
+          successMsg.classList.add('visible');
+          // the card has changed height: redraw its outline
+          if (html.classList.contains('motion')) window.ScrollTrigger.refresh(); else { layoutSpine(); layoutOutline(); }
+        });
       } catch (err) {
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send message →';
